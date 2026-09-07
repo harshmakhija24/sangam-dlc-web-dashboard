@@ -2,8 +2,9 @@ name: Deploy Sangam DLC to GitHub Pages
 
 on:
   push:
-    branches: ["sangam"]
+    branches: ["sangam", "main"]
   workflow_dispatch:
+
 
 permissions:
   contents: read
