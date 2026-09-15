@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en-IN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sangam Digital Learning Community | Empowering Faculty for Digital Pedagogy</title>
-    <meta name="description" content="Sangam Digital Learning Community by IIMBx supports higher-education faculty in India with digital pedagogy training, AI in education programs, peer learning, and open resources to enhance online and blended teaching.">
+    <meta name="description"
+        content="Sangam Digital Learning Community by IIMBx supports higher-education faculty in India with digital pedagogy training, AI in education programs, peer learning, and open resources to enhance online and blended teaching.">
     <link rel="canonical" href="https://sangamdlc.org/">
     <meta property="og:locale" content="en_IN">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sangam Digital Learning Community | Empowering Faculty for Digital Pedagogy">
-    <meta property="og:description" content="Sangam Digital Learning Community by IIMBx supports higher-education faculty in India with digital pedagogy training, AI in education programs, peer learning, and open resources to enhance online and blended teaching.">
+    <meta property="og:description"
+        content="Sangam Digital Learning Community by IIMBx supports higher-education faculty in India with digital pedagogy training, AI in education programs, peer learning, and open resources to enhance online and blended teaching.">
     <meta property="og:url" content="https://sangamdlc.org/">
     <meta property="og:site_name" content="Sangam Digital Learning Community">
     <meta property="og:image" content="https://sangamdlc.org/wp-content/uploads/2025/02/Sangam-Logo.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sangam Digital Learning Community | Empowering Faculty for Digital Pedagogy">
-    <meta name="twitter:description" content="Join India's largest digital pedagogy community. Free courses, resources & peer learning for higher-education faculty.">
+    <meta name="twitter:description"
+        content="Join India's largest digital pedagogy community. Free courses, resources & peer learning for higher-education faculty.">
     <meta name="twitter:image" content="https://sangamdlc.org/wp-content/uploads/2025/02/Sangam-Logo.png">
 
     <!-- Structured Data -->
@@ -64,7 +68,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <style>
         /* ===== DESIGN SYSTEM TOKENS ===== */
@@ -96,8 +102,19 @@
         }
 
         /* ===== RESET & BASE ===== */
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+
         body {
             font-family: var(--font-body);
             color: var(--sangam-text-body);
@@ -106,67 +123,98 @@
             font-size: 16px;
             overflow-x: hidden;
         }
-        img { max-width: 100%; height: auto; display: block; }
-        a { text-decoration: none; color: inherit; transition: color var(--transition); }
-        h1, h2, h3, h4, h5, h6 {
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color var(--transition);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: var(--font-heading);
             color: var(--sangam-text-heading);
             line-height: 1.2;
             font-weight: 700;
         }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
 
         /* ===== HEADER ===== */
         .header {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--sangam-border);
             transition: box-shadow var(--transition);
         }
-        .header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+
+        .header.scrolled {
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        }
+
         .header-inner {
-            display: flex; align-items: center; justify-content: space-between;
-            max-width: 1200px; margin: 0 auto; padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 24px;
         }
-        .logo { display: flex; align-items: center; gap: 12px; }
-        .logo-icon {
-            width: 44px; height: 44px;
-            background: linear-gradient(135deg, var(--sangam-navy) 0%, var(--sangam-navy-card) 100%);
-            border-radius: var(--radius-md);
-            display: flex; align-items: center; justify-content: center;
-            position: relative; overflow: hidden;
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        .logo-icon::after {
-            content: ''; position: absolute; top: 4px; right: 4px;
-            width: 8px; height: 8px;
-            background: var(--sangam-orange);
-            border-radius: 50%;
+
+        .logo-img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
         }
-        .logo-icon span {
-            color: white; font-family: var(--font-heading);
-            font-weight: 800; font-size: 22px;
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-        .logo-text {
-            font-family: var(--font-heading); font-weight: 700;
-            font-size: 18px; color: var(--sangam-navy);
-        }
-        .logo-text small {
-            display: block; font-size: 11px;
-            font-weight: 500; color: var(--sangam-text-muted);
-            letter-spacing: 0.5px; text-transform: uppercase;
-        }
-        .nav { display: flex; align-items: center; gap: 8px; }
+
         .nav a {
-            padding: 8px 16px; font-size: 14px; font-weight: 600;
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
             color: var(--sangam-text-body);
             border-radius: var(--radius-sm);
             transition: all var(--transition);
-            text-transform: uppercase; letter-spacing: 0.3px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
-        .nav a:hover, .nav a.active {
-            color: var(--sangam-navy); background: var(--sangam-bg-light);
+
+        .nav a:hover,
+        .nav a.active {
+            color: var(--sangam-navy);
+            background: var(--sangam-bg-light);
         }
+
         .nav-cta {
             background: var(--sangam-orange) !important;
             color: white !important;
@@ -174,11 +222,26 @@
             padding: 10px 24px !important;
             box-shadow: var(--shadow-btn);
         }
-        .nav-cta:hover { background: var(--sangam-orange-hover) !important; transform: translateY(-1px); }
-        .mobile-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+
+        .nav-cta:hover {
+            background: var(--sangam-orange-hover) !important;
+            transform: translateY(-1px);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
         .mobile-toggle span {
-            display: block; width: 24px; height: 2px;
-            background: var(--sangam-navy); margin: 6px 0;
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--sangam-navy);
+            margin: 6px 0;
             transition: all var(--transition);
         }
 
@@ -186,364 +249,810 @@
         .hero {
             padding: 140px 0 100px;
             background: linear-gradient(135deg, #E8EFF7 0%, #C8D6E5 30%, #6B8DAE 70%, #2C435E 100%);
-            position: relative; overflow: hidden;
+            position: relative;
+            overflow: hidden;
         }
+
         .hero::before {
-            content: ''; position: absolute; inset: 0;
+            content: '';
+            position: absolute;
+            inset: 0;
             background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
+
         .hero-inner {
-            display: grid; grid-template-columns: 1fr 1fr;
-            gap: 60px; align-items: center; position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
         }
-        .hero-content { z-index: 2; }
+
+        .hero-content {
+            z-index: 2;
+        }
+
         .hero-badge {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: rgba(255,255,255,0.2); backdrop-filter: blur(10px);
-            padding: 6px 16px; border-radius: var(--radius-pill);
-            font-size: 13px; font-weight: 600; color: var(--sangam-navy);
-            margin-bottom: 24px; border: 1px solid rgba(255,255,255,0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 6px 16px;
+            border-radius: var(--radius-pill);
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--sangam-navy);
+            margin-bottom: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
-        .hero-badge::before { content: '🎓'; }
+
+        .hero-badge::before {
+            content: '🎓';
+        }
+
         .hero h1 {
-            font-size: 48px; line-height: 1.15;
+            font-size: 48px;
+            line-height: 1.15;
             color: var(--sangam-navy);
             margin-bottom: 20px;
         }
+
         .hero h1 .highlight {
             color: var(--sangam-orange);
             position: relative;
         }
+
         .hero h1 .highlight::after {
-            content: ''; position: absolute; bottom: 2px; left: 0;
-            width: 100%; height: 6px;
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 6px;
             background: var(--sangam-orange-glow);
             border-radius: 4px;
         }
+
         .hero p {
-            font-size: 18px; color: #334155;
-            max-width: 520px; margin-bottom: 32px;
+            font-size: 18px;
+            color: #334155;
+            max-width: 520px;
+            margin-bottom: 32px;
             line-height: 1.8;
         }
-        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-        .btn-primary {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: var(--sangam-orange); color: white;
-            padding: 14px 32px; border-radius: var(--radius-pill);
-            font-family: var(--font-heading); font-weight: 600; font-size: 15px;
-            box-shadow: var(--shadow-btn);
-            transition: all var(--transition); border: none; cursor: pointer;
-        }
-        .btn-primary:hover { background: var(--sangam-orange-hover); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(243,112,35,0.4); }
-        .btn-secondary {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: transparent; color: var(--sangam-navy);
-            padding: 14px 32px; border-radius: var(--radius-md);
-            font-family: var(--font-heading); font-weight: 600; font-size: 15px;
-            border: 2px solid var(--sangam-navy);
-            transition: all var(--transition); cursor: pointer;
-        }
-        .btn-secondary:hover { background: var(--sangam-navy); color: white; }
 
-        .hero-visual { position: relative; z-index: 2; }
-        .hero-card {
-            background: white; border-radius: var(--radius-lg);
-            box-shadow: 0 20px 60px rgba(31, 61, 92, 0.15);
-            padding: 32px; position: relative;
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
         }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--sangam-orange);
+            color: white;
+            padding: 14px 32px;
+            border-radius: var(--radius-pill);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 15px;
+            box-shadow: var(--shadow-btn);
+            transition: all var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            background: var(--sangam-orange-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(243, 112, 35, 0.4);
+        }
+
+        .btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--sangam-navy);
+            padding: 14px 32px;
+            border-radius: var(--radius-md);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 15px;
+            border: 2px solid var(--sangam-navy);
+            transition: all var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background: var(--sangam-navy);
+            color: white;
+        }
+
+        .hero-visual {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 20px 60px rgba(31, 61, 92, 0.15);
+            padding: 32px;
+            position: relative;
+        }
+
         .hero-card::before {
-            content: ''; position: absolute; top: -12px; left: -12px;
-            width: 60px; height: 60px;
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: -12px;
+            width: 60px;
+            height: 60px;
             border-left: 4px solid var(--sangam-orange);
             border-top: 4px solid var(--sangam-orange);
             border-radius: 8px 0 0 0;
         }
+
         .hero-card::after {
-            content: ''; position: absolute; bottom: -12px; right: -12px;
-            width: 60px; height: 60px;
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            right: -12px;
+            width: 60px;
+            height: 60px;
             border-right: 4px solid var(--sangam-orange);
             border-bottom: 4px solid var(--sangam-orange);
             border-radius: 0 0 8px 0;
         }
+
         .hero-stats {
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
         }
-        .stat-item { text-align: center; padding: 16px; }
+
+        .stat-item {
+            text-align: center;
+            padding: 16px;
+        }
+
         .stat-item .stat-number {
-            font-family: var(--font-heading); font-size: 36px;
-            font-weight: 800; color: var(--sangam-orange);
+            font-family: var(--font-heading);
+            font-size: 36px;
+            font-weight: 800;
+            color: var(--sangam-orange);
             display: block;
         }
+
         .stat-item .stat-label {
-            font-size: 13px; color: var(--sangam-text-muted);
-            font-weight: 600; text-transform: uppercase;
-            letter-spacing: 0.5px; margin-top: 4px;
+            font-size: 13px;
+            color: var(--sangam-text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 4px;
         }
-        .stat-item:nth-child(odd) { border-right: 1px solid var(--sangam-border); }
-        .stat-item:nth-child(1), .stat-item:nth-child(2) { border-bottom: 1px solid var(--sangam-border); }
+
+        .stat-item:nth-child(odd) {
+            border-right: 1px solid var(--sangam-border);
+        }
+
+        .stat-item:nth-child(1),
+        .stat-item:nth-child(2) {
+            border-bottom: 1px solid var(--sangam-border);
+        }
 
         /* ===== SECTION COMMON ===== */
-        .section { padding: 100px 0; }
-        .section-light { background: var(--sangam-bg-light); }
-        .section-header { text-align: center; max-width: 680px; margin: 0 auto 60px; }
-        .section-header .overline {
-            display: inline-block; font-size: 12px; font-weight: 700;
-            text-transform: uppercase; letter-spacing: 2px;
-            color: var(--sangam-orange); margin-bottom: 12px;
+        .section {
+            padding: 100px 0;
         }
-        .section-header h2 { font-size: 36px; margin-bottom: 16px; }
-        .section-header p { font-size: 17px; color: var(--sangam-text-muted); line-height: 1.7; }
+
+        .section-light {
+            background: var(--sangam-bg-light);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 680px;
+            margin: 0 auto 60px;
+        }
+
+        .section-header .overline {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--sangam-orange);
+            margin-bottom: 12px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            font-size: 17px;
+            color: var(--sangam-text-muted);
+            line-height: 1.7;
+        }
 
         /* ===== ABOUT PREVIEW ===== */
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
         .about-image {
-            position: relative; border-radius: var(--radius-lg); overflow: hidden;
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
             aspect-ratio: 4/3;
-            background: linear-gradient(135deg, var(--sangam-navy) 0%, var(--sangam-navy-card) 100%);
-            display: flex; align-items: center; justify-content: center;
         }
-        .about-image-text {
-            color: white; font-family: var(--font-heading);
-            font-size: 72px; font-weight: 800; opacity: 0.15;
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--radius-lg);
         }
-        .about-content h2 { font-size: 36px; margin-bottom: 20px; }
-        .about-content p { margin-bottom: 16px; font-size: 16px; }
+
+        .about-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
         .about-features {
-            display: flex; flex-direction: column; gap: 16px;
-            margin-top: 24px; margin-bottom: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
+            margin-bottom: 32px;
         }
+
         .about-feature {
-            display: flex; align-items: flex-start; gap: 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
         }
+
         .about-feature-icon {
-            width: 40px; height: 40px; min-width: 40px;
+            width: 40px;
+            height: 40px;
+            min-width: 40px;
             background: var(--sangam-orange-glow);
             border-radius: var(--radius-sm);
-            display: flex; align-items: center; justify-content: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             font-size: 18px;
         }
-        .about-feature-text h4 { font-size: 15px; margin-bottom: 2px; }
-        .about-feature-text p { font-size: 14px; color: var(--sangam-text-muted); margin: 0; }
+
+        .about-feature-text h4 {
+            font-size: 15px;
+            margin-bottom: 2px;
+        }
+
+        .about-feature-text p {
+            font-size: 14px;
+            color: var(--sangam-text-muted);
+            margin: 0;
+        }
 
         /* ===== PROGRAMS / COURSES ===== */
         .programs-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
         }
+
         .program-card {
-            background: white; border-radius: var(--radius-lg);
+            background: white;
+            border-radius: var(--radius-lg);
             box-shadow: var(--shadow-card);
-            overflow: hidden; transition: all var(--transition);
+            overflow: hidden;
+            transition: all var(--transition);
             border: 1px solid transparent;
         }
+
         .program-card:hover {
-            transform: translateY(-4px); box-shadow: var(--shadow-card-hover);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-card-hover);
             border-color: var(--sangam-orange);
         }
+
         .program-card-image {
             height: 180px;
-            background: linear-gradient(135deg, var(--sangam-navy) 0%, var(--sangam-navy-card) 100%);
-            display: flex; align-items: center; justify-content: center;
             position: relative;
+            overflow: hidden;
         }
-        .program-card-image .card-icon { font-size: 48px; }
+
+        .program-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .program-card-badge {
-            position: absolute; top: 12px; right: 12px;
-            padding: 4px 12px; border-radius: var(--radius-pill);
-            font-size: 11px; font-weight: 700; text-transform: uppercase;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 4px 12px;
+            border-radius: var(--radius-pill);
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-        .badge-upcoming { background: var(--sangam-orange); color: white; }
-        .badge-open { background: #10B981; color: white; }
-        .badge-completed { background: var(--sangam-text-muted); color: white; }
-        .program-card-body { padding: 24px; }
-        .program-card-body h3 { font-size: 18px; margin-bottom: 8px; }
-        .program-card-body p { font-size: 14px; color: var(--sangam-text-muted); margin-bottom: 16px; }
-        .program-meta {
-            display: flex; gap: 16px; font-size: 12px;
-            color: var(--sangam-text-muted); margin-bottom: 16px;
+
+        .badge-upcoming {
+            background: var(--sangam-orange);
+            color: white;
         }
-        .program-meta span { display: flex; align-items: center; gap: 4px; }
+
+        .badge-open {
+            background: #10B981;
+            color: white;
+        }
+
+        .badge-completed {
+            background: var(--sangam-text-muted);
+            color: white;
+        }
+
+        .program-card-body {
+            padding: 24px;
+        }
+
+        .program-card-body h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        .program-card-body p {
+            font-size: 14px;
+            color: var(--sangam-text-muted);
+            margin-bottom: 16px;
+        }
+
+        .program-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 12px;
+            color: var(--sangam-text-muted);
+            margin-bottom: 16px;
+        }
+
+        .program-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
         .program-card-body .btn-sm {
-            display: inline-flex; padding: 8px 20px;
-            font-size: 13px; font-weight: 600;
+            display: inline-flex;
+            padding: 8px 20px;
+            font-size: 13px;
+            font-weight: 600;
             border-radius: var(--radius-pill);
-            background: var(--sangam-orange); color: white;
+            background: var(--sangam-orange);
+            color: white;
             transition: all var(--transition);
         }
-        .program-card-body .btn-sm:hover { background: var(--sangam-orange-hover); }
+
+        .program-card-body .btn-sm:hover {
+            background: var(--sangam-orange-hover);
+        }
 
         /* ===== AUDIENCE / WHO IS THIS FOR ===== */
         .audience-grid {
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
         }
+
         .audience-card {
             background: var(--sangam-navy-card);
             border-radius: var(--radius-lg);
-            padding: 32px 24px; text-align: center;
+            padding: 32px 24px;
+            text-align: center;
             transition: all var(--transition);
         }
-        .audience-card:hover { transform: translateY(-4px); background: var(--sangam-navy); }
-        .audience-icon {
-            width: 64px; height: 64px;
-            background: rgba(255,255,255,0.1);
-            border-radius: var(--radius-md);
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 16px; font-size: 28px;
+
+        .audience-card:hover {
+            transform: translateY(-4px);
+            background: var(--sangam-navy);
         }
-        .audience-card h3 { color: white; font-size: 16px; margin-bottom: 8px; }
-        .audience-card p { color: rgba(255,255,255,0.7); font-size: 13px; line-height: 1.6; }
+
+        .audience-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            overflow: hidden;
+        }
+
+        .audience-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .audience-card h3 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .audience-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 13px;
+            line-height: 1.6;
+        }
 
         /* ===== IMPACT NUMBERS ===== */
         .impact-strip {
             background: var(--sangam-navy);
             padding: 60px 0;
         }
+
         .impact-grid {
-            display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
             text-align: center;
         }
+
         .impact-item .impact-number {
-            font-family: var(--font-heading); font-size: 48px;
-            font-weight: 800; color: var(--sangam-orange);
-            display: block; margin-bottom: 8px;
+            font-family: var(--font-heading);
+            font-size: 48px;
+            font-weight: 800;
+            color: var(--sangam-orange);
+            display: block;
+            margin-bottom: 8px;
         }
+
         .impact-item .impact-label {
-            color: rgba(255,255,255,0.8); font-size: 14px;
-            font-weight: 500; text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         /* ===== TESTIMONIALS ===== */
         .testimonials-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
         }
+
         .testimonial-card {
-            background: white; border-radius: var(--radius-lg);
-            padding: 32px; box-shadow: var(--shadow-card);
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            box-shadow: var(--shadow-card);
             border: 1px solid var(--sangam-border);
             transition: all var(--transition);
         }
-        .testimonial-card:hover { box-shadow: var(--shadow-card-hover); }
+
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-card-hover);
+        }
+
         .testimonial-quote {
-            font-size: 15px; font-style: italic;
-            line-height: 1.8; color: var(--sangam-text-body);
-            margin-bottom: 20px; position: relative;
+            font-size: 15px;
+            font-style: italic;
+            line-height: 1.8;
+            color: var(--sangam-text-body);
+            margin-bottom: 20px;
+            position: relative;
             padding-left: 20px;
             border-left: 3px solid var(--sangam-orange);
         }
-        .testimonial-author { display: flex; align-items: center; gap: 12px; }
-        .testimonial-avatar {
-            width: 44px; height: 44px;
-            background: linear-gradient(135deg, var(--sangam-navy), var(--sangam-navy-card));
-            border-radius: 50%; display: flex; align-items: center;
-            justify-content: center; color: white;
-            font-family: var(--font-heading); font-weight: 700; font-size: 16px;
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
         }
-        .testimonial-name { font-weight: 700; font-size: 14px; color: var(--sangam-navy); }
-        .testimonial-role { font-size: 12px; color: var(--sangam-text-muted); }
+
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, var(--sangam-navy), var(--sangam-navy-card));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: var(--font-heading);
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .testimonial-name {
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--sangam-navy);
+        }
+
+        .testimonial-role {
+            font-size: 12px;
+            color: var(--sangam-text-muted);
+        }
 
         /* ===== CTA SECTION ===== */
         .cta-section {
             padding: 100px 0;
             background: linear-gradient(135deg, var(--sangam-navy) 0%, var(--sangam-navy-deep) 100%);
-            text-align: center; position: relative; overflow: hidden;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
+
         .cta-section::before {
-            content: ''; position: absolute; top: -100px; right: -100px;
-            width: 400px; height: 400px;
-            background: radial-gradient(circle, rgba(243,112,35,0.15) 0%, transparent 70%);
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(243, 112, 35, 0.15) 0%, transparent 70%);
             border-radius: 50%;
         }
-        .cta-section h2 { color: white; font-size: 40px; margin-bottom: 16px; position: relative; }
-        .cta-section p { color: rgba(255,255,255,0.75); font-size: 18px; margin-bottom: 36px; max-width: 600px; margin-left: auto; margin-right: auto; position: relative; }
-        .cta-buttons { display: flex; gap: 16px; justify-content: center; position: relative; }
+
+        .cta-section h2 {
+            color: white;
+            font-size: 40px;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .cta-section p {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 18px;
+            margin-bottom: 36px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            position: relative;
+        }
 
         /* ===== FOOTER ===== */
         .footer {
             background: var(--sangam-navy-deep);
-            padding: 60px 0 0; color: white;
+            padding: 60px 0 0;
+            color: white;
         }
+
         .footer-grid {
-            display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px; padding-bottom: 40px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
             border-bottom: 1px solid var(--sangam-footer-divider);
         }
-        .footer-brand p { color: var(--sangam-footer-muted); font-size: 14px; margin-top: 16px; line-height: 1.7; }
-        .footer-social { display: flex; gap: 10px; margin-top: 20px; }
-        .footer-social a {
-            width: 36px; height: 36px;
-            background: var(--sangam-orange); border-radius: var(--radius-sm);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 16px; transition: all var(--transition);
+
+        .footer-brand p {
+            color: var(--sangam-footer-muted);
+            font-size: 14px;
+            margin-top: 16px;
+            line-height: 1.7;
         }
-        .footer-social a:hover { background: var(--sangam-orange-hover); transform: translateY(-2px); }
-        .footer h4 { font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; color: white; }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 10px; }
-        .footer-links a { color: var(--sangam-footer-muted); font-size: 14px; transition: color var(--transition); }
-        .footer-links a:hover { color: var(--sangam-orange); }
+
+        .footer-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            width: 36px;
+            height: 36px;
+            background: var(--sangam-orange);
+            border-radius: var(--radius-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            transition: all var(--transition);
+        }
+
+        .footer-social a:hover {
+            background: var(--sangam-orange-hover);
+            transform: translateY(-2px);
+        }
+
+        .footer h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--sangam-footer-muted);
+            font-size: 14px;
+            transition: color var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--sangam-orange);
+        }
+
         .footer-bottom {
-            padding: 20px 0; text-align: center;
-            color: var(--sangam-footer-muted); font-size: 13px;
+            padding: 20px 0;
+            text-align: center;
+            color: var(--sangam-footer-muted);
+            font-size: 13px;
         }
 
         /* ===== ANIMATIONS ===== */
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
+
         .animate-on-scroll {
-            opacity: 0; transform: translateY(30px);
+            opacity: 0;
+            transform: translateY(30px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
-        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         /* ===== COUNTER ANIMATION ===== */
-        .counter { display: inline-block; }
+        .counter {
+            display: inline-block;
+        }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
-            .hero h1 { font-size: 38px; }
-            .hero-inner { grid-template-columns: 1fr; gap: 40px; }
-            .programs-grid { grid-template-columns: repeat(2, 1fr); }
-            .audience-grid { grid-template-columns: repeat(2, 1fr); }
-            .impact-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-            .testimonials-grid { grid-template-columns: 1fr; }
-            .footer-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 768px) {
-            .nav { display: none; }
-            .mobile-toggle { display: block; }
-            .nav.open {
-                display: flex; flex-direction: column;
-                position: absolute; top: 100%; left: 0; right: 0;
-                background: white; padding: 16px; gap: 4px;
-                border-bottom: 1px solid var(--sangam-border);
-                box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            .hero h1 {
+                font-size: 38px;
             }
-            .hero h1 { font-size: 32px; }
-            .hero p { font-size: 16px; }
-            .about-grid { grid-template-columns: 1fr; gap: 32px; }
-            .programs-grid { grid-template-columns: 1fr; }
-            .audience-grid { grid-template-columns: 1fr; }
-            .impact-grid { grid-template-columns: repeat(2, 1fr); }
-            .section { padding: 60px 0; }
-            .section-header h2 { font-size: 28px; }
-            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .audience-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .impact-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: block;
+            }
+
+            .nav.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 16px;
+                gap: 4px;
+                border-bottom: 1px solid var(--sangam-border);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .audience-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- HEADER -->
     <header class="header" id="header">
         <div class="header-inner">
             <a href="/" class="logo" id="logo">
-                <div class="logo-icon"><span>S</span></div>
-                <div class="logo-text">
-                    Sangam DLC
-                    <small>By IIMBx</small>
-                </div>
+                <img class="logo-img" src="../../assets/sangam_gen/sangam_logo.jpg"
+                    alt="Sangam Digital Learning Community Logo">
             </a>
             <nav class="nav" id="mainNav">
                 <a href="/" class="active" id="nav-home">Home</a>
@@ -553,7 +1062,8 @@
                 <a href="/contact-us/" id="nav-contact">Contact</a>
                 <a href="/courses/" class="nav-cta" id="nav-join">Join Community</a>
             </nav>
-            <button class="mobile-toggle" id="mobileToggle" onclick="document.getElementById('mainNav').classList.toggle('open')" aria-label="Toggle navigation">
+            <button class="mobile-toggle" id="mobileToggle"
+                onclick="document.getElementById('mainNav').classList.toggle('open')" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -614,7 +1124,8 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-image animate-on-scroll">
-                    <div class="about-image-text">SANGAM</div>
+                    <img src="../../assets/sangam_gen/sangam_about_img.jpg"
+                        alt="Sangam DLC - Faculty using digital pedagogy tools" loading="lazy">
                 </div>
                 <div class="about-content animate-on-scroll">
                     <div class="section-header" style="text-align:left; margin:0 0 24px 0;">
@@ -660,17 +1171,20 @@
             <div class="section-header animate-on-scroll">
                 <span class="overline">Featured Programs</span>
                 <h2>Courses That Transform Teaching</h2>
-                <p>From digital pedagogy fundamentals to AI-powered classroom innovation — explore programs designed by IIM Bangalore faculty.</p>
+                <p>From digital pedagogy fundamentals to AI-powered classroom innovation — explore programs designed by
+                    IIM Bangalore faculty.</p>
             </div>
             <div class="programs-grid">
                 <div class="program-card animate-on-scroll" id="course-1">
                     <div class="program-card-image">
-                        <div class="card-icon">📚</div>
+                        <img src="../../assets/sangam_gen/course_digital_pedagogy.jpg"
+                            alt="Digital Pedagogy Essentials Course" loading="lazy">
                         <span class="program-card-badge badge-open">Open</span>
                     </div>
                     <div class="program-card-body">
                         <h3>Digital Pedagogy Essentials</h3>
-                        <p>Master the fundamentals of effective online teaching — from course design to student engagement strategies.</p>
+                        <p>Master the fundamentals of effective online teaching — from course design to student
+                            engagement strategies.</p>
                         <div class="program-meta">
                             <span>📅 6 Weeks</span>
                             <span>👥 Self-Paced</span>
@@ -681,12 +1195,14 @@
                 </div>
                 <div class="program-card animate-on-scroll" id="course-2">
                     <div class="program-card-image">
-                        <div class="card-icon">🤖</div>
+                        <img src="../../assets/sangam_gen/course_ai_tools.jpg" alt="AI Tools for Educators Course"
+                            loading="lazy">
                         <span class="program-card-badge badge-upcoming">Upcoming</span>
                     </div>
                     <div class="program-card-body">
                         <h3>AI Tools for Educators</h3>
-                        <p>Learn to integrate ChatGPT, assessment AI, and automated feedback tools into your teaching workflow.</p>
+                        <p>Learn to integrate ChatGPT, assessment AI, and automated feedback tools into your teaching
+                            workflow.</p>
                         <div class="program-meta">
                             <span>📅 4 Weeks</span>
                             <span>👥 Cohort-Based</span>
@@ -697,12 +1213,14 @@
                 </div>
                 <div class="program-card animate-on-scroll" id="course-3">
                     <div class="program-card-image">
-                        <div class="card-icon">🎬</div>
+                        <img src="../../assets/sangam_gen/course_video_lectures.jpg"
+                            alt="Creating Engaging Video Lectures Course" loading="lazy">
                         <span class="program-card-badge badge-open">Open</span>
                     </div>
                     <div class="program-card-body">
                         <h3>Creating Engaging Video Lectures</h3>
-                        <p>Production techniques, storyboarding, and tools to create professional-quality educational video content.</p>
+                        <p>Production techniques, storyboarding, and tools to create professional-quality educational
+                            video content.</p>
                         <div class="program-meta">
                             <span>📅 3 Weeks</span>
                             <span>👥 Self-Paced</span>
@@ -725,24 +1243,31 @@
             </div>
             <div class="audience-grid">
                 <div class="audience-card animate-on-scroll" id="audience-1">
-                    <div class="audience-icon">👨‍🏫</div>
+                    <div class="audience-icon"><img src="../../assets/sangam_gen/audience_faculty.jpg"
+                            alt="Early Stage Faculty" loading="lazy"></div>
                     <h3>University Faculty</h3>
-                    <p>Professors and lecturers looking to modernise their teaching with digital tools and blended learning.</p>
+                    <p>Professors and lecturers looking to modernise their teaching with digital tools and blended
+                        learning.</p>
                 </div>
                 <div class="audience-card animate-on-scroll" id="audience-2">
-                    <div class="audience-icon">🎨</div>
+                    <div class="audience-icon"><img src="../../assets/sangam_gen/audience_designers.jpg"
+                            alt="Educational Content Creators" loading="lazy"></div>
                     <h3>Instructional Designers</h3>
                     <p>Professionals designing engaging, outcome-aligned online courses and learning experiences.</p>
                 </div>
                 <div class="audience-card animate-on-scroll" id="audience-3">
-                    <div class="audience-icon">💻</div>
+                    <div class="audience-icon"><img src="../../assets/sangam_gen/audience_edtech.jpg"
+                            alt="Skilling Educators" loading="lazy"></div>
                     <h3>EdTech Professionals</h3>
-                    <p>Technology leaders implementing LMS platforms, analytics, and digital infrastructure in institutions.</p>
+                    <p>Technology leaders implementing LMS platforms, analytics, and digital infrastructure in
+                        institutions.</p>
                 </div>
                 <div class="audience-card animate-on-scroll" id="audience-4">
-                    <div class="audience-icon">🏛️</div>
+                    <div class="audience-icon"><img src="../../assets/sangam_gen/audience_leaders.jpg"
+                            alt="Training Institutions" loading="lazy"></div>
                     <h3>Academic Leaders</h3>
-                    <p>Deans, department heads, and policymakers driving digital transformation in their institutions.</p>
+                    <p>Deans, department heads, and policymakers driving digital transformation in their institutions.
+                    </p>
                 </div>
             </div>
         </div>
@@ -783,7 +1308,8 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card animate-on-scroll" id="testimonial-1">
                     <div class="testimonial-quote">
-                        "Sangam's digital pedagogy course completely changed how I approach online teaching. My student engagement scores improved by 40% in one semester."
+                        "Sangam's digital pedagogy course completely changed how I approach online teaching. My student
+                        engagement scores improved by 40% in one semester."
                     </div>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">DR</div>
@@ -795,7 +1321,8 @@
                 </div>
                 <div class="testimonial-card animate-on-scroll" id="testimonial-2">
                     <div class="testimonial-quote">
-                        "The AI Tools for Educators workshop gave me practical skills I use every day. My assessment design is now 3x faster with AI assistance."
+                        "The AI Tools for Educators workshop gave me practical skills I use every day. My assessment
+                        design is now 3x faster with AI assistance."
                     </div>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">AK</div>
@@ -807,7 +1334,8 @@
                 </div>
                 <div class="testimonial-card animate-on-scroll" id="testimonial-3">
                     <div class="testimonial-quote">
-                        "The peer community is what makes Sangam special. I've connected with educators across 15 states and we regularly share teaching innovations."
+                        "The peer community is what makes Sangam special. I've connected with educators across 15 states
+                        and we regularly share teaching innovations."
                     </div>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">SP</div>
@@ -833,7 +1361,8 @@
                 <a href="/courses/" class="btn-primary" id="cta-join" style="font-size:17px; padding: 16px 40px;">
                     Join Sangam — It's Free →
                 </a>
-                <a href="/contact-us/" class="btn-secondary" id="cta-contact" style="border-color: rgba(255,255,255,0.4); color: white;">
+                <a href="/contact-us/" class="btn-secondary" id="cta-contact"
+                    style="border-color: rgba(255,255,255,0.4); color: white;">
                     Get in Touch
                 </a>
             </div>
@@ -846,11 +1375,8 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo" style="margin-bottom: 8px;">
-                        <div class="logo-icon"><span>S</span></div>
-                        <div class="logo-text" style="color: white;">
-                            Sangam DLC
-                            <small style="color: var(--sangam-footer-muted);">By IIMBx</small>
-                        </div>
+                        <img class="logo-img" src="../../assets/sangam_gen/sangam_logo.jpg" alt="Sangam DLC Logo"
+                            style="filter: brightness(10);">
                     </div>
                     <p>
                         Sangam Digital Learning Community — India's premier platform for
@@ -858,9 +1384,11 @@
                         and blended teaching methods.
                     </p>
                     <div class="footer-social">
-                        <a href="https://www.instagram.com/sangamdlc/" aria-label="Instagram" id="social-instagram">📷</a>
+                        <a href="https://www.instagram.com/sangamdlc/" aria-label="Instagram"
+                            id="social-instagram">📷</a>
                         <a href="https://www.youtube.com/@SangamDLC" aria-label="YouTube" id="social-youtube">▶</a>
-                        <a href="https://www.linkedin.com/company/sangamdlc/" aria-label="LinkedIn" id="social-linkedin">in</a>
+                        <a href="https://www.linkedin.com/company/sangamdlc/" aria-label="LinkedIn"
+                            id="social-linkedin">in</a>
                     </div>
                 </div>
                 <div>
@@ -892,7 +1420,8 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2026 Sangam Digital Learning Community — An IIMBx Initiative. IIM Bangalore. All rights reserved.</p>
+                <p>© 2026 Sangam Digital Learning Community — An IIMBx Initiative. IIM Bangalore. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
@@ -947,4 +1476,5 @@
         }
     </script>
 </body>
+
 </html>

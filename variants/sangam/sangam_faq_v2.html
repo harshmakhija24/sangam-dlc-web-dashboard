@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sangam DLC — Help &amp; Knowledge Base | IIMBx</title>
+<!-- Google Fonts: Outfit, Plus Jakarta Sans, Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms & Container Queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "inverse-surface": "#2d3038",
+            "secondary-fixed-dim": "#ffb86f",
+            "tertiary-fixed": "#c5e8f9",
+            "on-secondary-fixed-variant": "#693c00",
+            "outline": "#8d716b",
+            "primary": "#96220e",
+            "surface-variant": "#e0e2ec",
+            "inverse-primary": "#ffb4a5",
+            "primary-fixed": "#ffdad3",
+            "on-tertiary-fixed-variant": "#2a4b59",
+            "surface-dim": "#d8d9e3",
+            "inverse-on-surface": "#eff0fa",
+            "background": "#f9f9ff",
+            "surface-tint": "#ad321d",
+            "surface-container": "#ecedf7",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "on-secondary-container": "#6c3e00",
+            "on-background": "#191c23",
+            "surface-bright": "#f9f9ff",
+            "on-tertiary-fixed": "#001f2a",
+            "secondary-fixed": "#ffdcbd",
+            "primary-container": "#b83a24",
+            "surface-container-high": "#e6e8f2",
+            "on-secondary": "#ffffff",
+            "surface": "#f9f9ff",
+            "on-tertiary-container": "#c8ebfc",
+            "on-primary-container": "#ffded8",
+            "tertiary-fixed-dim": "#aaccdc",
+            "tertiary": "#325361",
+            "on-surface": "#191c23",
+            "surface-container-highest": "#e0e2ec",
+            "secondary": "#8a5100",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "primary-fixed-dim": "#ffb4a5",
+            "on-primary-fixed": "#3f0400",
+            "on-secondary-fixed": "#2c1600",
+            "outline-variant": "#e0bfb9",
+            "on-surface-variant": "#59413c",
+            "surface-container-low": "#f2f3fd",
+            "tertiary-container": "#4a6b7a",
+            "on-primary-fixed-variant": "#8b1907",
+            "on-error-container": "#93000a",
+            "secondary-container": "#ffa43c",
+            "on-primary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin-mobile": "1.25rem",
+            "gutter-mobile": "1rem",
+            "space-xs": "0.25rem",
+            "margin": "3rem"
+          },
+          "fontFamily": {
+            "headline-lg-mobile": ["Outfit"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Outfit"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "display-lg": ["Outfit"],
+            "headline-sm": ["Outfit"],
+            "headline-md": ["Outfit"],
+            "title-md": ["Plus Jakarta Sans"],
+            "label-md": ["Inter"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Inter"],
+            "headline-lg": ["Outfit"]
+          },
+          "fontSize": {
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(184, 58, 36, 0.08);
+      box-shadow: 0 4px 24px -2px rgba(24, 27, 34, 0.04), 0 2px 6px -1px rgba(184, 58, 36, 0.03);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px -4px rgba(24, 27, 34, 0.07), 0 4px 12px -2px rgba(184, 58, 36, 0.06);
+    }
+    .hero-glow {
+      background: radial-gradient(circle at 50% 20%, rgba(255, 164, 60, 0.12) 0%, rgba(184, 58, 36, 0.05) 45%, transparent 75%);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md text-body-md antialiased selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Announcement Bar -->
+<div class="bg-primary text-on-primary px-4 py-2 text-center text-label-md font-label-md flex items-center justify-center gap-2 relative z-50">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full bg-white/20 text-white text-label-sm font-label-sm font-bold tracking-wider mr-1">IIMBx HUB</span>
+<span>Join our next Live Faculty Masterclass on Generative AI Pedagogies • Friday, 4:00 PM IST</span>
+<a class="inline-flex items-center underline hover:text-primary-fixed ml-1 font-semibold transition-colors duration-150" href="#">
+      Register Now <span class="material-symbols-outlined text-sm ml-0.5" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<!-- Main TopAppBar (Docked, Sticky) -->
+<header class="bg-surface/80 dark:bg-surface/80 backdrop-blur-md text-primary dark:text-primary-fixed shadow-sm dark:shadow-none docked full-width top-0 sticky z-40">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin py-space-sm max-w-[1440px] mx-auto">
+<!-- Logo + Brand Identity -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-2xl" data-icon="school">school</span>
+</div>
+<div class="flex items-center gap-2">
+<a class="text-headline-sm font-headline-sm text-primary dark:text-primary-fixed tracking-tight font-bold" href="#">Sangam DLC</a>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-surface-container-highest text-on-surface-variant font-semibold border border-outline-variant/30">IIMBx</span>
+</div>
+</div>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-space-lg text-body-md font-body-md">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">About</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Courses</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Resources</a>
+<!-- Active FAQ Navigation -->
+<a class="text-primary dark:text-primary-fixed font-bold relative flex items-center gap-1.5 py-1" href="#">
+<span>FAQ</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container inline-block"></span>
+</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors duration-200" href="#">Contact</a>
+</nav>
+<!-- Trailing Action Buttons -->
+<div class="flex items-center gap-space-sm">
+<button class="hidden sm:inline-flex text-on-surface-variant hover:text-primary font-title-md text-title-md px-3 py-1.5 rounded-full transition-colors duration-200">
+          Faculty Sign In
+        </button>
+<button class="rounded-full bg-primary-container text-on-primary px-space-md py-2 text-title-md font-title-md font-medium hover:bg-primary shadow-sm hover:shadow active:scale-95 transition-all duration-150 inline-flex items-center gap-1.5">
+<span class="material-symbols-outlined text-lg" data-icon="person">person</span>
+<span>Join Community</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section with Ambient Lighting Mesh -->
+<section class="relative pt-12 pb-14 px-margin-mobile md:px-margin hero-glow overflow-hidden">
+<!-- Ambient Blur Spotlights -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-80 bg-gradient-to-b from-secondary-container/15 via-primary-container/5 to-transparent blur-3xl pointer-events-none -z-10"></div>
+<div class="max-w-4xl mx-auto text-center flex flex-col items-center">
+<!-- Breadcrumb / Overline Badge -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container border border-outline-variant/30 text-primary text-label-md font-label-md mb-4 shadow-sm">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="help_center">help_center</span>
+<span class="tracking-wide">SANGAM DLC HELP &amp; KNOWLEDGE BASE</span>
+</div>
+<!-- Main Headline with Creative Editorial Accent -->
+<h1 class="font-headline-lg-mobile md:font-display-lg text-headline-lg-mobile md:text-display-lg text-on-background tracking-tight max-w-3xl mb-4">
+        How can we <span class="relative inline-block text-primary-container font-extrabold underline decoration-secondary-container decoration-wavy decoration-2 underline-offset-8">help you</span> teach &amp; innovate?
+      </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-8 leading-relaxed">
+        Find quick answers, pedagogical guidance, LMS integration guides, and platform support for the IIMBx digital teaching ecosystem.
+      </p>
+<!-- Prominent Search Bar -->
+<div class="w-full max-w-2xl relative mb-6">
+<div class="glass-card rounded-2xl p-1.5 flex items-center gap-2 border border-outline-variant/40 shadow-md">
+<span class="material-symbols-outlined text-outline ml-3 text-2xl" data-icon="search">search</span>
+<input class="w-full bg-transparent border-none text-on-surface placeholder:text-outline/70 focus:ring-0 text-body-md font-body-md py-2.5 px-1 outline-none" placeholder='Search questions by topic, keyword (e.g. "certificates", "Canvas", "ChatGPT rubrics")...' type="text"/>
+<button class="rounded-xl bg-primary-container text-on-primary px-5 py-2.5 text-title-md font-title-md hover:bg-primary font-medium transition-all shadow-sm flex-shrink-0 flex items-center gap-1.5 active:scale-95">
+<span>Search FAQs</span>
+<span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Quick Filter Chips -->
+<div class="flex flex-wrap items-center justify-center gap-2 pt-1 max-w-3xl">
+<!-- Active Filter -->
+<button class="px-3.5 py-1.5 rounded-full bg-inverse-surface text-inverse-on-surface text-label-md font-label-md transition-all shadow-sm">
+          All Topics (24)
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/30 hover:border-primary-container/40 hover:text-primary text-label-md font-label-md transition-colors">
+          Getting Started
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/30 hover:border-primary-container/40 hover:text-primary text-label-md font-label-md transition-colors">
+          Certifications &amp; Badges
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/30 hover:border-primary-container/40 hover:text-primary text-label-md font-label-md transition-colors">
+          Technical &amp; LMS
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/30 hover:border-primary-container/40 hover:text-primary text-label-md font-label-md transition-colors">
+          Pedagogy &amp; AI Prompts
+        </button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant border border-outline-variant/30 hover:border-primary-container/40 hover:text-primary text-label-md font-label-md transition-colors">
+          Institutional Access
+        </button>
+</div>
+</div>
+</section>
+<!-- Main Bento-Box Grid Section -->
+<main class="flex-grow px-margin-mobile md:px-margin max-w-[1440px] mx-auto w-full pb-space-xl">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Explore Knowledge by Category</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Structured documentation and direct pedagogical solutions curated by IIMB faculty mentors.</p>
+</div>
+<div class="hidden sm:flex items-center gap-2 text-label-md font-label-md text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Updated 2 hours ago</span>
+</div>
+</div>
+<!-- Bento Grid Container -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1: Featured Wide Bento Card (Spans 2 columns on lg) -->
+<div class="glass-card rounded-2xl p-6 lg:col-span-2 flex flex-col justify-between border-t-2 border-t-primary-container relative overflow-hidden group">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary-container/5 rounded-full blur-2xl pointer-events-none"></div>
+<div>
+<!-- Header info -->
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-primary-container/10 text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Getting Started &amp; Onboarding</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Everything you need to begin your journey with Sangam DLC and set up your educator profile.</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-label-sm font-label-sm bg-primary-container/10 text-primary-container font-semibold border border-primary-container/20">
+              Most Popular
+            </span>
+</div>
+<!-- Top 3 Question Links with subtle pill counter -->
+<div class="space-y-3 my-6">
+<a class="p-3.5 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-semibold">1</span>
+<span class="font-title-md text-title-md text-on-surface group-hover/item:text-primary transition-colors">What is Sangam DLC, and who is eligible to join the network?</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary group-hover/item:translate-x-0.5 transition-all text-xl" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="p-3.5 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-semibold">2</span>
+<span class="font-title-md text-title-md text-on-surface group-hover/item:text-primary transition-colors">How do I access the verified IIMBx teaching repository?</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary group-hover/item:translate-x-0.5 transition-all text-xl" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="p-3.5 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<div class="flex items-center gap-3">
+<span class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center font-semibold">3</span>
+<span class="font-title-md text-title-md text-on-surface group-hover/item:text-primary transition-colors">Is membership in Sangam DLC restricted to IIM faculty only?</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary group-hover/item:translate-x-0.5 transition-all text-xl" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Footer Action Link -->
+<div class="pt-2 border-t border-outline-variant/20 flex items-center justify-between">
+<a class="inline-flex items-center gap-1 font-title-md text-title-md font-semibold text-primary hover:text-primary-container transition-colors" href="#">
+<span>View all 8 Getting Started FAQs</span>
+<span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<span class="text-label-sm font-label-sm text-on-surface-variant">8 Guides Available</span>
+</div>
+</div>
+<!-- Card 2: Certificates & Faculty Badges -->
+<div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-secondary relative overflow-hidden group">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Certificates &amp; Badges</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Accreditation, LinkedIn credentials, and masterclass records.</p>
+</div>
+</div>
+<div class="space-y-2.5 my-5">
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">Are verifiable digital certificates issued upon completion?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">How do I add Sangam DLC teaching credentials to LinkedIn?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">What are the criteria for Master Online Educator badge?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/20">
+<a class="inline-flex items-center gap-1 font-title-md text-title-md font-semibold text-primary hover:text-primary-container transition-colors" href="#">
+<span>View all 5 Certification FAQs</span>
+<span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3: Technical & LMS Integrations -->
+<div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-tertiary relative overflow-hidden group">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="terminal">terminal</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Technical &amp; LMS Integrations</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">LTI standard, SSO access, video pipelines, and portals.</p>
+</div>
+</div>
+<div class="space-y-2.5 my-5">
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">Which LMS platforms (Moodle, Canvas) support LTI integration?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">I cannot access 4K video masterclasses. How to troubleshoot?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">How do I reset my Sangam DLC faculty portal credentials?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/20">
+<a class="inline-flex items-center gap-1 font-title-md text-title-md font-semibold text-primary hover:text-primary-container transition-colors" href="#">
+<span>View all 7 Tech FAQs</span>
+<span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 4: AI Pedagogy & Prompt Kits (Badge 'New') -->
+<div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-primary-container relative overflow-hidden group">
+<div>
+<div class="flex items-start justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-container to-secondary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">AI Pedagogy &amp; Prompt Kits</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Generative AI rubrics, conversational agents, and cases.</p>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm bg-secondary-container text-on-secondary-container font-bold">
+              New
+            </span>
+</div>
+<div class="space-y-2.5 my-5">
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">Can I adapt ChatGPT Socratic prompt kits for my syllabus?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">Are interactive micro-simulation spreadsheets tablet accessible?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">How can I contribute my own peer-reviewed pedagogical artifact?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/20">
+<a class="inline-flex items-center gap-1 font-title-md text-title-md font-semibold text-primary hover:text-primary-container transition-colors" href="#">
+<span>View all 6 Pedagogy FAQs</span>
+<span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 5: Institutional Sponsorship & Bulk Licensing -->
+<div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-secondary relative overflow-hidden group">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="corporate_fare">corporate_fare</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Institutional Sponsorship</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">University department agreements, invoicing, and cohorts.</p>
+</div>
+</div>
+<div class="space-y-2.5 my-5">
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">How do university deans apply for institutional enrollment?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">What payment gateways and GST invoices are supported?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">Can we schedule a dedicated private onboarding workshop?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/20">
+<a class="inline-flex items-center gap-1 font-title-md text-title-md font-semibold text-primary hover:text-primary-container transition-colors" href="#">
+<span>View all 4 Institutional FAQs</span>
+<span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 6: Research & Working Papers -->
+<div class="glass-card rounded-2xl p-6 flex flex-col justify-between border-t-2 border-t-outline relative overflow-hidden group">
+<div>
+<div class="flex items-center gap-3 mb-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl" data-icon="menu_book">menu_book</span>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-on-surface font-bold">Research &amp; Working Papers</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Academic citations, working manuscripts, and peer reviews.</p>
+</div>
+</div>
+<div class="space-y-2.5 my-5">
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">Where can I download the IIMBx Working Paper on GenAI?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">How are peer evaluations moderated for teaching rubrics?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+<a class="p-3 rounded-xl bg-surface-container-low/70 hover:bg-surface-container transition-all flex items-center justify-between group/item border border-outline-variant/15" href="#">
+<span class="font-body-sm text-body-sm text-on-surface group-hover/item:text-primary transition-colors pr-2">How do I cite Sangam DLC teaching frameworks in papers?</span>
+<span class="material-symbols-outlined text-outline group-hover/item:text-primary text-lg flex-shrink-0" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<div class="pt-3 border-t border-outline-variant/20">
+<a class="inline-flex items-center gap-1 font-title-md text-title-md font-semibold text-primary hover:text-primary-container transition-colors" href="#">
+<span>View all 4 Research FAQs</span>
+<span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</main>
+<!-- Support Banner / Dedicated Contact Section -->
+<section class="px-margin-mobile md:px-margin max-w-[1440px] mx-auto w-full pb-16">
+<div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden border border-primary-container/20 bg-gradient-to-br from-surface-container-low via-surface-container to-secondary-fixed/10">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary-container/10 text-primary-container text-label-sm font-label-sm font-semibold mb-3">
+<span class="material-symbols-outlined text-sm" data-icon="support_agent">support_agent</span>
+<span>HUMAN PEDAGOGY DESK</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight mb-2">Still need help with your courses or classroom tech?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-2xl leading-relaxed">
+          Our academic coordinators and technical support team at IIMBx are available Monday to Friday, 9:00 AM – 6:00 PM IST to assist with syllabus integration, LTI configs, or custom workshops.
+        </p>
+<div class="flex flex-wrap items-center gap-4">
+<!-- Secondary Action Button -->
+<button class="rounded-full border-[1.5px] border-primary-container text-primary-container hover:bg-primary-container/5 px-6 py-2.5 font-title-md text-title-md font-semibold transition-all inline-flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="mail">mail</span>
+<span>Email Academic Support</span>
+</button>
+<!-- Primary Terracotta Button -->
+<button class="rounded-full bg-primary-container text-on-primary hover:bg-primary px-6 py-2.5 font-title-md text-title-md font-semibold shadow-md transition-all inline-flex items-center gap-2 active:scale-95">
+<span class="material-symbols-outlined text-lg" data-icon="headset_mic">headset_mic</span>
+<span>Connect with Live Faculty Desk</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Mobile Bottom Navigation Bar (Visible on mobile only, hidden md:flex) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-gutter-mobile py-space-xs pb-safe bg-surface/90 dark:bg-surface/90 backdrop-blur-lg shadow-lg dark:shadow-none">
+<!-- Library (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="local_library">local_library</span>
+<span class="text-label-sm font-label-sm mt-0.5">Library</span>
+</a>
+<!-- Search / FAQ (Active for Help & Knowledge Base Search Intent) -->
+<a class="flex flex-col items-center justify-center bg-primary-fixed text-on-primary-fixed dark:bg-primary-container dark:text-on-primary-container rounded-full px-space-md py-space-xs active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="search">search</span>
+<span class="text-label-sm font-label-sm mt-0.5">Search</span>
+</a>
+<!-- Saved (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="bookmark">bookmark</span>
+<span class="text-label-sm font-label-sm mt-0.5">Saved</span>
+</a>
+<!-- Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant dark:text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="account_circle">account_circle</span>
+<span class="text-label-sm font-label-sm mt-0.5">Profile</span>
+</a>
+</nav>
+<!-- Footer Component adhering strictly to the JSON Anchor -->
+<footer class="bg-surface-container-low dark:bg-surface-container-low full-width text-center">
+<div class="flex flex-col items-center justify-center gap-space-md px-margin-mobile md:px-margin py-space-xl max-w-5xl mx-auto">
+<!-- Brand Logo / Headline -->
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="school">school</span>
+<span class="text-title-lg font-title-lg text-primary dark:text-primary-fixed font-bold">Sangam DLC</span>
+</div>
+<!-- Navigation Links from JSON Anchor -->
+<div class="flex flex-wrap items-center justify-center gap-6 text-label-sm font-label-sm">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all duration-200" href="#">Academic Integrity</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all duration-200" href="#">Faculty Directory</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed hover:underline transition-all duration-200" href="#">Research Archive</a>
+<a class="text-primary dark:text-primary-fixed font-semibold hover:underline transition-all duration-200" href="#">Support</a>
+</div>
+<!-- Copyright text exact from JSON Anchor -->
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2">
+        © 2024 Sangam DLC, IIMBx Digital Learning Community. All rights reserved.
+      </p>
+</div>
+</footer>
+</body></html>

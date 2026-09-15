@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Resources &amp; Artifacts | Sangam DLC - IIMBx</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration verbatim -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-background": "#191c23",
+            "error": "#ba1a1a",
+            "background": "#f9f9ff",
+            "primary-container": "#b83a24",
+            "secondary-container": "#ffa43c",
+            "on-tertiary-fixed-variant": "#2a4b59",
+            "on-error": "#ffffff",
+            "surface-tint": "#ad321d",
+            "secondary": "#8a5100",
+            "on-surface-variant": "#59413c",
+            "on-primary": "#ffffff",
+            "tertiary-fixed": "#c5e8f9",
+            "on-tertiary-container": "#c8ebfc",
+            "on-surface": "#191c23",
+            "primary": "#96220e",
+            "on-secondary-fixed": "#2c1600",
+            "surface-container-high": "#e6e8f2",
+            "surface-variant": "#e0e2ec",
+            "inverse-surface": "#2d3038",
+            "on-secondary-fixed-variant": "#693c00",
+            "secondary-fixed": "#ffdcbd",
+            "on-secondary": "#ffffff",
+            "primary-fixed-dim": "#ffb4a5",
+            "surface": "#f9f9ff",
+            "on-primary-fixed-variant": "#8b1907",
+            "on-primary-container": "#ffded8",
+            "tertiary-fixed-dim": "#aaccdc",
+            "tertiary": "#325361",
+            "outline": "#8d716b",
+            "surface-container-lowest": "#ffffff",
+            "surface-bright": "#f9f9ff",
+            "inverse-on-surface": "#eff0fa",
+            "tertiary-container": "#4a6b7a",
+            "surface-container": "#ecedf7",
+            "on-primary-fixed": "#3f0400",
+            "inverse-primary": "#ffb4a5",
+            "on-tertiary-fixed": "#001f2a",
+            "primary-fixed": "#ffdad3",
+            "on-secondary-container": "#6c3e00",
+            "secondary-fixed-dim": "#ffb86f",
+            "surface-dim": "#d8d9e3",
+            "surface-container-highest": "#e0e2ec",
+            "error-container": "#ffdad6",
+            "on-tertiary": "#ffffff",
+            "outline-variant": "#e0bfb9",
+            "surface-container-low": "#f2f3fd",
+            "on-error-container": "#93000a"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "margin": "3rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "margin-mobile": "1.25rem",
+            "gutter": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-sm": "0.5rem",
+            "gutter-mobile": "1rem"
+          },
+          "fontFamily": {
+            "title-lg": ["Plus Jakarta Sans"],
+            "display-lg": ["Outfit"],
+            "headline-lg": ["Outfit"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Outfit"],
+            "headline-sm": ["Outfit"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Inter"],
+            "headline-lg-mobile": ["Outfit"],
+            "label-md": ["Inter"],
+            "headline-md": ["Outfit"],
+            "title-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 4px 24px -2px rgba(24, 27, 34, 0.04), 0 2px 6px -1px rgba(184, 58, 36, 0.03);
+      border: 1px solid rgba(184, 58, 36, 0.09);
+    }
+    .glass-card:hover {
+      box-shadow: 0 16px 36px -4px rgba(24, 27, 34, 0.08), 0 4px 12px -2px rgba(184, 58, 36, 0.06);
+    }
+    .hero-glow {
+      background: radial-gradient(circle at 50% 15%, rgba(184, 58, 36, 0.08) 0%, rgba(255, 164, 60, 0.04) 45%, transparent 75%);
+    }
+    .wave-brush {
+      position: relative;
+      display: inline-block;
+      white-space: nowrap;
+    }
+    .wave-brush::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 8px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 12" fill="none"><path d="M2 7C45 2 95 11 140 6C185 1 225 10 258 5" stroke="%23b83a24" stroke-width="4" stroke-linecap="round"/></svg>') no-repeat center;
+      background-size: 100% 100%;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased selection:bg-primary selection:text-on-primary min-h-screen flex flex-col">
+<!-- 1. Top Announcement Banner -->
+<div class="bg-[#4a1209] text-on-primary text-label-md font-label-md py-2.5 px-4 sticky top-0 z-50 transition-all border-b border-white/10">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<div class="flex items-center gap-3 mx-auto">
+<span class="bg-secondary-container text-on-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider px-2.5 py-0.5 rounded-full font-bold">IIMBx HUB</span>
+<span class="text-white/90">Join our next Live Faculty Masterclass on Generative AI Pedagogies • Friday, 4:00 PM IST</span>
+<a class="inline-flex items-center gap-1 font-semibold text-secondary-fixed hover:text-white underline underline-offset-4 transition-colors" href="#register">
+          Register Now <span class="material-symbols-outlined text-label-md" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- 2. Shared TopNavBar (Web Header) -->
+<header class="bg-surface/80 dark:bg-inverse-surface/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20 shadow-sm docked full-width sticky top-9 z-40">
+<div class="flex justify-between items-center w-full px-gutter max-w-7xl mx-auto h-20">
+<!-- Logo + Institution Tag -->
+<div class="flex items-center gap-3.5">
+<a class="flex items-center gap-3" href="#home">
+<div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-2xl font-bold" data-icon="hub">hub</span>
+</div>
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm text-primary dark:text-inverse-primary tracking-tight">Sangam DLC</span>
+<span class="text-[10px] uppercase font-bold tracking-widest text-outline -mt-1">IIMBx Digital Learning Community</span>
+</div>
+</a>
+<span class="hidden lg:inline-flex items-center text-label-sm font-label-sm bg-surface-container text-on-surface-variant px-2 py-0.5 rounded-full border border-outline-variant/50">
+          Executive Pedagogy
+        </span>
+</div>
+<!-- Navigation Links (Active: Resources) -->
+<nav class="hidden md:flex items-center gap-7">
+<a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors text-label-md font-label-md" href="#home">Home</a>
+<a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors text-label-md font-label-md" href="#about">About</a>
+<a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors text-label-md font-label-md" href="#courses">Courses</a>
+<a class="text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary dark:border-inverse-primary pb-1 text-label-md font-label-md" href="#resources">Resources</a>
+<a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors text-label-md font-label-md" href="#faq">FAQ</a>
+<a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors text-label-md font-label-md" href="#contact">Contact</a>
+</nav>
+<!-- Trailing Action Buttons -->
+<div class="flex items-center gap-4">
+<button class="text-label-md font-label-md text-primary hover:text-primary-container px-3 py-2 transition-colors">
+          Faculty Sign In
+        </button>
+<button class="bg-primary-container hover:bg-primary text-on-primary rounded-full px-5 py-2.5 text-label-md font-label-md flex items-center gap-2 shadow-sm transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[18px]" data-icon="groups">groups</span>
+<span>Join Community</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow hero-glow">
+<!-- Hero & Search Section -->
+<section class="max-w-7xl mx-auto px-gutter pt-12 pb-8">
+<!-- Category Pill Badge -->
+<div class="flex justify-center mb-5">
+<span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-low border border-outline-variant/60 text-primary font-label-md text-label-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          IIMBx PEDAGOGY HUB • 100+ CURATED TEACHING ARTIFACTS
+        </span>
+</div>
+<!-- Main Headline & Subtitle -->
+<div class="text-center max-w-4xl mx-auto mb-10">
+<h1 class="text-display-lg font-display-lg text-on-surface tracking-tight mb-4">
+          Curated <span class="wave-brush text-primary">Resources &amp; Artifacts</span> for Digital Pedagogy
+        </h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto">
+          Discover 100+ classroom prompts, high-impact video tutorials, LMS syllabus templates, and peer-reviewed working papers curated by IIMBx faculty.
+        </p>
+</div>
+<!-- Search & Input Box -->
+<div class="max-w-3xl mx-auto mb-8">
+<div class="relative flex items-center rounded-2xl bg-surface-container-lowest shadow-md border border-outline-variant/60 p-2 focus-within:border-primary-container focus-within:ring-4 focus-within:ring-primary-container/10 transition-all">
+<span class="material-symbols-outlined text-outline ml-3 mr-2 text-2xl" data-icon="search">search</span>
+<input class="w-full bg-transparent border-none text-body-md font-body-md text-on-surface focus:outline-none focus:ring-0 placeholder:text-outline/70" placeholder='Search by topic, keyword, or LMS format (e.g., "ChatGPT rubrics", "Canvas", "Excel simulations")...' type="text"/>
+<button class="bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md px-6 py-3 rounded-xl flex items-center gap-2 transition-colors shrink-0 shadow-sm">
+<span>Search</span>
+<span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Quick Statistics Row -->
+<div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 text-center">
+<div class="p-3 bg-surface-container-lowest/60 rounded-xl border border-outline-variant/30">
+<div class="text-headline-sm font-headline-sm text-primary">120+</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant">Verified Artifacts</div>
+</div>
+<div class="p-3 bg-surface-container-lowest/60 rounded-xl border border-outline-variant/30">
+<div class="text-headline-sm font-headline-sm text-primary">4.9 / 5</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant">Educator Rating</div>
+</div>
+<div class="p-3 bg-surface-container-lowest/60 rounded-xl border border-outline-variant/30">
+<div class="text-headline-sm font-headline-sm text-primary">14.2k</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant">Faculty Downloads</div>
+</div>
+<div class="p-3 bg-surface-container-lowest/60 rounded-xl border border-outline-variant/30">
+<div class="text-headline-sm font-headline-sm text-primary">38</div>
+<div class="text-label-sm font-label-sm text-on-surface-variant">IIM Faculty Contributors</div>
+</div>
+</div>
+<!-- Primary Filter Pills / Tabs -->
+<div class="flex items-center gap-2.5 overflow-x-auto pb-3 mb-6 no-scrollbar border-b border-outline-variant/40">
+<button class="bg-primary-container text-on-primary rounded-full px-4 py-2 text-label-md font-label-md whitespace-nowrap shadow-sm flex items-center gap-2">
+<span>All Artifacts</span>
+<span class="bg-white/20 text-on-primary px-2 py-0.5 rounded-full text-label-sm">128</span>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant rounded-full px-4 py-2 text-label-md font-label-md whitespace-nowrap border border-outline-variant/40 transition-colors flex items-center gap-2">
+<span>Prompts &amp; AI Rubrics</span>
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full text-label-sm">42</span>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant rounded-full px-4 py-2 text-label-md font-label-md whitespace-nowrap border border-outline-variant/40 transition-colors flex items-center gap-2">
+<span>Video Masterclasses</span>
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full text-label-sm">28</span>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant rounded-full px-4 py-2 text-label-md font-label-md whitespace-nowrap border border-outline-variant/40 transition-colors flex items-center gap-2">
+<span>Course Templates &amp; LMS</span>
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full text-label-sm">31</span>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant rounded-full px-4 py-2 text-label-md font-label-md whitespace-nowrap border border-outline-variant/40 transition-colors flex items-center gap-2">
+<span>Research &amp; Working Papers</span>
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full text-label-sm">17</span>
+</button>
+<button class="bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant rounded-full px-4 py-2 text-label-md font-label-md whitespace-nowrap border border-outline-variant/40 transition-colors flex items-center gap-2">
+<span>Micro-Simulations &amp; Tools</span>
+<span class="bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full text-label-sm">10</span>
+</button>
+</div>
+<!-- Secondary Controls & Refinement Bar -->
+<div class="flex flex-wrap items-center justify-between gap-4 py-2 mb-8">
+<div class="flex flex-wrap items-center gap-3">
+<!-- Format Dropdown -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest border border-outline-variant/60 rounded-lg text-body-sm font-body-sm text-on-surface py-2 pl-3 pr-9 focus:border-primary-container focus:ring-0 cursor-pointer shadow-sm">
+<option>All Formats (PDF, DOCX, Notion, Zip)</option>
+<option>PDF Document</option>
+<option>Notion Template</option>
+<option>Canvas .imscc</option>
+<option>Excel / Code Package</option>
+</select>
+<span class="material-symbols-outlined text-outline absolute right-2.5 top-2.5 pointer-events-none text-lg" data-icon="expand_more">expand_more</span>
+</div>
+<!-- Discipline Filter -->
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest border border-outline-variant/60 rounded-lg text-body-sm font-body-sm text-on-surface py-2 pl-3 pr-9 focus:border-primary-container focus:ring-0 cursor-pointer shadow-sm">
+<option>All Disciplines (Strategy, Marketing, Analytics, OB)</option>
+<option>Corporate Strategy</option>
+<option>Marketing &amp; Digital Commerce</option>
+<option>Data Analytics &amp; Decision Sciences</option>
+<option>Organizational Behavior &amp; HR</option>
+</select>
+<span class="material-symbols-outlined text-outline absolute right-2.5 top-2.5 pointer-events-none text-lg" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<!-- Sort Dropdown -->
+<div class="flex items-center gap-2">
+<span class="text-label-sm font-label-sm text-outline flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="swap_vert">swap_vert</span>
+              Sort:
+            </span>
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest border border-outline-variant/60 rounded-lg text-body-sm font-body-sm text-on-surface py-1.5 pl-3 pr-8 focus:border-primary-container focus:ring-0 cursor-pointer">
+<option>Most Downloaded / Popular</option>
+<option>Newly Released</option>
+<option>Highest Faculty Rating</option>
+</select>
+<span class="material-symbols-outlined text-outline absolute right-2 top-2 pointer-events-none text-base" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- View Toggle -->
+<div class="flex items-center p-1 bg-surface-container rounded-lg border border-outline-variant/40">
+<button class="p-1.5 rounded bg-surface-container-lowest text-primary shadow-xs" title="Grid View">
+<span class="material-symbols-outlined text-base leading-none block" data-icon="grid_view">grid_view</span>
+</button>
+<button class="p-1.5 rounded text-on-surface-variant hover:text-on-surface" title="List View">
+<span class="material-symbols-outlined text-base leading-none block" data-icon="view_list">view_list</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 3. Artifacts Catalog Grid (3-column Modern Bento Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+<!-- Card 1: Featured Prompt Kit -->
+<article class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 relative group">
+<div>
+<div class="flex items-start justify-between mb-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-primary-container/10 text-primary-container border border-primary-container/20">
+<span class="material-symbols-outlined text-xs" data-icon="bolt">bolt</span>
+                Prompt Kit
+              </span>
+<button aria-label="Bookmark Artifact" class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+<h3 class="text-title-lg font-title-lg text-on-surface group-hover:text-primary transition-colors mb-2 leading-snug">
+              ChatGPT Pedagogy Prompts: Socratic Questioning &amp; Active Case Studies
+            </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-5 line-clamp-3">
+              45+ engineered prompts tailored for executive education and interactive MBA case discussions with step-by-step injection rubrics.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-outline mb-3">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+<span>3.4k Downloads</span>
+<span>•</span>
+<span>45 Prompts</span>
+<span>•</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-on-surface">MD / PDF</span>
+</div>
+<div class="text-label-sm font-label-sm text-tertiary mb-4 font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
+              Curated by Prof. R. Srinivasan, Strategy &amp; IIMBx Chair
+            </div>
+<div class="flex items-center justify-between gap-3">
+<button class="flex-1 bg-primary-container hover:bg-primary text-on-primary py-2 px-3 rounded-full text-label-md font-label-md transition-colors flex items-center justify-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-base" data-icon="download">download</span>
+<span>Download Pack (4.2 MB)</span>
+</button>
+<button class="px-3 py-2 text-label-md font-label-md text-primary hover:bg-primary-container/5 rounded-full transition-colors">
+                Preview
+              </button>
+</div>
+</div>
+</article>
+<!-- Card 2: Video Masterclass -->
+<article class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 relative group">
+<div>
+<div class="flex items-start justify-between mb-3">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-secondary-container/20 text-secondary font-semibold border border-secondary/20">
+<span class="material-symbols-outlined text-xs" data-icon="videocam">videocam</span>
+                Video Masterclass
+              </span>
+<button aria-label="Bookmark Artifact" class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+<!-- Video Thumbnail Preview -->
+<div class="relative rounded-xl overflow-hidden mb-4 bg-inverse-surface aspect-video flex items-center justify-center group/thumb">
+<img class="w-full h-full object-cover opacity-80 group-hover/thumb:scale-105 transition-transform duration-300" data-alt="Professional academic recording studio setup with three point warm lighting, high quality broadcast microphone, and teleprompter screen in a modern lecture room. The aesthetic is clean, scholarly, and refined with warm wooden accents and studio acoustics panels." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3QwIvT0naxNazkP_AvrEU1J02-SGyvcN0CveDvyVRJIg85rRGvp2hkt03iX1VYqMglTPZTexYUZI9vVRWnM3kMxNrTNSD4zrzVtLGeIj6Qff0oTgA7oLzIT-C7QQoI4Dj7m_CJqqgnxAD4_gDUj2xyLlmoAleHQQajLiJzSafpufyFduTmRKrnzn2ekVXWi_jdt94BCfqYYthQsleswqebNy7wrJxb9l37lbV7vXUr9Hc5wphF7f737fQdKJKe5oXHUNMVY_hTrve"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+<div class="absolute w-12 h-12 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-lg group-hover/thumb:scale-110 transition-transform">
+<span class="material-symbols-outlined text-2xl ml-0.5" data-icon="play_arrow">play_arrow</span>
+</div>
+<span class="absolute bottom-2.5 right-2.5 bg-black/80 text-white text-[11px] font-label-sm px-2 py-0.5 rounded backdrop-blur-sm">
+                48 mins • 4K UHD
+              </span>
+</div>
+<h3 class="text-title-lg font-title-lg text-on-surface group-hover:text-primary transition-colors mb-2 leading-snug">
+              Recording Studio-Quality Hybrid Lectures on a Budget
+            </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-5 line-clamp-2">
+              Step-by-step setup guides for studio microphone placement, 3-point lighting setups, OBS multi-camera switching, and tablet whiteboard integration.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-outline mb-3">
+<span class="material-symbols-outlined text-sm" data-icon="visibility">visibility</span>
+<span>1.9k Views</span>
+<span>•</span>
+<span>Includes Equipment Cheat-Sheet</span>
+</div>
+<div class="text-label-sm font-label-sm text-tertiary mb-4 font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="smart_display">smart_display</span>
+              IIMBx Digital Media Lab
+            </div>
+<button class="w-full border-1.5 border-primary text-primary hover:bg-primary/5 py-2 px-4 rounded-full text-label-md font-label-md transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-base" data-icon="play_circle">play_circle</span>
+<span>Watch Masterclass</span>
+</button>
+</div>
+</article>
+<!-- Card 3: LMS Syllabus & Rubrics -->
+<article class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 relative group">
+<div>
+<div class="flex items-start justify-between mb-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-tertiary-container/15 text-tertiary font-semibold border border-tertiary/20">
+<span class="material-symbols-outlined text-xs" data-icon="construction">construction</span>
+                Canvas &amp; Moodle Template
+              </span>
+<button aria-label="Bookmark Artifact" class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+<h3 class="text-title-lg font-title-lg text-on-surface group-hover:text-primary transition-colors mb-2 leading-snug">
+              Blended Learning Course Syllabus &amp; Rubric Architecture
+            </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-5 line-clamp-3">
+              Turnkey weekly pacing guides, peer-evaluation rubrics, and asynchronous discussion board engagement architectures.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-outline mb-3">
+<span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+<span>2.8k Downloads</span>
+<span>•</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-on-surface">Notion • Canvas .imscc</span>
+</div>
+<div class="text-label-sm font-label-sm text-tertiary mb-4 font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="policy">policy</span>
+              Pedagogy Review Board
+            </div>
+<button class="w-full bg-primary-container hover:bg-primary text-on-primary py-2 px-4 rounded-full text-label-md font-label-md transition-colors flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-base" data-icon="download">download</span>
+<span>Download Template</span>
+</button>
+</div>
+</article>
+<!-- Card 4: Research Paper -->
+<article class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 relative group">
+<div>
+<div class="flex items-start justify-between mb-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-surface-container-high text-on-surface-variant border border-outline-variant/50">
+<span class="material-symbols-outlined text-xs" data-icon="description">description</span>
+                Research Paper
+              </span>
+<button aria-label="Bookmark Artifact" class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+<h3 class="text-title-lg font-title-lg text-on-surface group-hover:text-primary transition-colors mb-2 leading-snug">
+              Generative AI in Management Pedagogy: Assessment Integrity Framework
+            </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-5 line-clamp-3">
+              Peer-reviewed IIMBx working paper evaluating oral defense mechanisms, AI-resilient exam design, and student reflective log assessments.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-outline mb-3">
+<span class="material-symbols-outlined text-sm" data-icon="auto_stories">auto_stories</span>
+<span>24 Pages</span>
+<span>•</span>
+<span>Academic Citation</span>
+<span>•</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-on-surface">PDF</span>
+</div>
+<div class="text-label-sm font-label-sm text-tertiary mb-4 font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="menu_book">menu_book</span>
+              IIMBx Working Paper Series 2024
+            </div>
+<button class="w-full border-1.5 border-outline hover:border-primary text-on-surface hover:text-primary py-2 px-4 rounded-full text-label-md font-label-md transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-base" data-icon="open_in_new">open_in_new</span>
+<span>Read Working Paper</span>
+</button>
+</div>
+</article>
+<!-- Card 5: Interactive Simulation Tool -->
+<article class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 relative group">
+<div>
+<div class="flex items-start justify-between mb-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-secondary-container/15 text-secondary font-semibold border border-secondary/20">
+<span class="material-symbols-outlined text-xs" data-icon="sports_esports">sports_esports</span>
+                Interactive Simulation
+              </span>
+<button aria-label="Bookmark Artifact" class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+<h3 class="text-title-lg font-title-lg text-on-surface group-hover:text-primary transition-colors mb-2 leading-snug">
+              Micro-Simulation Templates for Supply Chain &amp; Pricing Strategy
+            </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-5 line-clamp-3">
+              Browser-based spreadsheet models and dynamic decision trees designed for live synchronous classroom breakout sessions.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-outline mb-3">
+<span class="material-symbols-outlined text-sm" data-icon="extension">extension</span>
+<span>8 Modules</span>
+<span>•</span>
+<span>1.1k Downloads</span>
+<span>•</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-on-surface">Excel &amp; Web</span>
+</div>
+<div class="text-label-sm font-label-sm text-tertiary mb-4 font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="analytics">analytics</span>
+              Decision Sciences Group
+            </div>
+<button class="w-full bg-primary-container hover:bg-primary text-on-primary py-2 px-4 rounded-full text-label-md font-label-md transition-colors flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-base" data-icon="launch">launch</span>
+<span>Launch Simulation</span>
+</button>
+</div>
+</article>
+<!-- Card 6: Executive Prompt Kit -->
+<article class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all duration-200 relative group">
+<div>
+<div class="flex items-start justify-between mb-4">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm bg-primary-container/10 text-primary-container border border-primary-container/20">
+<span class="material-symbols-outlined text-xs" data-icon="bolt">bolt</span>
+                Prompt Kit
+              </span>
+<button aria-label="Bookmark Artifact" class="text-outline hover:text-primary transition-colors p-1">
+<span class="material-symbols-outlined text-xl" data-icon="bookmark_border">bookmark_border</span>
+</button>
+</div>
+<h3 class="text-title-lg font-title-lg text-on-surface group-hover:text-primary transition-colors mb-2 leading-snug">
+              Executive Roleplay &amp; Negotiation Simulation Prompts
+            </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-5 line-clamp-3">
+              Structured system prompts that turn LLMs into tough counterparties in B2B supplier negotiations and union arbitration drills.
+            </p>
+</div>
+<div class="pt-4 border-t border-outline-variant/30">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-outline mb-3">
+<span class="material-symbols-outlined text-sm" data-icon="group_work">group_work</span>
+<span>18 Scenarios</span>
+<span>•</span>
+<span>940 Downloads</span>
+<span>•</span>
+<span class="bg-surface-container px-1.5 py-0.5 rounded text-on-surface">JSON &amp; PDF</span>
+</div>
+<div class="text-label-sm font-label-sm text-tertiary mb-4 font-medium flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="handshake">handshake</span>
+              Organizational Behavior Dept
+            </div>
+<button class="w-full bg-primary-container hover:bg-primary text-on-primary py-2 px-4 rounded-full text-label-md font-label-md transition-colors flex items-center justify-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-base" data-icon="download">download</span>
+<span>Download Pack</span>
+</button>
+</div>
+</article>
+</div>
+<!-- 4. Pagination and Results Summary -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 py-4 px-6 bg-surface-container-lowest rounded-xl border border-outline-variant/40 mb-16 shadow-xs">
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+          Showing <span class="font-semibold text-on-surface">1–6</span> of <span class="font-semibold text-on-surface">128</span> verified academic artifacts
+        </p>
+<div class="flex items-center gap-1.5">
+<button class="px-3 py-1.5 rounded-lg border border-outline-variant/60 text-on-surface-variant hover:bg-surface-container text-body-sm font-body-sm flex items-center gap-1 disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined text-base" data-icon="chevron_left">chevron_left</span>
+            Prev
+          </button>
+<button class="w-8 h-8 rounded-lg bg-primary-container text-on-primary text-body-sm font-semibold flex items-center justify-center shadow-xs">1</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface text-body-sm font-medium flex items-center justify-center">2</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface text-body-sm font-medium flex items-center justify-center">3</button>
+<span class="px-1 text-outline">…</span>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface text-body-sm font-medium flex items-center justify-center">22</button>
+<button class="px-3 py-1.5 rounded-lg border border-outline-variant/60 text-on-surface hover:bg-surface-container text-body-sm font-body-sm flex items-center gap-1">
+            Next
+            <span class="material-symbols-outlined text-base" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- 5. Faculty Submission Banner (CTA Card) -->
+<section class="rounded-3xl p-8 lg:p-10 bg-gradient-to-br from-[#fff7f4] via-[#fcf5f0] to-[#faeee7] border border-outline-variant/70 shadow-sm relative overflow-hidden mb-16">
+<div class="absolute -right-8 -bottom-8 w-64 h-64 rounded-full bg-primary-container/5 blur-3xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-start gap-6">
+<div class="w-16 h-16 rounded-2xl bg-primary-container text-on-primary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-3xl" data-icon="campaign">campaign</span>
+</div>
+<div>
+<span class="text-label-sm font-label-sm uppercase tracking-wider text-primary font-bold mb-1 block">Collaborative Scholarship</span>
+<h2 class="text-headline-sm font-headline-sm text-on-surface mb-2">
+                Have an innovative pedagogical artifact or syllabus to share?
+              </h2>
+<p class="text-body-md font-body-md text-on-surface-variant max-w-2xl">
+                Submit your peer-tested teaching templates, prompt libraries, or case studies to Sangam DLC and reach 5,000+ management educators worldwide.
+              </p>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+<button class="bg-primary-container hover:bg-primary text-on-primary px-6 py-3 rounded-full text-label-md font-label-md font-semibold transition-all shadow-sm active:scale-95 duration-150">
+              Submit an Artifact
+            </button>
+<button class="border border-outline-variant hover:bg-white text-on-surface px-5 py-3 rounded-full text-label-md font-label-md transition-colors">
+              View Contributor Guidelines
+            </button>
+</div>
+</div>
+</section>
+</section>
+</main>
+<!-- 6. Shared Footer Component -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant/30 dark:border-outline/20">
+<div class="w-full px-gutter py-space-xl max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<!-- Brand / About Column -->
+<div class="md:col-span-1">
+<div class="flex items-center gap-2 mb-3">
+<div class="w-7 h-7 rounded-lg bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-lg font-bold" data-icon="hub">hub</span>
+</div>
+<span class="text-headline-sm font-headline-sm text-on-surface dark:text-inverse-on-surface">Sangam DLC</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant dark:text-surface-dim mb-4 leading-relaxed">
+            IIMBx Digital Learning Community uniting premier business school faculty, researchers, and pedagogical innovators across the globe.
+          </p>
+<div class="flex items-center gap-3 text-outline">
+<a class="hover:text-primary transition-colors" href="#twitter"><span class="material-symbols-outlined text-lg" data-icon="chat">chat</span></a>
+<a class="hover:text-primary transition-colors" href="#linkedin"><span class="material-symbols-outlined text-lg" data-icon="work">work</span></a>
+<a class="hover:text-primary transition-colors" href="#mail"><span class="material-symbols-outlined text-lg" data-icon="mail">mail</span></a>
+</div>
+</div>
+<!-- Directory Column -->
+<div>
+<h4 class="text-title-md font-title-md text-on-surface dark:text-inverse-on-surface mb-3">Teaching Directory</h4>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li><a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#prompts">ChatGPT Socratic Prompts</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#masterclasses">Case Study Masterclasses</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#syllabi">LMS Canvas Course Kits</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#simulations">Executive Roleplay Scripts</a></li>
+</ul>
+</div>
+<!-- Academic Distinction Column -->
+<div>
+<h4 class="text-title-md font-title-md text-on-surface dark:text-inverse-on-surface mb-3">Academic Excellence</h4>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li><a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#policies">Academic Policies</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#directory">Peer Directory</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#honor">Honor Code</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#faculty">Faculty Development</a></li>
+</ul>
+</div>
+<!-- Legal & Contact Column -->
+<div>
+<h4 class="text-title-md font-title-md text-on-surface dark:text-inverse-on-surface mb-3">Governance</h4>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li><a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#privacy">Privacy Notice</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#terms">Creative Commons 4.0</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-dim hover:text-on-surface dark:hover:text-inverse-on-surface transition-colors" href="#contact-office">Contact Office</a></li>
+<li><a class="text-primary dark:text-inverse-primary font-medium hover:underline" href="#iimbx">IIM Bangalore Portal →</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-6 border-t border-outline-variant/30 dark:border-outline/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-label-sm font-label-sm text-outline">
+<p>© 2024 Sangam DLC, IIMBx Digital Learning Community. All rights reserved. Academic distinction through premier pedagogy.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#academic-policies">Academic Policies</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#peer-directory">Peer Directory</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#honor-code">Honor Code</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors" href="#privacy-notice">Privacy Notice</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

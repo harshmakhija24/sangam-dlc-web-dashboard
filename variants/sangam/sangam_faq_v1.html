@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sangam DLC - Frequently Asked Questions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#b83a24',
+              hover: '#9c2e1b',
+              light: '#fdf2f0',
+              container: '#ffdad4',
+              surface: '#fff8f6'
+            },
+            amberGold: {
+              DEFAULT: '#d97706',
+              light: '#fef3c7',
+              accent: '#b45309'
+            },
+            terracotta: {
+              50: '#fdf4f2',
+              100: '#fbe8e4',
+              200: '#f8d4cd',
+              500: '#b83a24',
+              600: '#9e2e1a',
+              700: '#842414',
+              900: '#48130a'
+            },
+            surface: {
+              DEFAULT: '#fbf9f8',
+              card: '#ffffff',
+              subtle: '#f5f1ee'
+            }
+          },
+          fontFamily: {
+            sans: ['"Outfit"', 'sans-serif'],
+            body: ['"Plus Jakarta Sans"', 'sans-serif']
+          },
+          boxShadow: {
+            'glass': '0 8px 32px 0 rgba(184, 58, 36, 0.08)',
+            'glass-hover': '0 12px 40px 0 rgba(184, 58, 36, 0.12)',
+            'card-soft': '0 4px 20px -2px rgba(45, 23, 16, 0.05)',
+            'floating': '0 20px 48px -8px rgba(184, 58, 36, 0.14)'
+          },
+          backdropBlur: {
+            'xs': '2px',
+            'glass': '16px'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: #fbf9f8;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(184, 58, 36, 0.07) 0px, transparent 50%),
+        radial-gradient(at 100% 15%, rgba(217, 119, 6, 0.08) 0px, transparent 40%),
+        radial-gradient(at 50% 60%, rgba(184, 58, 36, 0.04) 0px, transparent 60%);
+      background-attachment: fixed;
+    }
+
+    .font-body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Subtle decorative blur circles */
+    .glow-orb-primary {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(184,58,36,0.12) 0%, rgba(184,58,36,0) 70%);
+      filter: blur(40px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .glow-orb-amber {
+      position: absolute;
+      width: 380px;
+      height: 380px;
+      border-radius: 9999px;
+      background: radial-gradient(circle, rgba(217,119,6,0.1) 0%, rgba(217,119,6,0) 70%);
+      filter: blur(40px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Glassmorphism Classes */
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.78);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(240, 230, 226, 0.8);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .glass-card:hover {
+      border-color: rgba(184, 58, 36, 0.28);
+      background: rgba(255, 255, 255, 0.94);
+    }
+
+    .glass-pill {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(230, 218, 213, 0.7);
+    }
+
+    /* Smooth accordion details marker removal */
+    details summary::-webkit-details-marker {
+      display: none;
+    }
+    details summary {
+      list-style: none;
+    }
+    
+    /* Icon rotation when accordion open */
+    details[open] summary .toggle-icon {
+      transform: rotate(180deg);
+      color: #b83a24;
+      background-color: #fdf2f0;
+    }
+
+    details[open] {
+      border-color: rgba(184, 58, 36, 0.35);
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 10px 30px -5px rgba(184, 58, 36, 0.08);
+    }
+  </style>
+</head>
+<body class="text-slate-800 antialiased min-h-screen flex flex-col relative overflow-x-hidden">
+
+  <!-- Ambient Glow Backgrounds -->
+  <div class="glow-orb-primary -top-24 -left-20"></div>
+  <div class="glow-orb-amber top-96 -right-24"></div>
+  <div class="glow-orb-primary bottom-32 left-1/3"></div>
+
+  <!-- Top Notification Ribbon -->
+  <div class="w-full bg-gradient-to-r from-terracotta-900 via-primary to-amberGold text-white text-xs font-medium py-2 px-4 text-center tracking-wide relative z-50 flex items-center justify-center gap-2">
+    <span class="inline-flex items-center justify-center bg-white/20 px-2 py-0.5 rounded text-[11px] font-semibold uppercase tracking-wider">IIMBx Hub</span>
+    <span>Join our next Live Faculty Masterclass on Generative AI Pedagogies &bull; Friday, 4:00 PM IST</span>
+    <a href="#" class="underline font-semibold ml-1 hover:text-amberGold-light transition-colors">Register Now &rarr;</a>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="sticky top-0 z-40 w-full glass-panel border-b border-terracotta-100/60 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-primary to-amberGold flex items-center justify-center text-white shadow-md shadow-primary/25 group-hover:scale-105 transition-transform">
+          <span class="material-symbols-outlined text-[26px]">school</span>
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="font-extrabold text-2xl tracking-tight text-slate-900 font-sans group-hover:text-primary transition-colors">Sangam <span class="text-primary font-bold">DLC</span></span>
+            <span class="bg-primary/10 text-primary text-[11px] font-bold px-2 py-0.5 rounded-full border border-primary/20">IIMBx</span>
+          </div>
+          <span class="text-[11px] text-slate-500 font-medium tracking-wide">Digital Learning Community</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+        <a href="#" class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-primary rounded-lg hover:bg-terracotta-50/70 transition-colors">Home</a>
+        <a href="#" class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-primary rounded-lg hover:bg-terracotta-50/70 transition-colors">About</a>
+        <a href="#" class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-primary rounded-lg hover:bg-terracotta-50/70 transition-colors">Courses</a>
+        <a href="#" class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-primary rounded-lg hover:bg-terracotta-50/70 transition-colors">Resources</a>
+        <!-- Active Tab: FAQ -->
+        <a href="#" class="px-3.5 py-2 text-sm font-semibold text-primary rounded-lg bg-primary-light border border-primary/20 transition-colors shadow-xs flex items-center gap-1.5">
+          <span>FAQ</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+        </a>
+        <a href="#" class="px-3.5 py-2 text-sm font-medium text-slate-600 hover:text-primary rounded-lg hover:bg-terracotta-50/70 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right Header CTA Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="#" class="text-sm font-semibold text-slate-700 hover:text-primary px-3 py-2 transition-colors">Faculty Sign In</a>
+        <a href="#" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-primary to-terracotta-600 text-white text-sm font-semibold shadow-md shadow-primary/25 hover:shadow-lg hover:shadow-primary/35 hover:-translate-y-0.5 transition-all">
+          <span class="material-symbols-outlined text-[18px]">groups</span>
+          <span>Join Community</span>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <div class="md:hidden flex items-center">
+        <button id="mobileMenuToggle" class="p-2 rounded-lg text-slate-600 hover:bg-slate-100 focus:outline-none" aria-label="Toggle Navigation">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Navigation -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-200/80 bg-white/95 backdrop-blur-xl px-4 pt-3 pb-6 space-y-2 shadow-lg">
+      <a href="#" class="block px-3 py-2 text-base font-medium text-slate-700 rounded-lg hover:bg-slate-50">Home</a>
+      <a href="#" class="block px-3 py-2 text-base font-medium text-slate-700 rounded-lg hover:bg-slate-50">About</a>
+      <a href="#" class="block px-3 py-2 text-base font-medium text-slate-700 rounded-lg hover:bg-slate-50">Courses</a>
+      <a href="#" class="block px-3 py-2 text-base font-medium text-slate-700 rounded-lg hover:bg-slate-50">Resources</a>
+      <a href="#" class="block px-3 py-2 text-base font-bold text-primary bg-primary-light rounded-lg">FAQ (Active)</a>
+      <a href="#" class="block px-3 py-2 text-base font-medium text-slate-700 rounded-lg hover:bg-slate-50">Contact</a>
+      <div class="pt-3 border-t border-slate-100 flex flex-col gap-2">
+        <a href="#" class="w-full text-center py-2.5 text-sm font-semibold text-slate-700 rounded-lg border border-slate-200">Faculty Sign In</a>
+        <a href="#" class="w-full text-center py-2.5 text-sm font-semibold text-white bg-primary rounded-lg shadow-sm">Join Community</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Hero Section -->
+  <main class="flex-grow relative z-10">
+    <section class="pt-14 pb-12 sm:pt-20 sm:pb-16 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto text-center">
+      
+      <!-- Overline Pill Badge -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-terracotta-200/80 shadow-xs mb-6 backdrop-blur-md">
+        <span class="material-symbols-outlined text-primary text-[18px]">help_center</span>
+        <span class="text-xs font-bold uppercase tracking-wider text-primary">Sangam DLC Help &amp; Knowledge Base</span>
+        <span class="w-1.5 h-1.5 rounded-full bg-amberGold"></span>
+      </div>
+
+      <!-- Hero Heading -->
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+        Frequently Asked <span class="bg-gradient-to-r from-primary via-terracotta-600 to-amberGold bg-clip-text text-transparent underline decoration-amberGold/40 decoration-wavy underline-offset-8">Questions</span>
+      </h1>
+
+      <!-- Hero Subtitle -->
+      <p class="mt-6 text-lg sm:text-xl text-slate-600 font-body max-w-2xl mx-auto font-normal leading-relaxed">
+        Find answers about our programs, support, and platform. Everything you need to know about partnering with the IIMBx digital teaching ecosystem.
+      </p>
+
+      <!-- Live Search & Filter Bar -->
+      <div class="mt-10 max-w-2xl mx-auto">
+        <div class="relative flex items-center glass-card rounded-2xl shadow-glass p-2 border border-terracotta-200/60 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+          <span class="material-symbols-outlined text-slate-400 ml-3 mr-2 text-2xl">search</span>
+          <input 
+            type="text" 
+            id="faqSearchInput"
+            placeholder="Search questions by keyword (e.g. 'certificate', 'Moodle', 'enrollment')..." 
+            class="w-full bg-transparent border-0 text-slate-800 placeholder:text-slate-400 text-sm sm:text-base font-body focus:outline-none focus:ring-0 py-2"
+          />
+          <button 
+            id="clearSearchBtn" 
+            class="hidden p-1.5 text-slate-400 hover:text-slate-600 rounded-lg mr-1 text-sm focus:outline-none"
+            title="Clear search">
+            <span class="material-symbols-outlined text-lg">close</span>
+          </button>
+          <button class="bg-primary text-white text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-xl shadow hover:bg-primary-hover transition-colors shrink-0">
+            Search
+          </button>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-2 sm:gap-3" id="categoryFilterContainer">
+        <button data-category="all" class="category-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-primary text-white shadow-md shadow-primary/25">
+          All Questions (12)
+        </button>
+        <button data-category="general" class="category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass-pill text-slate-600 hover:text-primary hover:bg-white/90">
+          General
+        </button>
+        <button data-category="enrollment" class="category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass-pill text-slate-600 hover:text-primary hover:bg-white/90">
+          Enrollment &amp; Programs
+        </button>
+        <button data-category="support" class="category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass-pill text-slate-600 hover:text-primary hover:bg-white/90">
+          Platform Support
+        </button>
+        <button data-category="pedagogy" class="category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all glass-pill text-slate-600 hover:text-primary hover:bg-white/90">
+          Teaching Resources
+        </button>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion Container Section -->
+    <section class="pb-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+
+      <!-- FAQ Items List -->
+      <div class="space-y-4" id="faqAccordionList">
+
+        <!-- CATEGORY: GENERAL -->
+        <!-- Question 1 (Open by default) -->
+        <div class="faq-item" data-category="general">
+          <details class="glass-card rounded-2xl p-5 sm:p-6 transition-all duration-200 group" open>
+            <summary class="flex items-center justify-between cursor-pointer select-none">
+              <div class="flex items-center gap-3.5 text-left pr-4">
+                <span class="w-8 h-8 rounded-lg bg-primary-light text-primary flex items-center justify-center font-bold text-sm shrink-0 border border-primary/20">
+                  Q1
+                </span>
+                <span class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">
+                  What is Sangam DLC, and who is it designed for?
+                </span>
+              </div>
+              <div class="toggle-icon w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-transform duration-300 shrink-0">
+                <span class="material-symbols-outlined text-xl">expand_more</span>
+              </div>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-slate-100 font-body text-slate-600 text-sm sm:text-base leading-relaxed pl-0 sm:pl-11">
+              <p class="mb-3">
+                <strong>Sangam DLC</strong> (Digital Learning Community) is a premier initiative backed by <strong>IIMBx</strong>. It connects educators, higher-education faculty, instructional designers, and institution leaders to exchange cutting-edge pedagogical tools, hybrid classroom strategies, and digital teaching resources.
+              </p>
+              <div class="flex items-center gap-2 text-xs font-semibold text-primary mt-2">
+                <span class="material-symbols-outlined text-base">verified</span>
+                <span>Includes access to IIMBx research working papers, prompt kits, and peer networking.</span>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="faq-item" data-category="general">
+          <details class="glass-card rounded-2xl p-5 sm:p-6 transition-all duration-200 group">
+            <summary class="flex items-center justify-between cursor-pointer select-none">
+              <div class="flex items-center gap-3.5 text-left pr-4">
+                <span class="w-8 h-8 rounded-lg bg-primary-light text-primary flex items-center justify-center font-bold text-sm shrink-0 border border-primary/20">
+                  Q2
+                </span>
+                <span class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">
+                  Is membership in Sangam DLC restricted to IIM faculty only?
+                </span>
+              </div>
+              <div class="toggle-icon w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-transform duration-300 shrink-0">
+                <span class="material-symbols-outlined text-xl">expand_more</span>
+              </div>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-slate-100 font-body text-slate-600 text-sm sm:text-base leading-relaxed pl-0 sm:pl-11">
+              <p>
+                No. While curated by IIMBx educators, membership is open to faculty members, adjunct professors, teaching assistants, and edtech practitioners across all accredited universities, business schools, and technical institutes across India and globally.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="faq-item" data-category="general">
+          <details class="glass-card rounded-2xl p-5 sm:p-6 transition-all duration-200 group">
+            <summary class="flex items-center justify-between cursor-pointer select-none">
+              <div class="flex items-center gap-3.5 text-left pr-4">
+                <span class="w-8 h-8 rounded-lg bg-primary-light text-primary flex items-center justify-center font-bold text-sm shrink-0 border border-primary/20">
+                  Q3
+                </span>
+                <span class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">
+                  Are certificates issued upon completion of Sangam DLC programs?
+                </span>
+              </div>
+              <div class="toggle-icon w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-transform duration-300 shrink-0">
+                <span class="material-symbols-outlined text-xl">expand_more</span>
+              </div>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-slate-100 font-body text-slate-600 text-sm sm:text-base leading-relaxed pl-0 sm:pl-11">
+              <p class="mb-3">
+                Yes! Participants completing structured Faculty Development Programs (FDPs) and certification pathways receive an official <strong>IIMBx Executive Digital Certificate</strong> verifiable on LinkedIn and national academic credentials depositories.
+              </p>
+              <div class="bg-amberGold-light/40 border border-amberGold/30 p-3 rounded-xl text-xs text-amberGold-accent flex items-start gap-2">
+                <span class="material-symbols-outlined text-sm shrink-0 mt-0.5">workspace_premium</span>
+                <span>Certificates are cryptographically verifiable via QR code and comply with National Higher Education accreditation guidelines.</span>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <!-- CATEGORY: ENROLLMENT -->
+        <!-- Question 4 -->
+        <div class="faq-item" data-category="enrollment">
+          <details class="glass-card rounded-2xl p-5 sm:p-6 transition-all duration-200 group">
+            <summary class="flex items-center justify-between cursor-pointer select-none">
+              <div class="flex items-center gap-3.5 text-left pr-4">
+                <span class="w-8 h-8 rounded-lg bg-amberGold-light text-amberGold-accent flex items-center justify-center font-bold text-sm shrink-0 border border-amberGold/30">
+                  Q4
+                </span>
+                <span class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">
+                  How do I apply for institutional sponsorship or bulk faculty enrollment?
+                </span>
+              </div>
+              <div class="toggle-icon w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-transform duration-300 shrink-0">
+                <span class="material-symbols-outlined text-xl">expand_more</span>
+              </div>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-slate-100 font-body text-slate-600 text-sm sm:text-base leading-relaxed pl-0 sm:pl-11">
+              <p class="mb-2">
+                Institutions wishing to onboard department cohorts (minimum 5 faculty members) qualify for institutional licensing rates and dedicated LMS integration assistance.
+              </p>
+              <p>
+                To initiate a cohort request, contact our Academic Partnerships Liaison at <a href="mailto:partnerships.iimbx@iimb.ac.in" class="text-primary font-semibold underline">partnerships.iimbx@iimb.ac.in</a> or visit the Contact page with your institution's NIRF or accreditation details.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="faq-item" data-category="enrollment">
+          <details class="glass-card rounded-2xl p-5 sm:p-6 transition-all duration-200 group">
+            <summary class="flex items-center justify-between cursor-pointer select-none">
+              <div class="flex items-center gap-3.5 text-left pr-4">
+                <span class="w-8 h-8 rounded-lg bg-amberGold-light text-amberGold-accent flex items-center justify-center font-bold text-sm shrink-0 border border-amberGold/30">
+                  Q5
+                </span>
+                <span class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">
+                  What payment methods are supported for course registration?
+                </span>
+              </div>
+              <div class="toggle-icon w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-transform duration-300 shrink-0">
+                <span class="material-symbols-outlined text-xl">expand_more</span>
+              </div>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-slate-100 font-body text-slate-600 text-sm sm:text-base leading-relaxed pl-0 sm:pl-11">
+              <p>
+                We accept all major credit/debit cards (Visa, MasterCard, RuPay, American Express), UPI, Net Banking through 50+ Indian banks, as well as institutional purchase orders (NEFT/RTGS) with GST-compliant electronic invoices.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="faq-item" data-category="enrollment">
+          <details class="glass-card rounded-2xl p-5 sm:p-6 transition-all duration-200 group">
+            <summary class="flex items-center justify-between cursor-pointer select-none">
+              <div class="flex items-center gap-3.5 text-left pr-4">
+                <span class="w-8 h-8 rounded-lg bg-amberGold-light text-amberGold-accent flex items-center justify-center font-bold text-sm shrink-0 border border-amberGold/30">
+                  Q6
+                </span>
+                <span class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">
+                  Can I defer my program enrollment to an upcoming batch?
+                </span>
+              </div>
+              <div class="toggle-icon w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-transform duration-300 shrink-0">
+                <span class="material-symbols-outlined text-xl">expand_more</span>
+              </div>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-slate-100 font-body text-slate-600 text-sm sm:text-base leading-relaxed pl-0 sm:pl-11">
+              <p>
+                Yes. Deferral requests are accommodated up to 7 calendar days before the official cohort launch date without any penalty. One deferral per enrollment is permitted within a 12-month academic cycle.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <!-- CATEGORY: PLATFORM SUPPORT -->
+        <!-- Question 7 -->
+        <div class="faq-item" data-category="support">
+          <details class="glass-card rounded-2xl p-5 sm:p-6 transition-all duration-200 group">
+            <summary class="flex items-center justify-between cursor-pointer select-none">
+              <div class="flex items-center gap-3.5 text-left pr-4">
+                <span class="w-8 h-8 rounded-lg bg-terracotta-100 text-terracotta-700 flex items-center justify-center font-bold text-sm shrink-0 border border-terracotta-200">
+                  Q7
+                </span>
+                <span class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">
+                  Which LMS platforms are compatible with Sangam DLC resources?
+                </span>
+              </div>
+              <div class="toggle-icon w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-transform duration-300 shrink-0">
+                <span class="material-symbols-outlined text-xl">expand_more</span>
+              </div>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-slate-100 font-body text-slate-600 text-sm sm:text-base leading-relaxed pl-0 sm:pl-11">
+              <p class="mb-3">
+                Our templates and modules adhere strictly to SCORM 1.2 / 2004 and LTI 1.3 standards. They deploy natively in:
+              </p>
+              <ul class="list-disc pl-5 space-y-1 text-slate-700">
+                <li>Canvas LMS by Instructure</li>
+                <li>Moodle (v3.9 LTS through 4.3+)</li>
+                <li>Blackboard Learn Ultra</li>
+                <li>Google Classroom and Microsoft Teams for Education</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="faq-item" data-category="support">
+          <details class="glass-card rounded-2xl p-5 sm:p-6 transition-all duration-200 group">
+            <summary class="flex items-center justify-between cursor-pointer select-none">
+              <div class="flex items-center gap-3.5 text-left pr-4">
+                <span class="w-8 h-8 rounded-lg bg-terracotta-100 text-terracotta-700 flex items-center justify-center font-bold text-sm shrink-0 border border-terracotta-200">
+                  Q8
+                </span>
+                <span class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">
+                  I cannot access the video masterclasses. How can I troubleshoot?
+                </span>
+              </div>
+              <div class="toggle-icon w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-transform duration-300 shrink-0">
+                <span class="material-symbols-outlined text-xl">expand_more</span>
+              </div>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-slate-100 font-body text-slate-600 text-sm sm:text-base leading-relaxed pl-0 sm:pl-11">
+              <p class="mb-2">
+                Video masterclasses are delivered via secure CDN streaming. If playback is interrupted:
+              </p>
+              <ol class="list-decimal pl-5 space-y-1 text-slate-700">
+                <li>Verify your browser allows third-party cookies for authenticated session tokens.</li>
+                <li>Disable aggressive ad-blockers or whitelist <code class="bg-slate-100 px-1.5 py-0.5 rounded text-xs">*.iimbx.edu.in</code>.</li>
+                <li>If accessing via university campus proxy/VPN, check with your network administrator regarding WebRTC port permissions.</li>
+              </ol>
+            </div>
+          </details>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="faq-item" data-category="support">
+          <details class="glass-card rounded-2xl p-5 sm:p-6 transition-all duration-200 group">
+            <summary class="flex items-center justify-between cursor-pointer select-none">
+              <div class="flex items-center gap-3.5 text-left pr-4">
+                <span class="w-8 h-8 rounded-lg bg-terracotta-100 text-terracotta-700 flex items-center justify-center font-bold text-sm shrink-0 border border-terracotta-200">
+                  Q9
+                </span>
+                <span class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">
+                  How do I reset my Sangam DLC faculty portal password?
+                </span>
+              </div>
+              <div class="toggle-icon w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-transform duration-300 shrink-0">
+                <span class="material-symbols-outlined text-xl">expand_more</span>
+              </div>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-slate-100 font-body text-slate-600 text-sm sm:text-base leading-relaxed pl-0 sm:pl-11">
+              <p>
+                Click on <em>Faculty Sign In</em> on the top right, select <em>Forgot Password</em>, and input your registered institutional email address. An automated reset token valid for 30 minutes will be dispatched immediately.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <!-- CATEGORY: TEACHING RESOURCES -->
+        <!-- Question 10 -->
+        <div class="faq-item" data-category="pedagogy">
+          <details class="glass-card rounded-2xl p-5 sm:p-6 transition-all duration-200 group">
+            <summary class="flex items-center justify-between cursor-pointer select-none">
+              <div class="flex items-center gap-3.5 text-left pr-4">
+                <span class="w-8 h-8 rounded-lg bg-primary-light text-primary flex items-center justify-center font-bold text-sm shrink-0 border border-primary/20">
+                  Q10
+                </span>
+                <span class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">
+                  Can I adapt the ChatGPT prompt kits and rubrics for my own syllabus?
+                </span>
+              </div>
+              <div class="toggle-icon w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-transform duration-300 shrink-0">
+                <span class="material-symbols-outlined text-xl">expand_more</span>
+              </div>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-slate-100 font-body text-slate-600 text-sm sm:text-base leading-relaxed pl-0 sm:pl-11">
+              <p>
+                Yes! All prompt libraries, course syllabi, and micro-simulation templates are distributed under <strong>Creative Commons (CC BY-NC 4.0)</strong>. You are encouraged to modify, localize, and use them in non-commercial university classrooms with proper attribution to Sangam DLC, IIMBx.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Question 11 -->
+        <div class="faq-item" data-category="pedagogy">
+          <details class="glass-card rounded-2xl p-5 sm:p-6 transition-all duration-200 group">
+            <summary class="flex items-center justify-between cursor-pointer select-none">
+              <div class="flex items-center gap-3.5 text-left pr-4">
+                <span class="w-8 h-8 rounded-lg bg-primary-light text-primary flex items-center justify-center font-bold text-sm shrink-0 border border-primary/20">
+                  Q11
+                </span>
+                <span class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">
+                  How can I contribute my own pedagogical artifact or research paper?
+                </span>
+              </div>
+              <div class="toggle-icon w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-transform duration-300 shrink-0">
+                <span class="material-symbols-outlined text-xl">expand_more</span>
+              </div>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-slate-100 font-body text-slate-600 text-sm sm:text-base leading-relaxed pl-0 sm:pl-11">
+              <p>
+                We welcome submissions from educators worldwide! Navigate to the Resources Directory and click <em>Submit an Artifact</em>. Submissions are peer-reviewed by the IIMBx Academic Advisory Board within 14 business days before being indexed in the community repository.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Question 12 -->
+        <div class="faq-item" data-category="pedagogy">
+          <details class="glass-card rounded-2xl p-5 sm:p-6 transition-all duration-200 group">
+            <summary class="flex items-center justify-between cursor-pointer select-none">
+              <div class="flex items-center gap-3.5 text-left pr-4">
+                <span class="w-8 h-8 rounded-lg bg-primary-light text-primary flex items-center justify-center font-bold text-sm shrink-0 border border-primary/20">
+                  Q12
+                </span>
+                <span class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-primary transition-colors">
+                  Are the micro-simulation spreadsheets accessible on mobile devices?
+                </span>
+              </div>
+              <div class="toggle-icon w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500 transition-transform duration-300 shrink-0">
+                <span class="material-symbols-outlined text-xl">expand_more</span>
+              </div>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-slate-100 font-body text-slate-600 text-sm sm:text-base leading-relaxed pl-0 sm:pl-11">
+              <p>
+                Yes. While full model customization is best performed on desktop screens using Excel or Google Sheets, the interactive decision trees and web-based calculators are fully responsive and function smoothly on tablets and smartphones.
+              </p>
+            </div>
+          </details>
+        </div>
+
+      </div>
+
+      <!-- No Results State (Hidden by default) -->
+      <div id="noResultsState" class="hidden text-center py-16 glass-card rounded-3xl mt-6">
+        <div class="w-16 h-16 bg-terracotta-100 text-primary rounded-2xl mx-auto flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-3xl">sentiment_dissatisfied</span>
+        </div>
+        <h3 class="text-xl font-bold text-slate-900 mb-2">No matching questions found</h3>
+        <p class="text-slate-500 font-body text-sm max-w-md mx-auto mb-6">
+          We couldn't find any questions matching your keywords. Try searching for other terms or get in touch with our team directly.
+        </p>
+        <button id="resetSearchBtn" class="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-xl hover:bg-primary-hover transition-colors shadow-sm">
+          View All Questions
+        </button>
+      </div>
+
+      <!-- Still Have Questions Contact Banner -->
+      <div class="mt-14 relative overflow-hidden rounded-3xl glass-card border border-terracotta-200/80 p-8 sm:p-10 shadow-floating">
+        <div class="absolute -right-10 -bottom-10 w-60 h-60 bg-amberGold/10 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -left-10 -top-10 w-60 h-60 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-light text-primary text-xs font-bold uppercase tracking-wider mb-3">
+              <span class="material-symbols-outlined text-sm">support_agent</span>
+              <span>Need personalized assistance?</span>
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+              Still have questions about our digital community?
+            </h3>
+            <p class="mt-2 text-slate-600 font-body text-sm sm:text-base max-w-xl">
+              Our academic coordinators and technical support specialists are available Monday to Friday, 9:00 AM – 6:00 PM IST.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+            <a href="#" class="w-full sm:w-auto px-5 py-3 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-primary hover:border-primary/40 font-semibold text-sm transition-all shadow-xs text-center flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-lg">mail</span>
+              <span>Email Support</span>
+            </a>
+            <a href="#" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-primary hover:bg-primary-hover text-white font-semibold text-sm shadow-md shadow-primary/25 hover:shadow-lg hover:shadow-primary/35 transition-all text-center flex items-center justify-center gap-2">
+              <span class="material-symbols-outlined text-lg">forum</span>
+              <span>Live Faculty Desk</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Global Footer Component (Consistent with Sangam DLC) -->
+  <footer class="glass-panel border-t border-terracotta-100/80 mt-auto py-12 px-4 sm:px-6 lg:px-8 relative z-20">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-10 border-b border-slate-200/60">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-amberGold flex items-center justify-center text-white shadow-sm">
+              <span class="material-symbols-outlined text-xl">school</span>
+            </div>
+            <span class="font-extrabold text-xl tracking-tight text-slate-900 font-sans">Sangam <span class="text-primary">DLC</span></span>
+          </div>
+          <p class="text-sm text-slate-500 font-body max-w-md leading-relaxed">
+            The Digital Learning Community by IIMBx empowers educators across premier management and academic institutions with next-generation teaching architectures.
+          </p>
+          <div class="flex items-center gap-4 text-slate-400">
+            <a href="#" class="hover:text-primary transition-colors"><span class="material-symbols-outlined text-xl">share</span></a>
+            <a href="#" class="hover:text-primary transition-colors"><span class="material-symbols-outlined text-xl">public</span></a>
+            <a href="#" class="hover:text-primary transition-colors"><span class="material-symbols-outlined text-xl">mail</span></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">Quick Links</h4>
+          <ul class="space-y-2.5 text-sm font-body text-slate-600">
+            <li><a href="#" class="hover:text-primary transition-colors">Teaching Resources Directory</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Faculty Development Programs</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">ChatGPT Socratic Prompts</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Case Study Masterclasses</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Academic Governance -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-900 mb-4">Academic &amp; Legal</h4>
+          <ul class="space-y-2.5 text-sm font-body text-slate-600">
+            <li><a href="#" class="hover:text-primary transition-colors">Academic Integrity Policy</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Faculty Directory</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Research Archive</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Terms &amp; Creative Commons</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom copyright notice -->
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 font-body gap-4">
+        <p>&copy; 2024 Sangam DLC, IIMBx Digital Learning Community. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-primary transition-colors">Support Desk</a>
+          <a href="#" class="hover:text-primary transition-colors">IIM Bangalore Portal</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vanilla JavaScript Interactivity -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Mobile menu toggle
+      const mobileToggle = document.getElementById('mobileMenuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileToggle && mobileMenu) {
+        mobileToggle.addEventListener('click', function() {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+
+      // FAQ Category Filtering & Search Logic
+      const categoryButtons = document.querySelectorAll('.category-btn');
+      const faqItems = document.querySelectorAll('.faq-item');
+      const searchInput = document.getElementById('faqSearchInput');
+      const clearSearchBtn = document.getElementById('clearSearchBtn');
+      const noResultsState = document.getElementById('noResultsState');
+      const resetSearchBtn = document.getElementById('resetSearchBtn');
+
+      let currentCategory = 'all';
+      let searchQuery = '';
+
+      function filterFAQs() {
+        let visibleCount = 0;
+
+        faqItems.forEach(item => {
+          const itemCategory = item.getAttribute('data-category');
+          const questionText = item.querySelector('summary').innerText.toLowerCase();
+          const answerText = item.querySelector('.border-t').innerText.toLowerCase();
+
+          const matchesCategory = (currentCategory === 'all' || itemCategory === currentCategory);
+          const matchesSearch = (!searchQuery || questionText.includes(searchQuery) || answerText.includes(searchQuery));
+
+          if (matchesCategory && matchesSearch) {
+            item.classList.remove('hidden');
+            visibleCount++;
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+
+        if (visibleCount === 0) {
+          noResultsState.classList.remove('hidden');
+        } else {
+          noResultsState.classList.add('hidden');
+        }
+      }
+
+      // Category filter clicks
+      categoryButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          categoryButtons.forEach(b => {
+            b.classList.remove('active', 'bg-primary', 'text-white', 'shadow-md', 'shadow-primary/25');
+            b.classList.add('glass-pill', 'text-slate-600');
+          });
+
+          btn.classList.add('active', 'bg-primary', 'text-white', 'shadow-md', 'shadow-primary/25');
+          btn.classList.remove('glass-pill', 'text-slate-600');
+
+          currentCategory = btn.getAttribute('data-category');
+          filterFAQs();
+        });
+      });
+
+      // Search input typing
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.trim().toLowerCase();
+          if (searchQuery.length > 0) {
+            clearSearchBtn.classList.remove('hidden');
+          } else {
+            clearSearchBtn.classList.add('hidden');
+          }
+          filterFAQs();
+        });
+      }
+
+      // Clear search button
+      if (clearSearchBtn) {
+        clearSearchBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          searchQuery = '';
+          clearSearchBtn.classList.add('hidden');
+          filterFAQs();
+          searchInput.focus();
+        });
+      }
+
+      // Reset button inside no-results
+      if (resetSearchBtn) {
+        resetSearchBtn.addEventListener('click', () => {
+          searchInput.value = '';
+          searchQuery = '';
+          clearSearchBtn.classList.add('hidden');
+          
+          // Reset to All category
+          categoryButtons[0].click();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

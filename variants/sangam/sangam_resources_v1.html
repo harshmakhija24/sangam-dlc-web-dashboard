@@ -1,68 +1,502 @@
 <!DOCTYPE html>
-<html lang="en-IN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources — Teaching Toolkits, Guides & Downloads | Sangam DLC</title>
-    <meta name="description" content="Access free teaching resources — toolkits, guides, templates, and video tutorials from IIM Bangalore faculty. Enhance your digital teaching practice today.">
-    <link rel="canonical" href="https://sangamdlc.org/resources/">
-    <meta property="og:title" content="Resources — Teaching Toolkits & Guides | Sangam DLC">
-    <meta property="og:description" content="Free teaching resources, toolkits, and guides for higher-education faculty from Sangam DLC.">
-    <meta property="og:url" content="https://sangamdlc.org/resources/">
-    <meta property="og:site_name" content="Sangam Digital Learning Community">
-    <meta property="og:image" content="https://sangamdlc.org/wp-content/uploads/2025/02/Sangam-Logo.png">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root{--sangam-navy:#1F3D5C;--sangam-navy-deep:#1B324C;--sangam-navy-card:#234568;--sangam-orange:#F37023;--sangam-orange-hover:#D95A10;--sangam-orange-glow:rgba(243,112,35,0.15);--sangam-bg-light:#F4F6F8;--sangam-bg-white:#FFFFFF;--sangam-text-heading:#1F3D5C;--sangam-text-body:#475569;--sangam-text-muted:#64748B;--sangam-border:#E2E8F0;--sangam-footer-divider:#2A4666;--sangam-footer-muted:#E2E8F0;--font-heading:'Inter',sans-serif;--font-body:'Open Sans',sans-serif;--radius-sm:6px;--radius-md:10px;--radius-lg:16px;--radius-pill:50px;--shadow-card:0 4px 24px rgba(31,61,92,0.08);--shadow-card-hover:0 8px 32px rgba(31,61,92,0.14);--shadow-btn:0 4px 12px rgba(243,112,35,0.35);--transition:0.3s cubic-bezier(0.4,0,0.2,1)}
-        *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-body);color:var(--sangam-text-body);background:var(--sangam-bg-white);line-height:1.7;overflow-x:hidden}a{text-decoration:none;color:inherit;transition:color var(--transition)}h1,h2,h3,h4{font-family:var(--font-heading);color:var(--sangam-text-heading);line-height:1.2;font-weight:700}.container{max-width:1200px;margin:0 auto;padding:0 24px}
-        .header{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--sangam-border)}.header.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.08)}.header-inner{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto;padding:12px 24px}.logo{display:flex;align-items:center;gap:12px}.logo-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--sangam-navy),var(--sangam-navy-card));border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;position:relative}.logo-icon::after{content:'';position:absolute;top:4px;right:4px;width:8px;height:8px;background:var(--sangam-orange);border-radius:50%}.logo-icon span{color:white;font-family:var(--font-heading);font-weight:800;font-size:22px}.logo-text{font-family:var(--font-heading);font-weight:700;font-size:18px;color:var(--sangam-navy)}.logo-text small{display:block;font-size:11px;font-weight:500;color:var(--sangam-text-muted);letter-spacing:0.5px;text-transform:uppercase}.nav{display:flex;align-items:center;gap:8px}.nav a{padding:8px 16px;font-size:14px;font-weight:600;color:var(--sangam-text-body);border-radius:var(--radius-sm);transition:all var(--transition);text-transform:uppercase;letter-spacing:0.3px}.nav a:hover,.nav a.active{color:var(--sangam-navy);background:var(--sangam-bg-light)}.nav-cta{background:var(--sangam-orange)!important;color:white!important;border-radius:var(--radius-pill)!important;padding:10px 24px!important}.mobile-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px}.mobile-toggle span{display:block;width:24px;height:2px;background:var(--sangam-navy);margin:6px 0}
-        .page-hero{padding:140px 0 80px;background:linear-gradient(135deg,#E8EFF7,#C8D6E5);text-align:center}.page-hero .breadcrumb{font-size:13px;color:var(--sangam-text-muted);margin-bottom:16px}.page-hero .breadcrumb a{color:var(--sangam-orange)}.page-hero h1{font-size:44px;margin-bottom:16px}.page-hero p{font-size:18px;color:var(--sangam-text-muted);max-width:640px;margin:0 auto}
-        .section{padding:80px 0}.section-light{background:var(--sangam-bg-light)}
-        .section-header{text-align:center;max-width:680px;margin:0 auto 48px}.section-header .overline{display:inline-block;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:2px;color:var(--sangam-orange);margin-bottom:12px}.section-header h2{font-size:36px;margin-bottom:16px}.section-header p{font-size:17px;color:var(--sangam-text-muted)}
-        .resources-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
-        .resource-card{background:white;border-radius:var(--radius-lg);box-shadow:var(--shadow-card);overflow:hidden;transition:all var(--transition);border:1px solid transparent;display:flex;flex-direction:column}
-        .resource-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-card-hover);border-color:var(--sangam-orange)}
-        .resource-icon-bar{padding:20px 24px;display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--sangam-border)}
-        .resource-type-icon{width:48px;height:48px;border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:24px}
-        .type-pdf{background:#FEE2E2;color:#DC2626}.type-video{background:#DBEAFE;color:#2563EB}.type-toolkit{background:#D1FAE5;color:#059669}.type-template{background:#FEF3C7;color:#D97706}.type-guide{background:#E8E8FF;color:#6B46C1}.type-webinar{background:#FCE7F3;color:#DB2777}
-        .resource-type-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--sangam-text-muted)}
-        .resource-card-body{padding:24px;flex:1;display:flex;flex-direction:column}
-        .resource-card-body h3{font-size:17px;margin-bottom:8px}
-        .resource-card-body p{font-size:14px;color:var(--sangam-text-muted);margin-bottom:16px;flex:1}
-        .resource-card-footer{display:flex;justify-content:space-between;align-items:center}
-        .download-count{font-size:12px;color:var(--sangam-text-muted);display:flex;align-items:center;gap:4px}
-        .btn-sm{display:inline-flex;padding:8px 20px;font-size:13px;font-weight:600;border-radius:var(--radius-pill);background:var(--sangam-orange);color:white;transition:all var(--transition)}.btn-sm:hover{background:var(--sangam-orange-hover)}
-        .footer{background:var(--sangam-navy-deep);padding:60px 0 0;color:white}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid var(--sangam-footer-divider)}.footer-brand p{color:var(--sangam-footer-muted);font-size:14px;margin-top:16px;line-height:1.7}.footer-social{display:flex;gap:10px;margin-top:20px}.footer-social a{width:36px;height:36px;background:var(--sangam-orange);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:16px;transition:all var(--transition)}.footer h4{font-size:14px;text-transform:uppercase;letter-spacing:1px;margin-bottom:20px;color:white}.footer-links{list-style:none}.footer-links li{margin-bottom:10px}.footer-links a{color:var(--sangam-footer-muted);font-size:14px;transition:color var(--transition)}.footer-links a:hover{color:var(--sangam-orange)}.footer-bottom{padding:20px 0;text-align:center;color:var(--sangam-footer-muted);font-size:13px}
-        .animate-on-scroll{opacity:0;transform:translateY(30px);transition:opacity 0.6s ease,transform 0.6s ease}.animate-on-scroll.visible{opacity:1;transform:translateY(0)}
-        @media(max-width:1024px){.resources-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:repeat(2,1fr)}}
-        @media(max-width:768px){.nav{display:none}.mobile-toggle{display:block}.nav.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:white;padding:16px;border-bottom:1px solid var(--sangam-border)}.page-hero h1{font-size:32px}.resources-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}}
-    </style>
-</head>
-<body>
-    <header class="header" id="header"><div class="header-inner"><a href="/" class="logo"><div class="logo-icon"><span>S</span></div><div class="logo-text">Sangam DLC<small>By IIMBx</small></div></a><nav class="nav" id="mainNav"><a href="/">Home</a><a href="/about-us/">About</a><a href="/courses/">Courses</a><a href="/resources/" class="active">Resources</a><a href="/contact-us/">Contact</a><a href="/courses/" class="nav-cta">Join Community</a></nav><button class="mobile-toggle" onclick="document.getElementById('mainNav').classList.toggle('open')" aria-label="Toggle navigation"><span></span><span></span><span></span></button></div></header>
 
-    <section class="page-hero"><div class="container"><div class="breadcrumb"><a href="/">Home</a> / Resources</div><h1>Resources for Digital Teaching</h1><p>Free toolkits, guides, templates, and video tutorials to enhance your digital classroom practice — curated by IIM Bangalore faculty.</p></div></section>
-
-    <section class="section">
-        <div class="container">
-            <div class="resources-grid">
-                <div class="resource-card animate-on-scroll"><div class="resource-icon-bar"><div class="resource-type-icon type-toolkit">📦</div><div><strong style="font-size:14px;color:var(--sangam-text-heading)">Toolkit</strong><div class="resource-type-label">Teaching Resource</div></div></div><div class="resource-card-body"><h3>Digital Pedagogy Starter Kit</h3><p>A comprehensive toolkit for faculty starting their journey into digital teaching — includes checklists, templates, and best practices.</p><div class="resource-card-footer"><span class="download-count">⬇️ 2,340 downloads</span><a href="#" class="btn-sm">Download</a></div></div></div>
-                <div class="resource-card animate-on-scroll"><div class="resource-icon-bar"><div class="resource-type-icon type-video">🎬</div><div><strong style="font-size:14px;color:var(--sangam-text-heading)">Video Tutorial</strong><div class="resource-type-label">Watch & Learn</div></div></div><div class="resource-card-body"><h3>Recording Studio-Quality Lectures at Home</h3><p>Step-by-step video guide on setting up a home recording studio for online lectures — lighting, audio, and software tips.</p><div class="resource-card-footer"><span class="download-count">👁️ 4,120 views</span><a href="#" class="btn-sm">Watch</a></div></div></div>
-                <div class="resource-card animate-on-scroll"><div class="resource-icon-bar"><div class="resource-type-icon type-pdf">📄</div><div><strong style="font-size:14px;color:var(--sangam-text-heading)">Research Paper</strong><div class="resource-type-label">PDF Download</div></div></div><div class="resource-card-body"><h3>Impact of Blended Learning in Indian HEIs</h3><p>IIM Bangalore research paper on the effectiveness of blended learning approaches across 200+ Indian institutions.</p><div class="resource-card-footer"><span class="download-count">⬇️ 1,856 downloads</span><a href="#" class="btn-sm">Download PDF</a></div></div></div>
-                <div class="resource-card animate-on-scroll"><div class="resource-icon-bar"><div class="resource-type-icon type-template">📋</div><div><strong style="font-size:14px;color:var(--sangam-text-heading)">Template</strong><div class="resource-type-label">Ready to Use</div></div></div><div class="resource-card-body"><h3>Course Design Canvas Template</h3><p>A structured template to design your online course from scratch — includes learning outcomes mapping, assessment rubrics, and weekly plan.</p><div class="resource-card-footer"><span class="download-count">⬇️ 3,204 downloads</span><a href="#" class="btn-sm">Download</a></div></div></div>
-                <div class="resource-card animate-on-scroll"><div class="resource-icon-bar"><div class="resource-type-icon type-guide">📖</div><div><strong style="font-size:14px;color:var(--sangam-text-heading)">Guide</strong><div class="resource-type-label">Best Practices</div></div></div><div class="resource-card-body"><h3>AI-Assisted Assessment Guide</h3><p>How to use AI tools ethically for creating assessments, rubrics, and providing personalised feedback at scale.</p><div class="resource-card-footer"><span class="download-count">⬇️ 1,432 downloads</span><a href="#" class="btn-sm">Download</a></div></div></div>
-                <div class="resource-card animate-on-scroll"><div class="resource-icon-bar"><div class="resource-type-icon type-webinar">🎙️</div><div><strong style="font-size:14px;color:var(--sangam-text-heading)">Webinar Recording</strong><div class="resource-type-label">Watch On-Demand</div></div></div><div class="resource-card-body"><h3>Gamification in Higher Education</h3><p>Expert panel discussion on implementing gamification elements in university courses — featuring IIM Bangalore and IIT Delhi faculty.</p><div class="resource-card-footer"><span class="download-count">👁️ 2,678 views</span><a href="#" class="btn-sm">Watch</a></div></div></div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><div class="logo" style="margin-bottom:8px;"><div class="logo-icon"><span>S</span></div><div class="logo-text" style="color:white;">Sangam DLC<small style="color:var(--sangam-footer-muted);">By IIMBx</small></div></div><p>India's premier platform for higher-education faculty.</p><div class="footer-social"><a href="#">📷</a><a href="#">▶</a><a href="#">in</a></div></div><div><h4>Quick Links</h4><ul class="footer-links"><li><a href="/">Home</a></li><li><a href="/about-us/">About</a></li><li><a href="/courses/">Courses</a></li><li><a href="/resources/">Resources</a></li></ul></div><div><h4>Programs</h4><ul class="footer-links"><li><a href="#">Digital Pedagogy</a></li><li><a href="#">AI in Education</a></li><li><a href="#">Blended Learning</a></li></ul></div><div><h4>Connect</h4><ul class="footer-links"><li><a href="/contact-us/">Contact</a></li><li><a href="mailto:sangam@iimb.ac.in">sangam@iimb.ac.in</a></li><li><a href="https://iimbx.iimb.ac.in/">IIMBx</a></li></ul></div></div><div class="footer-bottom"><p>© 2026 Sangam Digital Learning Community — An IIMBx Initiative.</p></div></div></footer>
-    <script>
-        const header=document.getElementById('header');window.addEventListener('scroll',()=>{header.classList.toggle('scrolled',window.scrollY>50)});
-        const observer=new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('visible')})},{threshold:0.1});
-        document.querySelectorAll('.animate-on-scroll').forEach(el=>observer.observe(el));
-    </script>
-</body>
-</html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sangam DLC - Resources Directory</title>
+<!-- Google Fonts & Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration matching Design System -->
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline": "#8d716b",
+            "on-tertiary-fixed-variant": "#2a4b59",
+            "error": "#ba1a1a",
+            "background": "#f9f9ff",
+            "on-primary-fixed-variant": "#8b1907",
+            "on-tertiary-fixed": "#001f2a",
+            "tertiary-fixed-dim": "#aaccdc",
+            "on-secondary-fixed": "#2c1600",
+            "on-primary": "#ffffff",
+            "surface-container-high": "#e6e8f2",
+            "surface-tint": "#ad321d",
+            "primary": "#96220e",
+            "surface-container-highest": "#e0e2ec",
+            "tertiary-container": "#4a6b7a",
+            "surface-variant": "#e0e2ec",
+            "primary-fixed": "#ffdad3",
+            "on-tertiary-container": "#c8ebfc",
+            "surface-container": "#ecedf7",
+            "secondary-fixed-dim": "#ffb86f",
+            "error-container": "#ffdad6",
+            "secondary": "#8a5100",
+            "surface-dim": "#d8d9e3",
+            "secondary-fixed": "#ffdcbd",
+            "outline-variant": "#e0bfb9",
+            "primary-container": "#b83a24",
+            "inverse-surface": "#2d3038",
+            "on-error-container": "#93000a",
+            "secondary-container": "#ffa43c",
+            "inverse-on-surface": "#eff0fa",
+            "on-secondary-container": "#6c3e00",
+            "primary-fixed-dim": "#ffb4a5",
+            "on-secondary-fixed-variant": "#693c00",
+            "surface-bright": "#f9f9ff",
+            "on-secondary": "#ffffff",
+            "inverse-primary": "#ffb4a5",
+            "on-error": "#ffffff",
+            "tertiary": "#325361",
+            "on-tertiary": "#ffffff",
+            "on-background": "#191c23",
+            "on-primary-fixed": "#3f0400",
+            "on-primary-container": "#ffded8",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f2f3fd",
+            "on-surface-variant": "#59413c",
+            "on-surface": "#191c23",
+            "surface": "#f9f9ff",
+            "tertiary-fixed": "#c5e8f9"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "margin": "3rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "space-xl": "2.5rem",
+            "margin-mobile": "1.25rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Outfit"],
+            "title-md": ["Plus Jakarta Sans"],
+            "display-lg": ["Outfit"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-sm": ["Inter"],
+            "headline-lg": ["Outfit"],
+            "headline-md": ["Outfit"],
+            "headline-sm": ["Outfit"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-lg-mobile": ["Outfit"],
+            "label-md": ["Inter"],
+            "title-lg": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-sm": ["22px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "600" }],
+            "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    /* Ambient warm mesh background simulation */
+    .mesh-gradient-bg {
+      background-color: #f9f9ff;
+      background-image: 
+        radial-gradient(at 15% 10%, rgba(184, 58, 36, 0.12) 0px, transparent 48%),
+        radial-gradient(at 85% 25%, rgba(229, 143, 38, 0.14) 0px, transparent 52%),
+        radial-gradient(at 30% 65%, rgba(255, 180, 165, 0.18) 0px, transparent 50%),
+        radial-gradient(at 80% 85%, rgba(184, 58, 36, 0.08) 0px, transparent 45%);
+    }
+    /* Micro-scrollbar styling for mobile pill track */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen mesh-gradient-bg flex flex-col font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- ========================================================================= -->
+<!-- SHARED COMPONENT: TopAppBar (Semantic Shell Anchored)                   -->
+<!-- ========================================================================= -->
+<header class="bg-surface/80 backdrop-blur-md sticky top-0 z-40 shadow-sm transition-all duration-200">
+<div class="flex justify-between items-center w-full px-margin-mobile py-space-sm max-w-7xl mx-auto">
+<!-- Brand & Leading Academic Badge -->
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary shadow-sm ring-1 ring-primary/20">
+<span class="material-symbols-outlined text-primary text-[22px]" data-icon="school">school</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="text-headline-sm font-headline-sm text-primary tracking-tight font-bold">Sangam DLC</span>
+<span class="inline-flex items-center px-1.5 py-0.5 rounded-full text-[10px] font-bold font-label-sm bg-primary-fixed text-on-primary-fixed border border-primary/20">IIMBx</span>
+</div>
+<p class="text-[11px] font-label-sm text-on-surface-variant leading-none hidden sm:block">Digital Learning Community</p>
+</div>
+</div>
+<!-- Desktop / Tablet Navigation Links (Hidden on mobile) -->
+<nav class="hidden md:flex items-center gap-space-md">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#home">Home</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#about">About</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#courses">Courses</a>
+<a class="text-primary font-bold font-label-md text-label-md relative py-1 px-3 bg-primary-fixed/40 rounded-full border border-primary/10" href="#resources">
+          Resources
+          <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-1.5 h-1.5 bg-primary rounded-full"></span>
+</a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#contact">Contact</a>
+</nav>
+<!-- Action Area: CTA Button & Mobile Quick Toggle -->
+<div class="flex items-center gap-space-xs">
+<button class="relative inline-flex items-center justify-center rounded-full bg-primary-container text-on-primary px-space-md py-space-xs font-label-md text-label-md font-semibold shadow-sm hover:bg-primary transition-all duration-200 active:scale-95 ring-1 ring-white/20" type="button">
+<span class="relative z-10">Community</span>
+</button>
+<!-- Mobile Menu Toggle -->
+<button aria-label="Open Navigation Menu" class="md:hidden p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors active:scale-95" type="button">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- ========================================================================= -->
+<!-- MAIN CONTENT CANVAS                                                      -->
+<!-- ========================================================================= -->
+<main class="flex-1 w-full max-w-4xl mx-auto px-margin-mobile pt-space-lg pb-space-xl">
+<!-- Hero Section -->
+<section class="mb-space-lg text-left">
+<div class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed border border-secondary-fixed-dim/40 mb-space-xs">
+<span class="material-symbols-outlined text-[14px]" data-icon="local_library">local_library</span>
+<span class="text-label-sm font-label-sm uppercase tracking-wider font-semibold">IIMBx Pedagogy Hub</span>
+</div>
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile md:text-headline-lg md:font-headline-lg text-on-background tracking-tight text-balance">
+        Resources for <span class="text-primary font-bold relative inline-block">Digital Teaching
+          <span class="absolute left-0 -bottom-1 w-full h-[3px] bg-gradient-to-r from-primary-container via-secondary-container to-transparent rounded-full"></span>
+</span>
+</h1>
+<p class="mt-space-sm text-body-md font-body-md text-on-surface-variant max-w-2xl leading-relaxed">
+        Browse our curated collection of 100+ classroom prompts, high-impact video tutorials, lecture templates, and pedagogical guides by IIMBx educators.
+      </p>
+<!-- Stats Ticker Chips -->
+<div class="flex flex-wrap items-center gap-space-xs mt-space-md">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/30 shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-primary" data-icon="auto_stories">auto_stories</span>
+<span class="text-label-sm font-label-sm font-semibold">120+ Artifacts</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/30 shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-secondary-container" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-label-sm font-label-sm font-semibold">4.9★ Educator Rating</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/30 shadow-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary" data-icon="download">download</span>
+<span class="text-label-sm font-label-sm font-semibold">12k+ Downloads</span>
+</div>
+</div>
+</section>
+<!-- Search & Filter System -->
+<section class="sticky top-[60px] z-30 mb-space-lg bg-surface/75 backdrop-blur-xl py-space-xs rounded-xl transition-all">
+<div class="space-y-space-sm">
+<!-- Search Input Bar -->
+<div class="relative flex items-center shadow-sm rounded-lg">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-on-surface-variant/70">
+<span class="material-symbols-outlined text-[20px]" data-icon="search">search</span>
+</div>
+<input class="block w-full pl-10 pr-24 py-2.5 bg-surface-container-lowest border border-outline-variant/50 rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-200" placeholder="Search pedagogy prompts, lecture guides, rubrics..." type="text"/>
+<div class="absolute inset-y-0 right-1.5 flex items-center">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-label-sm font-label-sm font-bold bg-surface-container-high text-on-surface-variant">
+              108 Results
+            </span>
+</div>
+</div>
+<!-- Filter Controls Row -->
+<div class="flex items-center justify-between gap-space-xs">
+<!-- Horizontal Scrollable Category Pills -->
+<div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 pr-2 -mr-2 flex-1">
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold shadow-sm transition-transform active:scale-95">
+              All (108)
+            </button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant hover:text-primary hover:border-primary/30 font-label-sm text-label-sm transition-all active:scale-95">
+              Prompts (34)
+            </button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant hover:text-primary hover:border-primary/30 font-label-sm text-label-sm transition-all active:scale-95">
+              Video Tutorials (28)
+            </button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant hover:text-primary hover:border-primary/30 font-label-sm text-label-sm transition-all active:scale-95">
+              Templates (26)
+            </button>
+<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container-lowest border border-outline-variant/40 text-on-surface-variant hover:text-primary hover:border-primary/30 font-label-sm text-label-sm transition-all active:scale-95">
+              Research Papers (20)
+            </button>
+</div>
+<!-- Quick Sort Pill Dropdown Button -->
+<div class="shrink-0">
+<button class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-surface-container-low border border-outline-variant/30 text-on-surface-variant font-label-sm text-label-sm hover:text-on-surface">
+<span class="material-symbols-outlined text-[16px]" data-icon="swap_vert">swap_vert</span>
+<span>Popular</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Resources Cards Grid -->
+<section aria-label="Pedagogy Artifacts" class="space-y-space-md">
+<!-- Card 1: ChatGPT Pedagogy Prompts -->
+<article class="p-4 md:p-5 rounded-xl bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/40 hover:border-primary/30 shadow-[0_4px_20px_-2px_rgba(24,27,34,0.05)] transition-all duration-200">
+<div class="flex items-start justify-between gap-2 mb-2.5">
+<!-- Crimson Amber Pill Badge -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm font-bold bg-primary-fixed text-on-primary-fixed-variant border border-primary/20">
+<span class="material-symbols-outlined text-[14px]" data-icon="bolt">bolt</span>
+            Prompt Kit
+          </span>
+<button aria-label="Bookmark ChatGPT Prompts" class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<h2 class="text-title-lg font-title-lg text-on-surface font-bold leading-snug">
+          ChatGPT Pedagogy Prompts: Socratic Questioning &amp; Active Case Studies
+        </h2>
+<p class="mt-1.5 text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+          45+ engineered prompts tailored for executive education and interactive MBA case discussions.
+        </p>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="download">download</span> 3.4k Downloads
+            </span>
+<span>•</span>
+<span>45 Prompts</span>
+<span>•</span>
+<span class="px-1.5 py-0.5 bg-surface-container-high rounded text-[10px]">MD / PDF</span>
+</div>
+<button class="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto px-4 py-2 rounded-full bg-primary-container text-on-primary text-label-md font-label-md font-semibold hover:bg-primary active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="download">download</span>
+            Download Pack
+          </button>
+</div>
+</article>
+<!-- Card 2: Recording Studio-Quality Lectures -->
+<article class="p-4 md:p-5 rounded-xl bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/40 hover:border-primary/30 shadow-[0_4px_20px_-2px_rgba(24,27,34,0.05)] transition-all duration-200">
+<div class="flex items-start justify-between gap-2 mb-2.5">
+<!-- Ruby Red Pill Badge -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm font-bold bg-primary-fixed-dim/40 text-primary border border-primary/20">
+<span class="material-symbols-outlined text-[14px]" data-icon="videocam">videocam</span>
+            Video Masterclass
+          </span>
+<button aria-label="Bookmark Video Masterclass" class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<h2 class="text-title-lg font-title-lg text-on-surface font-bold leading-snug">
+          Recording Studio-Quality Lectures on a Budget
+        </h2>
+<p class="mt-1.5 text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+          Step-by-step masterclass on microphone placement, lighting setups, and OBS multi-camera switching for online faculty.
+        </p>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span> 48 mins
+            </span>
+<span>•</span>
+<span class="px-1.5 py-0.5 bg-surface-container-high rounded text-[10px]">4K Video</span>
+<span>•</span>
+<span>Resources Included</span>
+</div>
+<button class="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto px-4 py-2 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high active:scale-95 transition-all text-label-md font-label-md font-semibold border border-outline-variant/30" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="play_arrow">play_arrow</span>
+            Watch Video
+          </button>
+</div>
+</article>
+<!-- Card 3: Blended Learning Course Templates -->
+<article class="p-4 md:p-5 rounded-xl bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/40 hover:border-primary/30 shadow-[0_4px_20px_-2px_rgba(24,27,34,0.05)] transition-all duration-200">
+<div class="flex items-start justify-between gap-2 mb-2.5">
+<!-- Warm Ochre Pill Badge -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm font-bold bg-secondary-fixed text-on-secondary-fixed border border-secondary/20">
+<span class="material-symbols-outlined text-[14px]" data-icon="design_services">design_services</span>
+            Canvas &amp; Moodle Template
+          </span>
+<button aria-label="Bookmark Blended Course Template" class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<h2 class="text-title-lg font-title-lg text-on-surface font-bold leading-snug">
+          Blended Learning Course Syllabus &amp; Rubric Framework
+        </h2>
+<p class="mt-1.5 text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+          Turnkey weekly pacing guides, peer-evaluation rubrics, and asynchronous discussion board architectures.
+        </p>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="download">download</span> 1.8k Downloads
+            </span>
+<span>•</span>
+<span class="px-1.5 py-0.5 bg-secondary-fixed/50 text-on-secondary-fixed rounded text-[10px]">Notion &amp; DOCX</span>
+</div>
+<button class="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto px-4 py-2 rounded-full bg-primary-container text-on-primary text-label-md font-label-md font-semibold hover:bg-primary active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="download">download</span>
+            Download Template
+          </button>
+</div>
+</article>
+<!-- Card 4: AI in Business Education: 2024 Working Paper -->
+<article class="p-4 md:p-5 rounded-xl bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/40 hover:border-primary/30 shadow-[0_4px_20px_-2px_rgba(24,27,34,0.05)] transition-all duration-200">
+<div class="flex items-start justify-between gap-2 mb-2.5">
+<!-- Slate Teal Pill Badge -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm font-bold bg-tertiary-fixed text-on-tertiary-fixed border border-tertiary/20">
+<span class="material-symbols-outlined text-[14px]" data-icon="description">description</span>
+            Research Paper
+          </span>
+<button aria-label="Bookmark AI Research Paper" class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<h2 class="text-title-lg font-title-lg text-on-surface font-bold leading-snug">
+          Generative AI in Management Pedagogy: Assessment Integrity Framework
+        </h2>
+<p class="mt-1.5 text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+          Peer-reviewed IIMBx faculty working paper on AI-resilient oral exams and reflective learning logs.
+        </p>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span>24 Pages</span>
+<span>•</span>
+<span>Academic Citation</span>
+<span>•</span>
+<span class="px-1.5 py-0.5 bg-tertiary-fixed/60 rounded text-[10px]">PDF</span>
+</div>
+<button class="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto px-4 py-2 rounded-full bg-surface-container text-on-surface hover:bg-surface-container-high active:scale-95 transition-all text-label-md font-label-md font-semibold border border-outline-variant/30" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary" data-icon="menu_book">menu_book</span>
+            Read Paper
+          </button>
+</div>
+</article>
+<!-- Card 5: Interactive Simulation Micro-modules -->
+<article class="p-4 md:p-5 rounded-xl bg-surface-container-lowest/80 backdrop-blur-md border border-outline-variant/40 hover:border-primary/30 shadow-[0_4px_20px_-2px_rgba(24,27,34,0.05)] transition-all duration-200">
+<div class="flex items-start justify-between gap-2 mb-2.5">
+<!-- Rose / Accent Pill Badge -->
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm font-bold bg-primary-fixed/60 text-primary border border-primary/20">
+<span class="material-symbols-outlined text-[14px]" data-icon="sports_esports">sports_esports</span>
+            Interactive Tool
+          </span>
+<button aria-label="Bookmark Simulation Tool" class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+<h2 class="text-title-lg font-title-lg text-on-surface font-bold leading-snug">
+          Micro-Simulation Templates for Supply Chain &amp; Strategy
+        </h2>
+<p class="mt-1.5 text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+          Browser-based spreadsheet models and decision trees designed for live breakout sessions.
+        </p>
+<div class="mt-4 pt-3 border-t border-outline-variant/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+<div class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
+<span>Excel &amp; Web App</span>
+<span>•</span>
+<span class="px-1.5 py-0.5 bg-surface-container-high rounded text-[10px]">8 Modules</span>
+</div>
+<button class="inline-flex items-center justify-center gap-1.5 w-full sm:w-auto px-4 py-2 rounded-full bg-primary-container text-on-primary text-label-md font-label-md font-semibold hover:bg-primary active:scale-95 transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="open_in_new">open_in_new</span>
+            Launch Tool
+          </button>
+</div>
+</article>
+</section>
+<!-- Community Submission Callout Banner -->
+<section class="mt-space-xl p-space-md md:p-space-lg rounded-xl bg-gradient-to-br from-primary-fixed/60 via-secondary-fixed/30 to-surface-container-lowest border border-outline-variant/40 shadow-sm text-center relative overflow-hidden">
+<div class="relative z-10 max-w-xl mx-auto space-y-space-xs">
+<span class="material-symbols-outlined text-primary text-[32px]" data-icon="campaign">campaign</span>
+<h3 class="text-title-lg font-title-lg text-on-surface font-bold">Have an innovative pedagogical resource to share?</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Submit an artifact to Sangam DLC and collaborate with executive educators across premier business faculties.</p>
+<div class="pt-2">
+<button class="inline-flex items-center gap-2 px-space-md py-2 rounded-full bg-primary-container text-on-primary text-label-md font-label-md font-semibold hover:bg-primary transition-all duration-200 active:scale-95 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]" data-icon="upload_file">upload_file</span>
+            Submit an Artifact
+          </button>
+</div>
+</div>
+</section>
+</main>
+<!-- ========================================================================= -->
+<!-- SHARED COMPONENT: Footer                                                 -->
+<!-- ========================================================================= -->
+<footer class="bg-surface-container-low border-t border-outline-variant/20 py-space-xl px-margin-mobile text-center pb-24 md:pb-space-xl">
+<div class="max-w-4xl mx-auto flex flex-col items-center justify-center gap-space-md">
+<!-- Logo in Footer -->
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]" data-icon="school">school</span>
+<span class="text-title-lg font-title-lg text-primary font-bold">Sangam DLC</span>
+</div>
+<!-- Links adhering strictly to JSON -->
+<div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-label-sm font-label-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors duration-200" href="#academic-integrity">Academic Integrity</a>
+<a class="hover:text-primary transition-colors duration-200" href="#faculty-directory">Faculty Directory</a>
+<a class="hover:text-primary transition-colors duration-200" href="#research-archive">Research Archive</a>
+<a class="hover:text-primary transition-colors duration-200" href="#support">Support</a>
+</div>
+<!-- Copyright Text adhering strictly to JSON -->
+<p class="text-body-sm font-body-sm text-on-surface-variant/80">
+        © 2024 Sangam DLC, IIMBx Digital Learning Community. All rights reserved.
+      </p>
+</div>
+</footer>
+<!-- ========================================================================= -->
+<!-- SHARED COMPONENT: BottomNavBar (Semantic Lock: Library Active)           -->
+<!-- Responsive Pivot: Shown on mobile (md:hidden), hidden on desktop          -->
+<!-- ========================================================================= -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-lg border-t border-outline-variant/20 shadow-lg flex justify-around items-center px-gutter-mobile py-space-xs pb-safe">
+<!-- Destination 1: Library (ACTIVE - Resources Directory maps directly to Library) -->
+<a class="flex flex-col items-center justify-center bg-primary-fixed text-on-primary-fixed rounded-full px-space-md py-space-xs active:scale-95 transition-transform duration-150" href="#library">
+<span class="material-symbols-outlined text-[20px]" data-icon="local_library">local_library</span>
+<span class="text-label-sm font-label-sm font-bold mt-0.5">Library</span>
+</a>
+<!-- Destination 2: Search (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-200 active:scale-95" href="#search">
+<span class="material-symbols-outlined text-[20px]" data-icon="search">search</span>
+<span class="text-label-sm font-label-sm mt-0.5">Search</span>
+</a>
+<!-- Destination 3: Saved (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-200 active:scale-95" href="#saved">
+<span class="material-symbols-outlined text-[20px]" data-icon="bookmark">bookmark</span>
+<span class="text-label-sm font-label-sm mt-0.5">Saved</span>
+</a>
+<!-- Destination 4: Profile (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant px-space-md py-space-xs hover:text-primary transition-colors duration-200 active:scale-95" href="#profile">
+<span class="material-symbols-outlined text-[20px]" data-icon="account_circle">account_circle</span>
+<span class="text-label-sm font-label-sm mt-0.5">Profile</span>
+</a>
+</nav>
+</body></html>
