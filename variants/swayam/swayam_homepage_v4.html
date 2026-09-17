@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IIMB SWAYAM | National Management Education Initiative</title>
+<!-- Material Symbols & Editorial Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-surface": "#0d1c2f",
+            "surface-container-high": "#dde9ff",
+            "on-primary-fixed-variant": "#7f2b00",
+            "primary": "#a33900",
+            "on-error": "#ffffff",
+            "on-primary-container": "#fffbff",
+            "error-container": "#ffdad6",
+            "error": "#ba1a1a",
+            "background": "#f8f9ff",
+            "inverse-on-surface": "#ebf1ff",
+            "inverse-surface": "#233144",
+            "tertiary-container": "#c2512d",
+            "secondary-fixed-dim": "#bec6e0",
+            "primary-fixed": "#ffdbce",
+            "surface-variant": "#d5e3fd",
+            "on-secondary-fixed": "#131b2e",
+            "on-error-container": "#93000a",
+            "secondary-fixed": "#dae2fd",
+            "inverse-primary": "#ffb599",
+            "tertiary-fixed-dim": "#ffb59f",
+            "on-secondary-fixed-variant": "#3f465c",
+            "on-secondary-container": "#5c647a",
+            "surface": "#f8f9ff",
+            "on-background": "#0d1c2f",
+            "on-tertiary": "#ffffff",
+            "primary-fixed-dim": "#ffb599",
+            "surface-dim": "#ccdbf4",
+            "primary-container": "#cc4900",
+            "on-surface-variant": "#5a4138",
+            "tertiary-fixed": "#ffdbd1",
+            "outline": "#8e7166",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#d5e3fd",
+            "on-tertiary-fixed-variant": "#842503",
+            "on-primary-fixed": "#370e00",
+            "surface-container-lowest": "#ffffff",
+            "surface-bright": "#f8f9ff",
+            "secondary": "#565e74",
+            "outline-variant": "#e2bfb2",
+            "secondary-container": "#dae2fd",
+            "surface-container-low": "#eff4ff",
+            "surface-container": "#e6eeff",
+            "on-tertiary-fixed": "#3a0a00",
+            "surface-tint": "#a73a00",
+            "on-tertiary-container": "#fffbff",
+            "tertiary": "#a23917"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin": "3.5rem",
+            "space-md": "1.75rem",
+            "space-lg": "2.5rem",
+            "space-xs": "0.5rem",
+            "space-xl": "5rem",
+            "gutter": "2rem",
+            "space-sm": "1rem"
+          },
+          "fontFamily": {
+            "label-xs": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "body-lead": ["Newsreader"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "display-hero": ["Newsreader"],
+            "headline-lg": ["Newsreader"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Newsreader"],
+            "display-hero-mobile": ["Newsreader"]
+          },
+          "fontSize": {
+            "label-xs": ["0.85rem", { "lineHeight": "1.1rem", "letterSpacing": "0.04em", "fontWeight": "600" }],
+            "headline-sm": ["1.35rem", { "lineHeight": "1.85rem", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-md": ["1.85rem", { "lineHeight": "2.35rem", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-md": ["1.05rem", { "lineHeight": "1.65rem", "letterSpacing": "0", "fontWeight": "400" }],
+            "body-lead": ["1.35rem", { "lineHeight": "2rem", "letterSpacing": "0", "fontWeight": "400" }],
+            "label-lg": ["1rem", { "lineHeight": "1.4rem", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-lg": ["1.15rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "label-md": ["0.95rem", { "lineHeight": "1.3rem", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "display-hero": ["4.5rem", { "lineHeight": "5rem", "letterSpacing": "-0.03em", "fontWeight": "400" }],
+            "headline-lg": ["3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "body-sm": ["0.95rem", { "lineHeight": "1.5rem", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+            "display-hero-mobile": ["2.75rem", { "lineHeight": "3rem", "letterSpacing": "-0.02em", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+<!-- 1. TOP NAVIGATION BAR (Shared Component: TopNavBar) -->
+<header class="bg-surface dark:bg-inverse-surface docked full-width top-0 sticky z-50 border-b border-outline-variant/30 dark:border-outline/20">
+<div class="max-w-7xl mx-auto px-margin flex items-center justify-between h-20 w-full">
+<!-- Institutional Branding -->
+<div class="flex flex-col">
+<a class="font-display-hero text-headline-sm text-on-surface dark:text-inverse-on-surface tracking-tight font-semibold flex items-center gap-2" href="#">
+<span>IIMB SWAYAM</span>
+</a>
+<span class="text-label-xs font-label-xs text-secondary tracking-wider">Indian Institute of Management Bangalore • National MOOCs Initiative</span>
+</div>
+<!-- Center Links -->
+<nav class="hidden lg:flex items-center space-x-6">
+<a class="text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary dark:border-inverse-primary pb-1 text-label-md font-label-md transition-colors duration-150" href="#home">Home</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface text-label-md font-label-md transition-colors duration-150" href="#about">About</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface text-label-md font-label-md transition-colors duration-150" href="#explore">Explore Courses</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface text-label-md font-label-md transition-colors duration-150" href="#faculties">Our Faculties</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface text-label-md font-label-md transition-colors duration-150" href="#partners">Our Partners</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface text-label-md font-label-md transition-colors duration-150" href="#learners">Our Learners</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface text-label-md font-label-md transition-colors duration-150" href="#updates">Updates</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface text-label-md font-label-md transition-colors duration-150" href="#proposal">Submit Proposal</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface text-label-md font-label-md transition-colors duration-150" href="#contact">Contact</a>
+</nav>
+<!-- Trailing Action (NO Login / Sign-in) -->
+<div class="flex items-center">
+<a class="bg-primary text-on-primary text-label-lg font-label-lg px-6 py-2.5 rounded hover:bg-primary-container transition-all duration-150 shadow-sm active:scale-[0.99] flex items-center gap-1.5" href="#explore">
+<span>Enrol Now</span>
+<span class="material-symbols-outlined text-[1.125rem]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<!-- MAIN CANVAS -->
+<main class="max-w-7xl mx-auto px-margin space-y-space-xl py-space-xl" id="home">
+<!-- 2. HERO SECTION -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 space-y-space-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-low border border-outline-variant/50 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-label-xs font-label-xs text-primary tracking-wide">NATIONAL INITIATIVE UNDER MINISTRY OF EDUCATION</span>
+</div>
+<h1 class="font-display-hero text-display-hero text-on-surface leading-tight">
+          Democratising World-Class Management Education Across India
+        </h1>
+<p class="font-body-lead text-body-lead text-secondary max-w-2xl">
+          Advancing national access, equity, and scholarly rigor. Experience postgraduate curricula, real-world case discussions, and accredited pedagogy designed by IIM Bangalore faculty—completely open to every learner.
+        </p>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="bg-primary text-on-primary font-label-lg text-label-lg px-6 py-3 rounded hover:bg-primary-container transition-all flex items-center gap-2 shadow-sm" href="#explore">
+<span>Explore Free Courses</span>
+<span class="material-symbols-outlined text-base" data-icon="east">east</span>
+</a>
+<a class="border border-on-surface text-on-surface font-label-lg text-label-lg px-6 py-3 rounded hover:bg-on-surface hover:text-surface-container-lowest transition-all" href="#syllabus">
+            View Course Syllabus
+          </a>
+</div>
+<div class="flex items-center gap-6 pt-4 text-secondary text-body-sm font-body-sm border-t border-outline-variant/30">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="check_circle">check_circle</span>
+<span>UGC &amp; AICTE Recognized</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-lg" data-icon="verified">verified</span>
+<span>Transferable Academic Credits</span>
+</div>
+</div>
+</div>
+<!-- Bento Hero Visual Showcase -->
+<div class="lg:col-span-5 bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-space-md shadow-sm space-y-4">
+<div class="relative overflow-hidden rounded border border-outline-variant/30 aspect-[16/10]">
+<img class="w-full h-full object-cover" data-alt="An expansive, light-filled university amphitheatre at IIM Bangalore where executive students listen intently to a management professor writing corporate strategies on an interactive glass board, shot in natural architectural lighting with a dignified slate and warm terracotta academic color scheme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5VgYxJ7IgBLewzMK9P77w9JmiQcnggtEN3uNtR5iEHc0hoE12jLDAJz4Mzgy8UnMl86goo6yClFnMwqHoc4DoDLi05iY4W6UupfoMpGxLfCRzJxdK3V80oM-dl8s76fVNk6WfAIvh18LoBz_6_vw3u_o9--qCxKj3d6Gg-R0PvLEYCUBHhhhLrVl5O7aJPSoZ67FnP0-rQn7p7O5Mun-BS362URUiAeQCrFfKXl3Jbn3XdVJnMp-f-rHWUj9P7DPTkoFHmSDqCEw"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded text-label-xs font-label-xs text-on-surface border border-outline-variant/40 flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            LIVE TERM ACTIVE
+          </div>
+</div>
+<!-- Interactive Preview Bento Tile -->
+<div class="bg-surface-container-low rounded p-4 border border-outline-variant/30 space-y-2">
+<div class="flex items-center justify-between text-label-xs font-label-xs text-secondary">
+<span>FEATURED SPECIALISATION</span>
+<span class="text-primary font-semibold">TERM II 2025</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Strategic Leadership in Emerging Markets</h4>
+<p class="font-body-sm text-body-sm text-secondary">Prof. Sourav Mukherji • 6 Modules with Case Studies</p>
+<div class="w-full bg-surface-container-high h-1.5 rounded overflow-hidden mt-2">
+<div class="bg-primary h-full w-3/4 rounded"></div>
+</div>
+<div class="flex justify-between items-center pt-2 text-label-xs font-label-xs text-secondary">
+<span>National Enrolment: 14,280 Learners</span>
+<span class="text-on-surface font-semibold">75% Capacity</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. 'ACCESS, QUALITY, IMPACT' SECTION -->
+<section class="space-y-space-md" id="about">
+<div class="max-w-2xl">
+<span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Our Core Pillars</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Structured for Institutional Excellence</h2>
+<p class="font-body-md text-body-md text-secondary mt-1">Guaranteed by the highest standards of faculty governance, rigorous peer assessment, and national digital infrastructure.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Pillar 1: Access -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-space-lg rounded-xl hover:-translate-y-1 hover:border-outline transition-all duration-200 shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl" data-icon="public">public</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Access</h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Open without financial friction or geographical prerequisites. Course video lectures, readings, and assessments are 100% free to access from any tier of Indian higher education.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center text-label-md font-label-md text-primary">
+<span>Universal Equity Standards</span>
+</div>
+</div>
+<!-- Pillar 2: Quality -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-space-lg rounded-xl hover:-translate-y-1 hover:border-outline transition-all duration-200 shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl" data-icon="school">school</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Quality</h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Crafted directly by full-time IIM Bangalore faculty, utilizing the case-method pedagogy that defines benchmark master-level management research and practice.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center text-label-md font-label-md text-primary">
+<span>Academic Pedigree</span>
+</div>
+</div>
+<!-- Pillar 3: Impact -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-space-lg rounded-xl hover:-translate-y-1 hover:border-outline transition-all duration-200 shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-10 h-10 rounded bg-primary-fixed flex items-center justify-center text-primary mb-4">
+<span class="material-symbols-outlined text-2xl" data-icon="verified_user">verified_user</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Impact</h3>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">
+              Direct UGC-approved credit mobility into university transcripts, alongside proctored physical examinations certifying executive competence for career progression.
+            </p>
+</div>
+<div class="mt-6 pt-4 border-t border-outline-variant/20 flex items-center text-label-md font-label-md text-primary">
+<span>Validated Credentials</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. METRICS SECTION (Bento Ribbon) -->
+<section class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-space-lg shadow-sm">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter divide-y md:divide-y-0 md:divide-x divide-outline-variant/30">
+<div class="px-4 py-2 text-center md:text-left">
+<div class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">100+</div>
+<div class="font-headline-sm text-body-md text-on-surface font-semibold mt-1">Management Courses</div>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Spanning foundational to doctoral level</p>
+</div>
+<div class="px-4 py-2 text-center md:text-left">
+<div class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">5 Lakh+</div>
+<div class="font-headline-sm text-body-md text-on-surface font-semibold mt-1">Learner Enrolments</div>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Across all 28 states &amp; union territories</p>
+</div>
+<div class="px-4 py-2 text-center md:text-left">
+<div class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">25+</div>
+<div class="font-headline-sm text-body-md text-on-surface font-semibold mt-1">Partner Institutions</div>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Universities embedding IIMB credits</p>
+</div>
+<div class="px-4 py-2 text-center md:text-left">
+<div class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">15+</div>
+<div class="font-headline-sm text-body-md text-on-surface font-semibold mt-1">Specialised Domains</div>
+<p class="font-body-sm text-body-sm text-secondary mt-0.5">Finance, Ops, Strategy, &amp; Analytics</p>
+</div>
+</div>
+</section>
+<!-- 5. 'WHY LEARN THROUGH IIMB SWAYAM?' SECTION -->
+<section class="space-y-space-md" id="faculties">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Distinctive Pedagogy</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Why Learn Through IIMB SWAYAM?</h2>
+</div>
+<p class="text-secondary font-body-md text-body-md max-w-md">Bridging textbook theory with verified executive practices through India's premier management think tank.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Diff 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-space-lg rounded-xl flex gap-5">
+<div class="text-primary mt-1">
+<span class="material-symbols-outlined text-3xl" data-icon="schedule">schedule</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Flexible Online Access</h3>
+<p class="font-body-md text-body-md text-secondary">
+              Synchronous and asynchronous flexibility designed for balancing demanding university schedules or full-time corporate responsibilities. Multi-device support for anytime learning.
+            </p>
+</div>
+</div>
+<!-- Diff 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-space-lg rounded-xl flex gap-5">
+<div class="text-primary mt-1">
+<span class="material-symbols-outlined text-3xl" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Leading Faculty</h3>
+<p class="font-body-md text-body-md text-secondary">
+              Direct mentorship from world-renowned researchers, former corporate board members, and tenured chairs at IIM Bangalore, accompanied by distinguished visiting fellows.
+            </p>
+</div>
+</div>
+<!-- Diff 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-space-lg rounded-xl flex gap-5">
+<div class="text-primary mt-1">
+<span class="material-symbols-outlined text-3xl" data-icon="smart_display">smart_display</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Video Lectures &amp; Interactive Content</h3>
+<p class="font-body-md text-body-md text-secondary">
+              High-definition digital lectures produced in dedicated academic broadcast studios with animated conceptual frameworks, interactive transcripts, and graded module checkpoints.
+            </p>
+</div>
+</div>
+<!-- Diff 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-space-lg rounded-xl flex gap-5">
+<div class="text-primary mt-1">
+<span class="material-symbols-outlined text-3xl" data-icon="badge">badge</span>
+</div>
+<div class="space-y-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Certification Opportunities</h3>
+<p class="font-body-md text-body-md text-secondary">
+              End-of-term in-person proctored exams conducted across designated TCS iON centers nationwide, issuing verified certificates signed by IIMB and SWAYAM National Coordinators.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. 'HOW LEARNING WORKS' STEP-BY-STEP ROADMAP -->
+<section class="space-y-space-md bg-surface-container-low p-space-lg rounded-xl border border-outline-variant/30">
+<div class="text-center max-w-2xl mx-auto space-y-1">
+<span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Five Simple Steps</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">How Learning Works</h2>
+<p class="font-body-md text-body-md text-secondary">A transparent academic pathway from initial enrolment through certified graduation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-4 pt-4">
+<!-- Step 1 -->
+<div class="bg-surface-container-lowest p-4 rounded border border-outline-variant/40 space-y-2 relative">
+<div class="text-primary font-bold text-label-xs font-label-xs">01 / ENROL</div>
+<h4 class="font-headline-sm text-body-lg font-semibold text-on-surface">Browse &amp; Register</h4>
+<p class="font-body-sm text-body-sm text-secondary">Select any course from the catalogue and register for free with single-click simplicity.</p>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-lowest p-4 rounded border border-outline-variant/40 space-y-2 relative">
+<div class="text-primary font-bold text-label-xs font-label-xs">02 / LEARN</div>
+<h4 class="font-headline-sm text-body-lg font-semibold text-on-surface">Stream Modules</h4>
+<p class="font-body-sm text-body-sm text-secondary">Engage with weekly recorded lectures and curated academic readings at your own pace.</p>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-lowest p-4 rounded border border-outline-variant/40 space-y-2 relative">
+<div class="text-primary font-bold text-label-xs font-label-xs">03 / PRACTISE</div>
+<h4 class="font-headline-sm text-body-lg font-semibold text-on-surface">Self-Assessments</h4>
+<p class="font-body-sm text-body-sm text-secondary">Solidify conceptual mastery with weekly assignments and auto-graded analytical problem sets.</p>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-lowest p-4 rounded border border-outline-variant/40 space-y-2 relative">
+<div class="text-primary font-bold text-label-xs font-label-xs">04 / ENGAGE</div>
+<h4 class="font-headline-sm text-body-lg font-semibold text-on-surface">Discuss &amp; Debate</h4>
+<p class="font-body-sm text-body-sm text-secondary">Participate in TA-moderated forums to clarify questions and solve case scenarios with peers.</p>
+</div>
+<!-- Step 5 -->
+<div class="bg-surface-container-lowest p-4 rounded border border-outline-variant/40 space-y-2 relative">
+<div class="text-primary font-bold text-label-xs font-label-xs">05 / CERTIFY</div>
+<h4 class="font-headline-sm text-body-lg font-semibold text-on-surface">Proctored Exam</h4>
+<p class="font-body-sm text-body-sm text-secondary">Take an authorized test to earn verifiable IIMB credentials eligible for university credit transfer.</p>
+</div>
+</div>
+</section>
+<!-- 7. 'LEARNER PATHWAYS' SECTION -->
+<section class="space-y-space-md" id="learners">
+<div class="max-w-xl">
+<span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Tailored Academic Trajectories</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Engineered for Your Goals</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Student -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-5 rounded-xl space-y-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="school">school</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Students</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+            Earn formal credits valid across higher educational institutions nationwide, fulfilling AICTE / UGC core and elective management criteria.
+          </p>
+<ul class="text-label-xs font-label-xs text-secondary space-y-1 pt-2">
+<li>• Credit Mobility via ABC</li>
+<li>• Internship Readiness</li>
+</ul>
+</div>
+<!-- Faculty -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-5 rounded-xl space-y-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="co_present">co_present</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Faculty &amp; Colleges</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+            Incorporate top-tier IIMB content into university classrooms through blended teaching models and Faculty Development Programmes (FDPs).
+          </p>
+<ul class="text-label-xs font-label-xs text-secondary space-y-1 pt-2">
+<li>• Curricular Enrichment</li>
+<li>• FDP Recognition Points</li>
+</ul>
+</div>
+<!-- Professionals -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-5 rounded-xl space-y-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="business_center">business_center</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Working Executives</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+            Upskill in strategic planning, financial metrics, and organisational mechanics to accelerate promotions into general management.
+          </p>
+<ul class="text-label-xs font-label-xs text-secondary space-y-1 pt-2">
+<li>• Pragmatic Case Studies</li>
+<li>• Executive Credibility</li>
+</ul>
+</div>
+<!-- Lifelong -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-5 rounded-xl space-y-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="psychology">psychology</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Lifelong Learners</h3>
+<p class="font-body-sm text-body-sm text-secondary">
+            Satisfy intellectual curiosity with unrestricted exploration of sustainable economics, corporate governance, and entrepreneurial ventures.
+          </p>
+<ul class="text-label-xs font-label-xs text-secondary space-y-1 pt-2">
+<li>• Zero Pre-requisites</li>
+<li>• Self-Directed Schedules</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- 8. 'EXPLORE COURSES' SECTION -->
+<section class="space-y-space-md" id="explore">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Academic Catalogue</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Explore Core Management Courses</h2>
+</div>
+<a class="text-label-md font-label-md text-primary hover:underline flex items-center gap-1" href="#catalogue">
+<span>View Complete 100+ Course Registry</span>
+<span class="material-symbols-outlined text-sm" data-icon="arrow_outward">arrow_outward</span>
+</a>
+</div>
+<!-- Filter Controls Bar -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-4 rounded-xl flex flex-wrap items-center justify-between gap-4 shadow-sm">
+<div class="flex items-center gap-2 flex-1 min-w-[240px]">
+<span class="material-symbols-outlined text-secondary" data-icon="search">search</span>
+<input class="w-full text-body-md font-body-md bg-transparent border-none focus:ring-0 text-on-surface placeholder:text-secondary" placeholder="Search by course title, professor, or discipline..." type="text"/>
+</div>
+<div class="flex flex-wrap items-center gap-2">
+<button class="bg-primary text-on-primary text-label-xs font-label-xs px-3 py-1.5 rounded">All Subjects</button>
+<button class="bg-surface-container-low text-secondary hover:text-on-surface text-label-xs font-label-xs px-3 py-1.5 rounded">Strategy</button>
+<button class="bg-surface-container-low text-secondary hover:text-on-surface text-label-xs font-label-xs px-3 py-1.5 rounded">Finance</button>
+<button class="bg-surface-container-low text-secondary hover:text-on-surface text-label-xs font-label-xs px-3 py-1.5 rounded">Marketing</button>
+<button class="bg-surface-container-low text-secondary hover:text-on-surface text-label-xs font-label-xs px-3 py-1.5 rounded">Operations</button>
+<button class="bg-surface-container-low text-secondary hover:text-on-surface text-label-xs font-label-xs px-3 py-1.5 rounded">Data Analytics</button>
+</div>
+<div class="border-l border-outline-variant/30 pl-4">
+<select class="text-label-xs font-label-xs text-on-surface bg-transparent border border-outline-variant/40 rounded py-1 px-2 focus:ring-primary">
+<option>All Schedules (Upcoming &amp; Self-Paced)</option>
+<option>Term II (Starts Next Month)</option>
+<option>Continuous Self-Paced</option>
+</select>
+</div>
+</div>
+<!-- Courses Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Course 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl overflow-hidden hover:-translate-y-1 hover:border-outline transition-all duration-200 shadow-sm flex flex-col justify-between">
+<div class="p-5 space-y-3">
+<div class="flex justify-between items-center text-label-xs font-label-xs text-secondary">
+<span class="bg-surface-container-low text-on-surface px-2 py-0.5 rounded font-medium">Strategy</span>
+<div class="flex items-center text-primary font-semibold">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="star" data-weight="fill">star</span>
+                4.9
+              </div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2">
+              Strategic Management: Creating Competitive Advantage
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary">Prof. P.D. Jose • Professor of Strategy</p>
+<div class="pt-2 text-label-xs font-label-xs text-secondary flex items-center gap-4">
+<span>6 Weeks</span>
+<span>•</span>
+<span>3-4 hrs/week</span>
+</div>
+</div>
+<div class="p-5 pt-0 border-t border-outline-variant/20 flex items-center justify-between mt-4">
+<span class="text-label-xs font-label-xs text-secondary">Free Access</span>
+<a class="text-primary font-label-md font-label-md hover:underline flex items-center gap-1" href="#">
+<span>Enrol for Free</span>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Course 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl overflow-hidden hover:-translate-y-1 hover:border-outline transition-all duration-200 shadow-sm flex flex-col justify-between">
+<div class="p-5 space-y-3">
+<div class="flex justify-between items-center text-label-xs font-label-xs text-secondary">
+<span class="bg-surface-container-low text-on-surface px-2 py-0.5 rounded font-medium">Finance</span>
+<div class="flex items-center text-primary font-semibold">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="star" data-weight="fill">star</span>
+                4.8
+              </div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2">
+              Financial Accounting and Corporate Statement Analysis
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary">Prof. M.S. Narasimhan • Finance &amp; Accounting</p>
+<div class="pt-2 text-label-xs font-label-xs text-secondary flex items-center gap-4">
+<span>8 Weeks</span>
+<span>•</span>
+<span>4-5 hrs/week</span>
+</div>
+</div>
+<div class="p-5 pt-0 border-t border-outline-variant/20 flex items-center justify-between mt-4">
+<span class="text-label-xs font-label-xs text-secondary">Free Access</span>
+<a class="text-primary font-label-md font-label-md hover:underline flex items-center gap-1" href="#">
+<span>Enrol for Free</span>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Course 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl overflow-hidden hover:-translate-y-1 hover:border-outline transition-all duration-200 shadow-sm flex flex-col justify-between">
+<div class="p-5 space-y-3">
+<div class="flex justify-between items-center text-label-xs font-label-xs text-secondary">
+<span class="bg-surface-container-low text-on-surface px-2 py-0.5 rounded font-medium">Marketing</span>
+<div class="flex items-center text-primary font-semibold">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="star" data-weight="fill">star</span>
+                4.9
+              </div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2">
+              Brand Management and Integrated Communications
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary">Prof. Seema Gupta • Digital Marketing Chair</p>
+<div class="pt-2 text-label-xs font-label-xs text-secondary flex items-center gap-4">
+<span>6 Weeks</span>
+<span>•</span>
+<span>3 hrs/week</span>
+</div>
+</div>
+<div class="p-5 pt-0 border-t border-outline-variant/20 flex items-center justify-between mt-4">
+<span class="text-label-xs font-label-xs text-secondary">Free Access</span>
+<a class="text-primary font-label-md font-label-md hover:underline flex items-center gap-1" href="#">
+<span>Enrol for Free</span>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Course 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl overflow-hidden hover:-translate-y-1 hover:border-outline transition-all duration-200 shadow-sm flex flex-col justify-between">
+<div class="p-5 space-y-3">
+<div class="flex justify-between items-center text-label-xs font-label-xs text-secondary">
+<span class="bg-surface-container-low text-on-surface px-2 py-0.5 rounded font-medium">Operations</span>
+<div class="flex items-center text-primary font-semibold">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="star" data-weight="fill">star</span>
+                4.7
+              </div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface line-clamp-2">
+              Operations &amp; Supply Chain Management Dynamics
+            </h3>
+<p class="font-body-sm text-body-sm text-secondary">Prof. B. Mahadevan • Production &amp; Ops</p>
+<div class="pt-2 text-label-xs font-label-xs text-secondary flex items-center gap-4">
+<span>8 Weeks</span>
+<span>•</span>
+<span>4 hrs/week</span>
+</div>
+</div>
+<div class="p-5 pt-0 border-t border-outline-variant/20 flex items-center justify-between mt-4">
+<span class="text-label-xs font-label-xs text-secondary">Free Access</span>
+<a class="text-primary font-label-md font-label-md hover:underline flex items-center gap-1" href="#">
+<span>Enrol for Free</span>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 9. 'STORIES AND IMPACT' SECTION -->
+<section class="space-y-space-md" id="partners">
+<div class="max-w-xl">
+<span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Peer Testimonials</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Transformative Journeys</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Story 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-space-lg rounded-xl flex flex-col justify-between shadow-sm">
+<div class="space-y-4">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-lg" data-icon="format_quote">format_quote</span>
+</div>
+<p class="font-body-lead text-body-md text-on-surface italic">
+              "Coming from a regional state engineering college in Jabalpur, I lacked exposure to top-tier strategic frameworks. Completing Prof. Jose's courses gave me the conceptual foundation to transition into a tier-one consulting firm."
+            </p>
+</div>
+<div class="pt-6 border-t border-outline-variant/20 flex items-center gap-3 mt-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface text-label-md">AS</div>
+<div>
+<div class="font-headline-sm text-body-md font-semibold text-on-surface">Ananya Sharma</div>
+<div class="font-body-sm text-body-sm text-secondary">Now Corporate Strategy Analyst</div>
+</div>
+</div>
+</div>
+<!-- Story 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-space-lg rounded-xl flex flex-col justify-between shadow-sm">
+<div class="space-y-4">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-lg" data-icon="format_quote">format_quote</span>
+</div>
+<p class="font-body-lead text-body-md text-on-surface italic">
+              "We integrated IIMB's Operations Management modules into our university's MBA program as a blended module. Student engagement and placement assessment clearing rates increased by 40% in our very first term."
+            </p>
+</div>
+<div class="pt-6 border-t border-outline-variant/20 flex items-center gap-3 mt-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface text-label-md">RN</div>
+<div>
+<div class="font-headline-sm text-body-md font-semibold text-on-surface">Rajesh Nair</div>
+<div class="font-body-sm text-body-sm text-secondary">Assistant Professor, Kerala Technological Univ</div>
+</div>
+</div>
+</div>
+<!-- Story 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-space-lg rounded-xl flex flex-col justify-between shadow-sm">
+<div class="space-y-4">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-lg" data-icon="format_quote">format_quote</span>
+</div>
+<p class="font-body-lead text-body-md text-on-surface italic">
+              "Balancing factory shifts with continuous education seemed impossible. The modular video units and proctored Sunday exams allowed me to earn 12 official management credits that validated my transition into regional supply lead."
+            </p>
+</div>
+<div class="pt-6 border-t border-outline-variant/20 flex items-center gap-3 mt-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface text-label-md">VS</div>
+<div>
+<div class="font-headline-sm text-body-md font-semibold text-on-surface">Vikramaditya Sen</div>
+<div class="font-body-sm text-body-sm text-secondary">Operations Head, Manufacturing Cluster</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- 10. FOOTER / HELP CENTRE (Shared Component: Footer) -->
+<footer class="bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant/30 dark:border-outline/20">
+<div class="max-w-7xl mx-auto px-margin py-space-xl flex flex-col gap-space-lg w-full" id="contact">
+<!-- Institutional Info Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="space-y-3">
+<div class="font-display-hero text-headline-md text-on-surface dark:text-inverse-on-surface tracking-tight font-semibold">
+            IIMB SWAYAM
+          </div>
+<p class="text-body-sm font-body-sm text-secondary">
+            A national initiative powered by the Indian Institute of Management Bangalore in partnership with the Ministry of Education (MoE), Government of India.
+          </p>
+<div class="text-label-xs font-label-xs text-primary font-bold">
+            Bannerghatta Road, Bengaluru, Karnataka 560076
+          </div>
+</div>
+<div class="space-y-2">
+<div class="text-headline-sm font-headline-sm text-on-surface dark:text-inverse-on-surface">Affiliations</div>
+<ul class="space-y-1 text-body-sm font-body-sm text-secondary">
+<li><a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">NPTEL &amp; SWAYAM MoE</a></li>
+<li><a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">UGC Credit Framework</a></li>
+<li><a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">AICTE Approval Matrix</a></li>
+<li><a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">Institutional Partners</a></li>
+</ul>
+</div>
+<div class="space-y-2">
+<div class="text-headline-sm font-headline-sm text-on-surface dark:text-inverse-on-surface">Academics</div>
+<ul class="space-y-1 text-body-sm font-body-sm text-secondary">
+<li><a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">Faculty Directory</a></li>
+<li><a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">Academic Integrity</a></li>
+<li><a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">Proctored Examination Centers</a></li>
+<li><a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">Terms of Certification</a></li>
+</ul>
+</div>
+<div class="space-y-2">
+<div class="text-headline-sm font-headline-sm text-on-surface dark:text-inverse-on-surface">Help Centre</div>
+<p class="text-body-sm font-body-sm text-secondary">
+            For learner inquiries, exam hall tickets, or credit transfer verification:
+          </p>
+<div class="pt-1">
+<span class="text-label-xs font-label-xs text-secondary block">SUPPORT DESK</span>
+<span class="text-label-md font-label-md text-on-surface font-semibold">swayam-support@iimb.ac.in</span>
+</div>
+<div class="pt-1 text-label-xs font-label-xs text-secondary">
+            Toll-Free Helpline: 1800-425-4462 (09:30 - 17:30 IST)
+          </div>
+</div>
+</div>
+<!-- Links & Copyright Strip -->
+<div class="pt-space-md border-t border-outline-variant/30 flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="flex flex-wrap gap-x-6 gap-y-2 text-label-xs font-label-xs text-secondary">
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">NPTEL &amp; SWAYAM MoE</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">Academic Integrity</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">Accessibility Charter</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">Institutional Partners</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">Faculty Directory</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">Terms of Certification</a>
+<a class="hover:text-primary dark:hover:text-inverse-primary transition-colors duration-150" href="#">Privacy Policy</a>
+</div>
+<p class="text-body-sm font-body-sm text-secondary text-center md:text-right">
+          © 2025 Indian Institute of Management Bangalore (IIMB) SWAYAM. All rights reserved. Advancing national management education through open access.
+        </p>
+</div>
+</div>
+</footer>
+</body></html>
