@@ -132,7 +132,21 @@
     .animate-marquee {
       animation: marquee 40s linear infinite;
     }
-  </style>
+  
+    /* Submit Proposal - V4 Editorial */
+    .proposal-eyebrow { background: #FFF7ED; color: #C2410C; }
+    .proposal-heading { color: #0F172A; }
+    .proposal-step-badge { background: #A33900; }
+    .proposal-input:focus { --tw-ring-color: rgba(163,57,0,0.2); border-color: #A33900 !important; }
+    .proposal-btn { background: #A33900; }
+    .proposal-btn:hover { background: #882E00; }
+    .proposal-icon-bg { background: #FFF7ED; }
+    .proposal-icon-color { color: #A33900; }
+    .proposal-check { color: #A33900; }
+    .proposal-badge { background: #FFF7ED; color: #C2410C; }
+    .proposal-helpdesk { background: #FFFBF8; }
+    .proposal-link { color: #A33900; }
+    </style>
 </head>
 <body class="bg-surface antialiased text-on-surface selection:bg-primary selection:text-on-primary">
 <!-- 1. TOP NAVIGATION BAR (Shared Component: TopNavBar) -->
@@ -716,6 +730,195 @@
 </div>
 </div>
 </section>
+
+
+<!-- =============== SUBMIT PROPOSAL SECTION =============== -->
+<section id="proposal" class="py-12 lg:py-20 border-t" style="background:#F4F7FC; border-color:rgba(0,0,0,0.06);">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
+
+    <!-- Grid: 7/5 columns -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14">
+
+      <!-- LEFT: Header + Steps + Form (7 cols) -->
+      <div class="lg:col-span-7">
+
+        <!-- Section label + heading -->
+        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3 proposal-eyebrow">For Faculty &amp; Institutions</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 proposal-heading">Submit a Course Proposal</h2>
+        <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-8 max-w-2xl">
+          IIMB SWAYAM invites faculty members and institutions to propose MOOCs for the SWAYAM platform. All proposals go through a structured review covering course design, production support, and teaching standards.
+        </p>
+
+        <!-- 3 Process Steps -->
+        <div class="flex flex-col gap-4 mb-8">
+          <div class="flex items-start gap-4 bg-white rounded-xl border p-5 shadow-sm" style="border-color:rgba(0,0,0,0.07);">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm text-white proposal-step-badge">01</div>
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-1">Submit Proposal</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">Complete the course proposal form with your teaching objectives, target audience, and syllabus outline.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 bg-white rounded-xl border p-5 shadow-sm" style="border-color:rgba(0,0,0,0.07);">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm text-white proposal-step-badge">02</div>
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-1">Review &amp; Feedback</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">The IIMB SWAYAM team reviews your proposal and provides structured feedback within 30 days.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4 bg-white rounded-xl border p-5 shadow-sm" style="border-color:rgba(0,0,0,0.07);">
+            <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm text-white proposal-step-badge">03</div>
+            <div>
+              <h3 class="font-semibold text-gray-900 mb-1">Development &amp; Launch</h3>
+              <p class="text-sm text-gray-500 leading-relaxed">Approved proposals receive full production support, faculty development resources, and platform onboarding.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proposal Form -->
+        <div class="bg-white rounded-xl border p-6 lg:p-8 shadow-sm" style="border-color:rgba(0,0,0,0.07);">
+          <h3 class="text-lg font-bold text-gray-900 mb-5">Course Proposal Form</h3>
+          <form onsubmit="event.preventDefault(); this.innerHTML='<div class='text-center py-8'><span class='text-3xl'>✓</span><p class='font-semibold text-gray-800 mt-3'>Proposal submitted successfully!</p><p class='text-sm text-gray-500 mt-1'>Our team will reach out within 30 days.</p></div>';">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide">Full Name</label>
+                <input type="text" placeholder="e.g. Prof. Arvind Sharma" required
+                  class="w-full h-11 px-3.5 rounded-lg border text-sm text-gray-800 bg-gray-50 focus:outline-none focus:ring-2 proposal-input" style="border-color:#CBD5E1;">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide">Institution / Organization</label>
+                <input type="text" placeholder="e.g. University / College name" required
+                  class="w-full h-11 px-3.5 rounded-lg border text-sm text-gray-800 bg-gray-50 focus:outline-none focus:ring-2 proposal-input" style="border-color:#CBD5E1;">
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide">Official Email</label>
+                <input type="email" placeholder="name@institution.ac.in" required
+                  class="w-full h-11 px-3.5 rounded-lg border text-sm text-gray-800 bg-gray-50 focus:outline-none focus:ring-2 proposal-input" style="border-color:#CBD5E1;">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide">Proposed Course Title</label>
+                <input type="text" placeholder="e.g. Strategic Product Innovation" required
+                  class="w-full h-11 px-3.5 rounded-lg border text-sm text-gray-800 bg-gray-50 focus:outline-none focus:ring-2 proposal-input" style="border-color:#CBD5E1;">
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide">Subject Area</label>
+              <select required class="w-full h-11 px-3.5 rounded-lg border text-sm text-gray-700 bg-gray-50 focus:outline-none focus:ring-2 proposal-input" style="border-color:#CBD5E1;">
+                <option value="">Select a subject area</option>
+                <option>Marketing &amp; Consumer Insights</option>
+                <option>Finance &amp; Accounting</option>
+                <option>Strategy &amp; Leadership</option>
+                <option>Operations &amp; Analytics</option>
+                <option>Entrepreneurship &amp; Innovation</option>
+                <option>People &amp; Organisations (HR)</option>
+              </select>
+            </div>
+            <div class="mb-6">
+              <label class="block text-xs font-semibold text-gray-600 mb-1.5 uppercase tracking-wide">Brief Proposal Summary</label>
+              <textarea rows="4" placeholder="Outline your teaching objectives, intended learner audience, prerequisite knowledge, and a high-level 6–8 week syllabus overview..." required
+                class="w-full px-3.5 py-3 rounded-lg border text-sm text-gray-800 bg-gray-50 focus:outline-none focus:ring-2 proposal-input resize-none leading-relaxed" style="border-color:#CBD5E1;"></textarea>
+            </div>
+            <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-semibold text-white proposal-btn transition-all duration-200 hover:opacity-90 hover:shadow-lg">
+              Submit Proposal →
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- RIGHT: Info Cards (5 cols) -->
+      <div class="lg:col-span-5 flex flex-col gap-5">
+
+        <!-- Who Can Apply -->
+        <div class="bg-white rounded-xl border p-6 shadow-sm" style="border-color:rgba(0,0,0,0.07);">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center proposal-icon-bg">
+              <span class="material-symbols-outlined text-xl proposal-icon-color" data-icon="groups">groups</span>
+            </div>
+            <h3 class="font-bold text-gray-900">Who Can Apply</h3>
+          </div>
+          <ul class="flex flex-col gap-2.5 mb-4">
+            <li class="flex items-start gap-2.5 text-sm text-gray-700">
+              <span class="material-symbols-outlined text-base mt-0.5 proposal-check" data-icon="check_circle">check_circle</span>
+              <span>Faculty members at universities &amp; premier business schools</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700">
+              <span class="material-symbols-outlined text-base mt-0.5 proposal-check" data-icon="check_circle">check_circle</span>
+              <span>Academic institutions seeking blended curriculum co-creation</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700">
+              <span class="material-symbols-outlined text-base mt-0.5 proposal-check" data-icon="check_circle">check_circle</span>
+              <span>Subject matter experts and recognized domain leaders</span>
+            </li>
+          </ul>
+          <p class="text-xs text-gray-500 pt-3 border-t leading-relaxed" style="border-color:rgba(0,0,0,0.06);">
+            Open to recognized collegiate faculty and industry thought leaders aiming to disseminate high-impact management education nationwide.
+          </p>
+        </div>
+
+        <!-- Support Available -->
+        <div class="bg-white rounded-xl border p-6 shadow-sm" style="border-color:rgba(0,0,0,0.07);">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center proposal-icon-bg">
+              <span class="material-symbols-outlined text-xl proposal-icon-color" data-icon="handyman">handyman</span>
+            </div>
+            <h3 class="font-bold text-gray-900">Support Available</h3>
+          </div>
+          <ul class="flex flex-col gap-2.5 mb-4">
+            <li class="flex items-start gap-2.5 text-sm text-gray-700">
+              <span class="material-symbols-outlined text-base mt-0.5 proposal-check" data-icon="check_circle">check_circle</span>
+              <span>Course design standards &amp; pedagogical mapping</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700">
+              <span class="material-symbols-outlined text-base mt-0.5 proposal-check" data-icon="check_circle">check_circle</span>
+              <span>Production and state-of-the-art studio recording support</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700">
+              <span class="material-symbols-outlined text-base mt-0.5 proposal-check" data-icon="check_circle">check_circle</span>
+              <span>Faculty development program &amp; teaching assistant support</span>
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-gray-700">
+              <span class="material-symbols-outlined text-base mt-0.5 proposal-check" data-icon="check_circle">check_circle</span>
+              <span>Platform onboarding &amp; semester lifecycle management</span>
+            </li>
+          </ul>
+          <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold proposal-badge">
+            <span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+            End-to-end NTA &amp; UGC compliant MOOC pipeline
+          </div>
+        </div>
+
+        <!-- Faculty Help Desk -->
+        <div class="rounded-xl border p-6 shadow-sm proposal-helpdesk" style="border-color:rgba(0,0,0,0.08);">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-lg flex items-center justify-center proposal-icon-bg">
+              <span class="material-symbols-outlined text-xl proposal-icon-color" data-icon="support_agent">support_agent</span>
+            </div>
+            <h3 class="font-bold text-gray-900">Faculty Help Desk</h3>
+          </div>
+          <p class="text-sm text-gray-600 mb-4 leading-relaxed">
+            Have questions on proposal guidelines, credit transfer, or studio recording schedules? Connect with our coordination team.
+          </p>
+          <div class="flex flex-col gap-3 pt-3 border-t" style="border-color:rgba(0,0,0,0.06);">
+            <div class="flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-base proposal-icon-color flex-shrink-0" data-icon="mail">mail</span>
+              <a href="mailto:iimbswayam@iimb.ac.in" class="text-sm font-semibold proposal-link hover:underline">iimbswayam@iimb.ac.in</a>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <span class="material-symbols-outlined text-base proposal-icon-color flex-shrink-0 mt-0.5" data-icon="call">call</span>
+              <div>
+                <a href="tel:08026993854" class="text-sm font-semibold text-gray-800 hover:underline">+91 80 2699 3854</a>
+                <p class="text-xs text-gray-500 mt-0.5">Mon – Fri, 9:30 AM – 5:30 PM IST</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ======================================================= -->
 
 <!-- 9. 'STORIES AND IMPACT' SECTION -->
 <section class="space-y-space-md" id="stories">
