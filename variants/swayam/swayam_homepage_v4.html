@@ -7,7 +7,7 @@
 <!-- Material Symbols & Editorial Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Manrope:wght@300..800&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -16,6 +16,15 @@
       darkMode: "class",
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif'],
+            display: ['"Playfair Display"', 'serif'],
+            headline: ['"Playfair Display"', 'serif'],
+            body: ['Manrope', 'sans-serif'],
+            label: ['Manrope', 'sans-serif'],
+          },
+
           "colors": {
             "on-surface": "#0d1c2f",
             "surface-container-high": "#dde9ff",
@@ -196,12 +205,12 @@
 </div>
 </header>
 <!-- MAIN CANVAS -->
-<main class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12 space-y-10 lg:space-y-16 py-10 lg:py-8 lg:py-16" id="home">
+<main class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12 space-y-10 lg:space-y-16 py-16 md:py-24 lg:py-8 lg:py-16" id="home">
 <!-- 2. HERO SECTION -->
 <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
 <div class="lg:col-span-7 space-y-space-md">
-<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-low border border-outline-variant/50 rounded-full">
-<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container-low border border-outline-variant/50 rounded-sm">
+<span class="w-2 h-2 rounded-sm bg-primary animate-pulse"></span>
 <span class="text-label-xs font-label-xs text-primary tracking-wide">NATIONAL INITIATIVE UNDER MINISTRY OF EDUCATION</span>
 </div>
 <h1 class="font-display-hero text-display-hero text-on-surface leading-tight">
@@ -232,15 +241,15 @@
 </div>
 <!-- Bento Hero Visual Showcase -->
 <div class="lg:col-span-5 bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-space-md shadow-sm space-y-4">
-<div class="relative overflow-hidden rounded border border-outline-variant/30 aspect-[16/10]">
+<div class="relative overflow-hidden rounded border-t-2 border-primary bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] aspect-[16/10]">
 <img class="w-full h-full object-cover" data-alt="An expansive, light-filled university amphitheatre at IIM Bangalore where executive students listen intently to a management professor writing corporate strategies on an interactive glass board, shot in natural architectural lighting with a dignified slate and warm terracotta academic color scheme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5VgYxJ7IgBLewzMK9P77w9JmiQcnggtEN3uNtR5iEHc0hoE12jLDAJz4Mzgy8UnMl86goo6yClFnMwqHoc4DoDLi05iY4W6UupfoMpGxLfCRzJxdK3V80oM-dl8s76fVNk6WfAIvh18LoBz_6_vw3u_o9--qCxKj3d6Gg-R0PvLEYCUBHhhhLrVl5O7aJPSoZ67FnP0-rQn7p7O5Mun-BS362URUiAeQCrFfKXl3Jbn3XdVJnMp-f-rHWUj9P7DPTkoFHmSDqCEw"/>
 <div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded text-label-xs font-label-xs text-on-surface border border-outline-variant/40 flex items-center gap-1.5">
-<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="w-2 h-2 rounded-sm bg-primary"></span>
             LIVE TERM ACTIVE
           </div>
 </div>
 <!-- Interactive Preview Bento Tile -->
-<div class="bg-surface-container-low rounded p-4 border border-outline-variant/30 space-y-2">
+<div class="bg-surface-container-low rounded p-4 border-t-2 border-primary bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] space-y-2">
 <div class="flex items-center justify-between text-label-xs font-label-xs text-secondary">
 <span>FEATURED SPECIALISATION</span>
 <span class="text-primary font-semibold">TERM II 2025</span>
@@ -295,7 +304,7 @@
 <section class="space-y-space-md" id="about">
 <div class="max-w-2xl">
 <span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Our Core Pillars</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Structured for Institutional Excellence</h2>
+<h2 class="font-headline-lg font-serif tracking-tight text-headline-lg text-on-surface">Structured for Institutional Excellence</h2>
 <p class="font-body-md text-body-md text-secondary mt-1">Guaranteed by the highest standards of faculty governance, rigorous peer assessment, and national digital infrastructure.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
@@ -350,22 +359,22 @@
 <section class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-space-lg shadow-sm">
 <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-gutter divide-y md:divide-y-0 md:divide-x divide-outline-variant/30">
 <div class="px-4 py-2 text-center md:text-left">
-<div class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">100+</div>
+<div class="font-headline-lg font-serif tracking-tight text-headline-lg text-primary font-bold tracking-tight">100+</div>
 <div class="font-headline-sm text-body-md text-on-surface font-semibold mt-1">Management Courses</div>
 <p class="font-body-sm text-body-sm text-secondary mt-0.5">Spanning foundational to doctoral level</p>
 </div>
 <div class="px-4 py-2 text-center md:text-left">
-<div class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">5 Lakh+</div>
+<div class="font-headline-lg font-serif tracking-tight text-headline-lg text-primary font-bold tracking-tight">5 Lakh+</div>
 <div class="font-headline-sm text-body-md text-on-surface font-semibold mt-1">Learner Enrolments</div>
 <p class="font-body-sm text-body-sm text-secondary mt-0.5">Across all 28 states &amp; union territories</p>
 </div>
 <div class="px-4 py-2 text-center md:text-left">
-<div class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">25+</div>
+<div class="font-headline-lg font-serif tracking-tight text-headline-lg text-primary font-bold tracking-tight">25+</div>
 <div class="font-headline-sm text-body-md text-on-surface font-semibold mt-1">Partner Institutions</div>
 <p class="font-body-sm text-body-sm text-secondary mt-0.5">Universities embedding IIMB credits</p>
 </div>
 <div class="px-4 py-2 text-center md:text-left">
-<div class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">15+</div>
+<div class="font-headline-lg font-serif tracking-tight text-headline-lg text-primary font-bold tracking-tight">15+</div>
 <div class="font-headline-sm text-body-md text-on-surface font-semibold mt-1">Specialised Domains</div>
 <p class="font-body-sm text-body-sm text-secondary mt-0.5">Finance, Ops, Strategy, &amp; Analytics</p>
 </div>
@@ -376,7 +385,7 @@
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
 <div>
 <span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Distinctive Pedagogy</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Why Learn Through IIMB SWAYAM?</h2>
+<h2 class="font-headline-lg font-serif tracking-tight text-headline-lg text-on-surface">Why Learn Through IIMB SWAYAM?</h2>
 </div>
 <p class="text-secondary font-body-md text-body-md max-w-md">Bridging textbook theory with verified executive practices through India's premier management think tank.</p>
 </div>
@@ -432,10 +441,10 @@
 </div>
 </section>
 <!-- 6. 'HOW LEARNING WORKS' STEP-BY-STEP ROADMAP -->
-<section class="space-y-space-md bg-surface-container-low p-space-lg rounded-xl border border-outline-variant/30">
+<section class="space-y-space-md bg-surface-container-low p-space-lg rounded-xl border-t-2 border-primary bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)]">
 <div class="text-center max-w-2xl mx-auto space-y-1">
 <span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Five Simple Steps</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">How Learning Works</h2>
+<h2 class="font-headline-lg font-serif tracking-tight text-headline-lg text-on-surface">How Learning Works</h2>
 <p class="font-body-md text-body-md text-secondary">A transparent academic pathway from initial enrolment through certified graduation.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-5 gap-4 pt-4">
@@ -475,7 +484,7 @@
 <section class="space-y-space-md" id="learners">
 <div class="max-w-xl">
 <span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Tailored Academic Trajectories</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Engineered for Your Goals</h2>
+<h2 class="font-headline-lg font-serif tracking-tight text-headline-lg text-on-surface">Engineered for Your Goals</h2>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
 <!-- Student -->
@@ -533,7 +542,7 @@
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
 <div>
 <span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Academic Catalogue</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Explore Core Management Courses</h2>
+<h2 class="font-headline-lg font-serif tracking-tight text-headline-lg text-on-surface">Explore Core Management Courses</h2>
 </div>
 <a class="text-label-md font-label-md text-primary hover:underline flex items-center gap-1" href="#catalogue">
 <span>View Complete 100+ Course Registry</span>
@@ -682,7 +691,7 @@
 <section class="space-y-space-md" id="updates">
 <div class="max-w-xl">
 <span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Latest Information</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">News and Announcements</h2>
+<h2 class="font-headline-lg font-serif tracking-tight text-headline-lg text-on-surface">News and Announcements</h2>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter">
 <div class="bg-surface-container-lowest border border-outline-variant/40 p-space-md rounded-xl flex gap-4 shadow-sm hover:border-primary transition-colors cursor-pointer">
@@ -712,13 +721,13 @@
 <!-- =============== SUBMIT PROPOSAL SECTION =============== -->
 
 <!-- ================= EXPLORE COURSES SECTION ================= -->
-<section id="courses" class="py-12 lg:py-20 bg-surface border-y border-outline-variant/30">
+<section id="courses" class="py-16 md:py-24 lg:py-20 bg-surface border-y border-outline-variant/30">
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
     
     <!-- Header -->
     <div class="mb-8 text-center sm:text-left">
-      <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3" class="bg-primary-fixed text-on-primary-fixed-variant border border-primary-fixed-dim/30">Course Catalog</span>
-      <h2 class="font-headline-lg-mobile lg:font-headline-lg text-headline-md lg:text-headline-lg font-bold mb-4 text-on-surface">Explore 100+ Live Courses</h2>
+      <span class="inline-block px-3 py-1 rounded-sm text-xs font-semibold uppercase tracking-widest mb-3" class="bg-primary-fixed text-on-primary-fixed-variant border border-primary-fixed-dim/30">Course Catalog</span>
+      <h2 class="font-headline-lg font-serif tracking-tight-mobile lg:font-headline-lg font-serif tracking-tight text-headline-md lg:text-headline-lg font-bold mb-4 text-on-surface">Explore 100+ Live Courses</h2>
       <p class="font-body-md text-secondary max-w-2xl">
         Discover premier management education from IIM Bangalore and our partner institutions. Filter by your specific needs and start learning today.
       </p>
@@ -866,7 +875,7 @@
 </section>
 <!-- ======================================================= -->
 
-<section id="proposal" class="py-12 lg:py-20 border-t" class="bg-surface border-outline-variant/30">
+<section id="proposal" class="py-16 md:py-24 lg:py-20 border-t" class="bg-surface border-outline-variant/30">
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
 
     <!-- Grid: 7/5 columns -->
@@ -876,8 +885,8 @@
       <div class="lg:col-span-7">
 
         <!-- Section label + heading -->
-        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3 proposal-eyebrow">For Faculty &amp; Institutions</span>
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 proposal-heading">Submit a Course Proposal</h2>
+        <span class="inline-block px-3 py-1 rounded-sm text-xs font-semibold uppercase tracking-widest mb-3 proposal-eyebrow">For Faculty &amp; Institutions</span>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif font-bold mb-4 proposal-heading">Submit a Course Proposal</h2>
         <p class="font-body-md text-secondary leading-relaxed mb-8 max-w-2xl">
           IIMB SWAYAM invites faculty members and institutions to propose MOOCs for the SWAYAM platform. All proposals go through a structured review covering course design, production support, and teaching standards.
         </p>
@@ -885,21 +894,21 @@
         <!-- 3 Process Steps -->
         <div class="flex flex-col gap-4 mb-8">
           <div class="flex items-start gap-4 bg-white rounded-xl border p-5 shadow-sm" class="">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm text-white proposal-step-badge">01</div>
+            <div class="flex-shrink-0 w-10 h-10 rounded-sm flex items-center justify-center font-bold text-sm text-white proposal-step-badge">01</div>
             <div>
               <h3 class="font-semibold text-on-surface mb-1">Submit Proposal</h3>
               <p class="font-body-sm text-secondary leading-relaxed">Complete the course proposal form with your teaching objectives, target audience, and syllabus outline.</p>
             </div>
           </div>
           <div class="flex items-start gap-4 bg-white rounded-xl border p-5 shadow-sm" class="">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm text-white proposal-step-badge">02</div>
+            <div class="flex-shrink-0 w-10 h-10 rounded-sm flex items-center justify-center font-bold text-sm text-white proposal-step-badge">02</div>
             <div>
               <h3 class="font-semibold text-on-surface mb-1">Review &amp; Feedback</h3>
               <p class="font-body-sm text-secondary leading-relaxed">The IIMB SWAYAM team reviews your proposal and provides structured feedback within 30 days.</p>
             </div>
           </div>
           <div class="flex items-start gap-4 bg-white rounded-xl border p-5 shadow-sm" class="">
-            <div class="flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm text-white proposal-step-badge">03</div>
+            <div class="flex-shrink-0 w-10 h-10 rounded-sm flex items-center justify-center font-bold text-sm text-white proposal-step-badge">03</div>
             <div>
               <h3 class="font-semibold text-on-surface mb-1">Development &amp; Launch</h3>
               <p class="font-body-sm text-secondary leading-relaxed">Approved proposals receive full production support, faculty development resources, and platform onboarding.</p>
@@ -1015,7 +1024,7 @@
               <span>Platform onboarding &amp; semester lifecycle management</span>
             </li>
           </ul>
-          <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold proposal-badge">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm text-xs font-semibold proposal-badge">
             <span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
             End-to-end NTA &amp; UGC compliant MOOC pipeline
           </div>
@@ -1057,7 +1066,7 @@
 <section class="space-y-space-md" id="stories">
 <div class="max-w-xl">
 <span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Peer Testimonials</span>
-<h2 class="font-headline-lg text-headline-lg text-on-surface">Transformative Journeys</h2>
+<h2 class="font-headline-lg font-serif tracking-tight text-headline-lg text-on-surface">Transformative Journeys</h2>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <!-- Story 1 -->
@@ -1071,7 +1080,7 @@
             </p>
 </div>
 <div class="pt-6 border-t border-outline-variant/20 flex items-center gap-3 mt-4">
-<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface text-label-md">AS</div>
+<div class="w-10 h-10 rounded-sm bg-surface-container-high flex items-center justify-center font-bold text-on-surface text-label-md">AS</div>
 <div>
 <div class="font-headline-sm text-body-md font-semibold text-on-surface">Ananya Sharma</div>
 <div class="font-body-sm text-body-sm text-secondary">Now Corporate Strategy Analyst</div>
@@ -1089,7 +1098,7 @@
             </p>
 </div>
 <div class="pt-6 border-t border-outline-variant/20 flex items-center gap-3 mt-4">
-<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface text-label-md">RN</div>
+<div class="w-10 h-10 rounded-sm bg-surface-container-high flex items-center justify-center font-bold text-on-surface text-label-md">RN</div>
 <div>
 <div class="font-headline-sm text-body-md font-semibold text-on-surface">Rajesh Nair</div>
 <div class="font-body-sm text-body-sm text-secondary">Assistant Professor, Kerala Technological Univ</div>
@@ -1107,7 +1116,7 @@
             </p>
 </div>
 <div class="pt-6 border-t border-outline-variant/20 flex items-center gap-3 mt-4">
-<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-on-surface text-label-md">VS</div>
+<div class="w-10 h-10 rounded-sm bg-surface-container-high flex items-center justify-center font-bold text-on-surface text-label-md">VS</div>
 <div>
 <div class="font-headline-sm text-body-md font-semibold text-on-surface">Vikramaditya Sen</div>
 <div class="font-body-sm text-body-sm text-secondary">Operations Head, Manufacturing Cluster</div>
@@ -1119,7 +1128,7 @@
 </main>
 <!-- 10. FOOTER / HELP CENTRE (Shared Component: Footer) -->
 <footer class="bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant/30 dark:border-outline/20">
-<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12 py-10 lg:py-8 lg:py-16 flex flex-col gap-space-lg w-full" id="contact">
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12 py-16 md:py-24 lg:py-8 lg:py-16 flex flex-col gap-space-lg w-full" id="contact">
 <!-- Institutional Info Grid -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
 <div class="space-y-3">

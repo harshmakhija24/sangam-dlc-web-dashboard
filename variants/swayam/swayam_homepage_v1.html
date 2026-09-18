@@ -7,7 +7,7 @@
 <!-- Typography: Outfit & Inter -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Outfit:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@400..800&display=swap" rel="stylesheet"/>
 <!-- Material Symbols Outlined -->
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -19,6 +19,15 @@
       darkMode: "class",
       theme: {
         extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['Lora', 'serif'],
+            display: ['Lora', 'serif'],
+            headline: ['Lora', 'serif'],
+            body: ['"Plus Jakarta Sans"', 'sans-serif'],
+            label: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+
           "colors": {
             "tertiary": "#613200",
             "outline-variant": "#dfbfbc",
@@ -137,7 +146,7 @@
     }
     .layer-card {
       background: #FFFFFF;
-      border: 1px solid #E8E4DC;
+      border: 1px solid rgba(0,0,0,0.04); background: rgba(255,255,255,0.8); backdrop-filter: blur(8px);
       transition: all 150ms ease-in-out;
     }
     .layer-card:hover {
@@ -273,7 +282,7 @@
 </header>
 <main>
 <!-- 2. Hero / Intro Section -->
-<section class="py-10 lg:py-14 lg:py-margin-lg px-4 sm:px-4 sm:px-6 lg:px-12 max-w-screen-xl mx-auto">
+<section class="py-20 lg:py-14 lg:py-margin-lg px-4 sm:px-4 sm:px-6 lg:px-12 max-w-screen-xl mx-auto">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
 <!-- Hero Column Left: Pedagogy Anchor -->
 <div class="lg:col-span-7 flex flex-col items-start gap-space-md">
@@ -283,7 +292,7 @@
               SWAYAM National Coordinator for Management Studies • IIM Bangalore
             </span>
 </div>
-<h1 class="text-display-hero-mobile md:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl lg:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl lg:text-6xl font-bold text-on-surface tracking-tight leading-tight">
+<h1 class="text-display-hero-mobile md:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif lg:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif lg:text-6xl font-bold text-on-surface tracking-tight leading-tight">
             Management Education for Every Learner, Everywhere.
           </h1>
 <p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">
@@ -403,11 +412,11 @@
 
 
 <!-- 3. Access, Quality, Impact Section -->
-<section class="py-10 lg:py-14 bg-surface-container-low border-y border-surface-variant">
+<section class="py-20 lg:py-14 bg-surface-container-low border-y border-surface-variant">
 <div class="max-w-screen-xl mx-auto px-4 sm:px-4 sm:px-6 lg:px-12">
 <div class="max-w-2xl mb-space-xl">
 <span class="text-label-caps font-label-caps text-primary uppercase tracking-widest font-bold">Our Pedagogical Pillar</span>
-<h2 class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl font-bold text-on-surface mt-1">
+<h2 class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif font-bold text-on-surface mt-1">
             Access, Quality, Impact — The Triad of Digital Education
           </h2>
 <p class="text-body-md font-body-md text-on-surface-variant mt-2">
@@ -467,26 +476,26 @@
 </div>
 </section>
 <!-- 4. Prominent Metrics / Impact Counters -->
-<section class="py-10 lg:py-8 lg:py-16 bg-surface-container-lowest border-b border-surface-variant">
+<section class="py-20 lg:py-8 lg:py-16 bg-surface-container-lowest border-b border-surface-variant">
 <div class="max-w-screen-xl mx-auto px-4 sm:px-4 sm:px-6 lg:px-12">
 <div class="bg-primary text-white rounded-xl p-space-lg lg:p-space-xl grid grid-cols-2 lg:grid-cols-4 gap-space-lg relative overflow-hidden">
 <div class="flex flex-col border-r border-white/20 last:border-none pr-4">
-<span class="text-display-hero-mobile md:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl lg:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl lg:text-6xl font-bold font-bold tracking-tight text-white">100+</span>
+<span class="text-display-hero-mobile md:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif lg:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif lg:text-6xl font-bold font-bold tracking-tight text-white">100+</span>
 <span class="text-title-academic font-title-academic font-medium text-white/90">Accredited Courses</span>
 <span class="text-body-sm font-body-sm text-white/70 mt-1">Undergraduate, Postgraduate &amp; Executive</span>
 </div>
 <div class="flex flex-col border-r border-white/20 last:border-none pr-4">
-<span class="text-display-hero-mobile md:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl lg:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl lg:text-6xl font-bold font-bold tracking-tight text-white">5 Lakh+</span>
+<span class="text-display-hero-mobile md:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif lg:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif lg:text-6xl font-bold font-bold tracking-tight text-white">5 Lakh+</span>
 <span class="text-title-academic font-title-academic font-medium text-white/90">Learner Enrolments</span>
 <span class="text-body-sm font-body-sm text-white/70 mt-1">Across 28 Indian States &amp; 60+ Countries</span>
 </div>
 <div class="flex flex-col border-r border-white/20 last:border-none pr-4">
-<span class="text-display-hero-mobile md:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl lg:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl lg:text-6xl font-bold font-bold tracking-tight text-white">25+</span>
+<span class="text-display-hero-mobile md:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif lg:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif lg:text-6xl font-bold font-bold tracking-tight text-white">25+</span>
 <span class="text-title-academic font-title-academic font-medium text-white/90">Partner Institutions</span>
 <span class="text-body-sm font-body-sm text-white/70 mt-1">Premier State &amp; Central Universities</span>
 </div>
 <div class="flex flex-col">
-<span class="text-display-hero-mobile md:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl lg:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl lg:text-6xl font-bold font-bold tracking-tight text-white">15+</span>
+<span class="text-display-hero-mobile md:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif lg:text-3xl sm:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif lg:text-6xl font-bold font-bold tracking-tight text-white">15+</span>
 <span class="text-title-academic font-title-academic font-medium text-white/90">Subject Areas</span>
 <span class="text-body-sm font-body-sm text-white/70 mt-1">From Corporate Finance to Public Policy</span>
 </div>
@@ -503,10 +512,10 @@
 
 
 <!-- 5. "Why Learn Through IIMB SWAYAM?" Section -->
-<section class="py-10 lg:py-14 max-w-screen-xl mx-auto px-4 sm:px-4 sm:px-6 lg:px-12">
+<section class="py-20 lg:py-14 max-w-screen-xl mx-auto px-4 sm:px-4 sm:px-6 lg:px-12">
 <div class="text-center max-w-2xl mx-auto mb-space-xl">
 <span class="text-label-caps font-label-caps text-primary uppercase tracking-widest font-bold">The IIMBx Edge</span>
-<h2 class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl font-bold text-on-surface mt-1">Why Learn Through IIMB SWAYAM?</h2>
+<h2 class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif font-bold text-on-surface mt-1">Why Learn Through IIMB SWAYAM?</h2>
 <p class="text-body-md font-body-md text-on-surface-variant mt-2">
           Harness the intellectual heritage of Indian Institute of Management Bangalore with the accessibility of SWAYAM’s digital campus.
         </p>
@@ -575,11 +584,11 @@
 </div>
 </section>
 <!-- 6. "How Learning Works" Step-by-Step Flow -->
-<section class="py-10 lg:py-14 bg-surface-container-low border-y border-surface-variant">
+<section class="py-20 lg:py-14 bg-surface-container-low border-y border-surface-variant">
 <div class="max-w-screen-xl mx-auto px-4 sm:px-4 sm:px-6 lg:px-12">
 <div class="max-w-2xl mb-space-xl">
 <span class="text-label-caps font-label-caps text-primary uppercase tracking-widest font-bold">Methodology</span>
-<h2 class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl font-bold text-on-surface mt-1">How Learning Works on SWAYAM</h2>
+<h2 class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif font-bold text-on-surface mt-1">How Learning Works on SWAYAM</h2>
 <p class="text-body-md font-body-md text-on-surface-variant mt-2">
             A transparent, academically rigorous 5-stage pedagogical workflow designed to guarantee deep comprehension and official institutional credentials.
           </p>
@@ -656,10 +665,10 @@
 </div>
 </section>
 <!-- 7. "Learner Pathways" Section -->
-<section class="py-10 lg:py-14 max-w-screen-xl mx-auto px-4 sm:px-4 sm:px-6 lg:px-12">
+<section class="py-20 lg:py-14 max-w-screen-xl mx-auto px-4 sm:px-4 sm:px-6 lg:px-12">
 <div class="text-center max-w-2xl mx-auto mb-space-xl">
 <span class="text-label-caps font-label-caps text-primary uppercase tracking-widest font-bold">Tailored Syllabi</span>
-<h2 class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl font-bold text-on-surface mt-1">Curriculum Tailored to Your Pathway</h2>
+<h2 class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif font-bold text-on-surface mt-1">Curriculum Tailored to Your Pathway</h2>
 <p class="text-body-md font-body-md text-on-surface-variant mt-2">
           Whether fulfilling degree credits or spearheading corporate operations, discover pathways curated for specific developmental needs.
         </p>
@@ -734,13 +743,13 @@
 <!-- 8. "Explore Courses" Section -->
 
 <!-- ================= EXPLORE COURSES SECTION ================= -->
-<section id="courses" class="py-12 lg:py-20 bg-surface-container-lowest border-y border-surface-variant">
+<section id="courses" class="py-24 lg:py-20 bg-surface-container-lowest border-y border-surface-variant">
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
     
     <!-- Header -->
     <div class="mb-8 text-center sm:text-left">
       <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3" style="background:#EFF6FF; color:#1D4ED8;">Course Catalog</span>
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-on-surface">Explore 100+ Live Courses</h2>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif font-bold mb-4 text-on-surface">Explore 100+ Live Courses</h2>
       <p class="text-sm sm:text-base text-gray-600 max-w-2xl">
         Discover premier management education from IIM Bangalore and our partner institutions. Filter by your specific needs and start learning today.
       </p>
@@ -889,10 +898,10 @@
 <!-- ======================================================= -->
 
 <!-- 9. "Stories and Impact" (Testimonials) -->
-<section class="py-10 lg:py-14 max-w-screen-xl mx-auto px-4 sm:px-4 sm:px-6 lg:px-12">
+<section class="py-20 lg:py-14 max-w-screen-xl mx-auto px-4 sm:px-4 sm:px-6 lg:px-12">
 <div class="text-center max-w-2xl mx-auto mb-space-xl">
 <span class="text-label-caps font-label-caps text-primary uppercase tracking-widest font-bold">Learner Voices</span>
-<h2 class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl font-bold text-on-surface mt-1">Real Learners, Measurable Impact</h2>
+<h2 class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif font-bold text-on-surface mt-1">Real Learners, Measurable Impact</h2>
 <p class="text-body-md font-body-md text-on-surface-variant mt-2">
           Discover how IIMB courses on SWAYAM empower faculty pedagogies, ignite young careers, and reach remote corners of India.
         </p>
@@ -984,7 +993,7 @@
 </main>
 <!-- 10. Footer & Help Centre (Shared Component Anchor) -->
 <footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-surface-variant dark:border-outline">
-<div class="w-full px-4 sm:px-4 sm:px-6 lg:px-12 py-10 lg:py-14 max-w-screen-xl mx-auto flex flex-col gap-space-lg">
+<div class="w-full px-4 sm:px-4 sm:px-6 lg:px-12 py-20 lg:py-14 max-w-screen-xl mx-auto flex flex-col gap-space-lg">
 <!-- Top Columns -->
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-lg">
 <!-- Institutional Mandate Column -->
@@ -1048,7 +1057,7 @@
 </div>
 
 <!-- =============== SUBMIT PROPOSAL SECTION =============== -->
-<section id="proposal" class="py-12 lg:py-20 border-t" style="background:#F4F7FC; border-color:rgba(0,0,0,0.06);">
+<section id="proposal" class="py-24 lg:py-20 border-t" style="background:#F4F7FC; border-color:rgba(0,0,0,0.06);">
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
 
     <!-- Grid: 7/5 columns -->
@@ -1059,7 +1068,7 @@
 
         <!-- Section label + heading -->
         <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3 proposal-eyebrow">For Faculty &amp; Institutions</span>
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 proposal-heading">Submit a Course Proposal</h2>
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl tracking-tight font-serif font-bold mb-4 proposal-heading">Submit a Course Proposal</h2>
         <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-8 max-w-2xl">
           IIMB SWAYAM invites faculty members and institutions to propose MOOCs for the SWAYAM platform. All proposals go through a structured review covering course design, production support, and teaching standards.
         </p>
