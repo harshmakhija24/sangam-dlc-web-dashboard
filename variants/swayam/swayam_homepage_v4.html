@@ -7,7 +7,7 @@
 <!-- Material Symbols & Editorial Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -71,6 +71,15 @@
             "xl": "0.5rem",
             "full": "0.75rem"
           },
+          "keyframes": {
+            "marquee": {
+              "0%": { "transform": "translateX(0)" },
+              "100%": { "transform": "translateX(-100%)" }
+            }
+          },
+          "animation": {
+            "marquee": "marquee 40s linear infinite"
+          },
           "spacing": {
             "margin": "3.5rem",
             "space-md": "1.75rem",
@@ -81,19 +90,19 @@
             "space-sm": "1rem"
           },
           "fontFamily": {
-            "label-xs": ["Plus Jakarta Sans"],
-            "headline-sm": ["Plus Jakarta Sans"],
-            "headline-md": ["Plus Jakarta Sans"],
-            "body-md": ["Plus Jakarta Sans"],
-            "body-lead": ["Newsreader"],
-            "label-lg": ["Plus Jakarta Sans"],
-            "body-lg": ["Plus Jakarta Sans"],
-            "label-md": ["Plus Jakarta Sans"],
-            "display-hero": ["Newsreader"],
-            "headline-lg": ["Newsreader"],
-            "body-sm": ["Plus Jakarta Sans"],
-            "headline-lg-mobile": ["Newsreader"],
-            "display-hero-mobile": ["Newsreader"]
+            "label-xs": ["Lato", "sans-serif"],
+            "headline-sm": ["Lato", "sans-serif"],
+            "headline-md": ["Lato", "sans-serif"],
+            "body-md": ["Lato", "sans-serif"],
+            "body-lead": ["Lato", "sans-serif"],
+            "label-lg": ["Lato", "sans-serif"],
+            "body-lg": ["Lato", "sans-serif"],
+            "label-md": ["Lato", "sans-serif"],
+            "display-hero": ["Lato", "sans-serif"],
+            "headline-lg": ["Lato", "sans-serif"],
+            "body-sm": ["Lato", "sans-serif"],
+            "headline-lg-mobile": ["Lato", "sans-serif"],
+            "display-hero-mobile": ["Lato", "sans-serif"]
           },
           "fontSize": {
             "label-xs": ["0.85rem", { "lineHeight": "1.1rem", "letterSpacing": "0.04em", "fontWeight": "600" }],
@@ -208,6 +217,64 @@
 </div>
 </div>
 </div>
+</section>
+<!-- OUR PARTNERS (Marquee) -->
+<section class="py-space-md border-b border-outline-variant/30 overflow-hidden bg-surface-container-lowest -mx-margin px-margin">
+  <div class="text-center mb-6">
+    <span class="text-label-xs font-label-xs text-secondary uppercase tracking-wider">In Collaboration With Leading Institutions</span>
+  </div>
+  <div class="relative w-full flex items-center overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+    <div class="flex items-center gap-12 animate-marquee whitespace-nowrap min-w-full">
+      <!-- Logos (Set 1) -->
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMA</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMS</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMV</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Jain University</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Christ University</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">CUSAT</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Dayanand Sagar</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIFT</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">University of Kashmir</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IICA</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Manipal</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">GD Goenka</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">KIIT</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Symbiosis</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">CMRIT</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Amity University</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Atlas University</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Balaji University</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Bennett University</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIS</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">QCI</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Welingkar</span>
+    </div>
+    <!-- Duplicate for infinite scroll -->
+    <div aria-hidden="true" class="flex items-center gap-12 animate-marquee whitespace-nowrap min-w-full absolute top-0 left-full">
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMA</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMS</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMV</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Jain University</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Christ University</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">CUSAT</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Dayanand Sagar</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIFT</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">University of Kashmir</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IICA</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Manipal</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">GD Goenka</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">KIIT</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Symbiosis</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">CMRIT</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Amity University</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Atlas University</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Balaji University</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Bennett University</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIS</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">QCI</span>
+      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Welingkar</span>
+    </div>
+  </div>
 </section>
 <!-- 3. 'ACCESS, QUALITY, IMPACT' SECTION -->
 <section class="space-y-space-md" id="about">
@@ -596,8 +663,38 @@
 </div>
 </div>
 </section>
+<!-- ANNOUNCEMENTS / UPDATES SECTION -->
+<section class="space-y-space-md" id="updates">
+<div class="max-w-xl">
+<span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Latest Information</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">News and Announcements</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-space-md rounded-xl flex gap-4 shadow-sm hover:border-primary transition-colors cursor-pointer">
+<div class="text-primary mt-1">
+<span class="material-symbols-outlined text-2xl" data-icon="event">event</span>
+</div>
+<div class="space-y-1">
+<div class="text-label-xs font-label-xs text-secondary font-bold">15 DEC 2025 | Semester II</div>
+<h3 class="font-headline-sm text-body-lg font-semibold text-on-surface">Term II Enrolment Commences</h3>
+<p class="font-body-sm text-body-sm text-secondary">Course enrolment and examination timelines for the upcoming semester have been finalized.</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant/40 p-space-md rounded-xl flex gap-4 shadow-sm hover:border-primary transition-colors cursor-pointer">
+<div class="text-primary mt-1">
+<span class="material-symbols-outlined text-2xl" data-icon="notifications">notifications</span>
+</div>
+<div class="space-y-1">
+<div class="text-label-xs font-label-xs text-secondary font-bold">28 NOV 2025 | Learner Update</div>
+<h3 class="font-headline-sm text-body-lg font-semibold text-on-surface">Certification Guidelines Updated</h3>
+<p class="font-body-sm text-body-sm text-secondary">Important certification, examination, and platform support announcements for the current term.</p>
+</div>
+</div>
+</div>
+</section>
+
 <!-- 9. 'STORIES AND IMPACT' SECTION -->
-<section class="space-y-space-md" id="partners">
+<section class="space-y-space-md" id="stories">
 <div class="max-w-xl">
 <span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Peer Testimonials</span>
 <h2 class="font-headline-lg text-headline-lg text-on-surface">Transformative Journeys</h2>
@@ -701,10 +798,10 @@
           </p>
 <div class="pt-1">
 <span class="text-label-xs font-label-xs text-secondary block">SUPPORT DESK</span>
-<span class="text-label-md font-label-md text-on-surface font-semibold">swayam-support@iimb.ac.in</span>
+<span class="text-label-md font-label-md text-on-surface font-semibold">iimbswayam@iimb.ac.in</span>
 </div>
 <div class="pt-1 text-label-xs font-label-xs text-secondary">
-            Toll-Free Helpline: 1800-425-4462 (09:30 - 17:30 IST)
+            Contact: 08026993854
           </div>
 </div>
 </div>
