@@ -114,6 +114,7 @@
         },
       },
     }
+  </script>
   <style>
     /* Ensure marquee animation works independently of Tailwind config CDN parsing */
     @keyframes marquee {
@@ -243,64 +244,65 @@
 </div>
 </section>
 <!-- OUR PARTNERS (Marquee) -->
-<section class="py-space-md border-b border-outline-variant/30 overflow-hidden bg-surface-container-lowest -mx-margin px-margin" id="partners">
-  <div class="text-center mb-6">
-    <span class="text-label-xs font-label-xs text-secondary uppercase tracking-wider">In Collaboration With Leading Institutions</span>
+<section class="py-10 border-b border-outline-variant/30 overflow-hidden bg-surface-container-lowest" id="partners" style="margin-left: calc(-1 * var(--tw-margin, 2rem)); margin-right: calc(-1 * var(--tw-margin, 2rem)); padding-left: 2rem; padding-right: 2rem;">
+  <div class="max-w-[1320px] mx-auto px-gutter mb-6 text-center">
+    <span class="text-label-sm font-label-sm text-secondary uppercase tracking-[0.15em]">Our Partner Institutions</span>
+    <h2 class="text-headline-sm font-headline-sm text-primary mt-1">22+ Leading Universities Across India</h2>
   </div>
-  <div class="relative w-full flex items-center overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-    <div class="flex items-center gap-12 animate-marquee whitespace-nowrap min-w-full shrink-0">
-      <!-- Logos (Set 1) -->
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMA</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMS</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMV</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Jain University</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Christ University</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">CUSAT</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Dayanand Sagar</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIFT</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">University of Kashmir</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IICA</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Manipal</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">GD Goenka</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">KIIT</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Symbiosis</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">CMRIT</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Amity University</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Atlas University</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Balaji University</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Bennett University</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIS</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">QCI</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Welingkar</span>
-    </div>
-    <!-- Duplicate for infinite scroll -->
-    <div aria-hidden="true" class="flex items-center gap-12 animate-marquee whitespace-nowrap min-w-full shrink-0 absolute top-0 left-full">
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMA</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMS</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMV</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Jain University</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Christ University</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">CUSAT</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Dayanand Sagar</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIFT</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">University of Kashmir</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IICA</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Manipal</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">GD Goenka</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">KIIT</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Symbiosis</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">CMRIT</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Amity University</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Atlas University</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Balaji University</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Bennett University</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIS</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">QCI</span>
-      <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Welingkar</span>
+  <!-- Marquee Track -->
+  <div class="relative w-full overflow-hidden" style="mask-image: linear-gradient(to right, transparent 0, black 120px, black calc(100% - 120px), transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0, black 120px, black calc(100% - 120px), transparent 100%);">
+    <div class="flex gap-5 animate-marquee" style="width: max-content;">
+      <!-- Set 1 -->
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">IIM Bangalore</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Jain University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Christ University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">CUSAT</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Dayanand Sagar University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">IIFT Delhi</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">University of Kashmir</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">IICA</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Manipal University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">GD Goenka University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">KIIT University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Symbiosis International</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">CMRIT</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Amity University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Atlas Skilltech University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Balaji Institute</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Bennett University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">IIS University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">QCI</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Welingkar Institute</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">IIMS</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">IIMV</span>
+      <!-- Duplicate set for seamless loop -->
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">IIM Bangalore</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Jain University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Christ University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">CUSAT</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Dayanand Sagar University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">IIFT Delhi</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">University of Kashmir</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">IICA</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Manipal University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">GD Goenka University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">KIIT University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Symbiosis International</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">CMRIT</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Amity University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Atlas Skilltech University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Balaji Institute</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Bennett University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">IIS University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">QCI</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">Welingkar Institute</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">IIMS</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border border-outline-variant/60 bg-surface text-secondary font-semibold text-sm whitespace-nowrap hover:border-primary hover:text-primary transition-all duration-200 cursor-default shadow-sm">IIMV</span>
     </div>
   </div>
 </section>
 <!-- SECTION 3: ACCESS, QUALITY, IMPACT -->
+
 <section class="py-space-xl bg-surface-bright border-b border-outline-variant/20" id="about">
 <div class="max-w-[1320px] mx-auto px-gutter">
 <div class="text-center max-w-2xl mx-auto mb-12">
