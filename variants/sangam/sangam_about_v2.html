@@ -10,7 +10,8 @@
     <style>
         :root{--s-orange:#F37023;--s-orange-lt:#FFF0E8;--s-navy:#1F3D5C;--s-navy-lt:#EEF3F8;--s-white:#FFFFFF;--s-bg:#F6F8FA;--s-text:#1A2332;--s-muted:#64748B;--s-border:#E5EAF0;--s-green:#059669;--s-green-lt:#D1FAE5;--font-h:'Sora',sans-serif;--font-b:'DM Sans',sans-serif;--r-sm:8px;--r-md:14px;--r-lg:20px;--r-xl:28px;--r-pill:100px;--sh-sm:0 1px 4px rgba(0,0,0,.06);--sh-md:0 4px 20px rgba(0,0,0,.08);--sh-lg:0 12px 40px rgba(0,0,0,.10);--t:0.25s ease}
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:var(--font-b);color:var(--s-text);background:var(--s-white);line-height:1.65;overflow-x:hidden}a{text-decoration:none;color:inherit}h1,h2,h3,h4{font-family:var(--font-h);line-height:1.15}.container{max-width:1180px;margin:0 auto;padding:0 24px}
-        .nav-wrap{position:fixed;top:0;left:0;right:0;z-index:900;padding:12px 0;transition:all var(--t)}.nav-wrap.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(16px);box-shadow:0 1px 4px rgba(0,0,0,.06);padding:8px 0}.nav-inner{display:flex;align-items:center;justify-content:space-between}.nav-logo{display:flex;align-items:center;gap:10px}.logo-badge{width:38px;height:38px;background:var(--s-orange);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-family:var(--font-h);font-weight:800;color:white;font-size:18px;position:relative}.logo-badge::after{content:'';position:absolute;top:-3px;right:-3px;width:10px;height:10px;border-radius:50%;background:var(--s-navy);border:2px solid white}.logo-name{font-family:var(--font-h);font-weight:700;font-size:17px;color:var(--s-text)}.logo-sub{font-size:10px;color:var(--s-muted);font-weight:500;display:block;margin-top:1px}.nav-links{display:flex;align-items:center;gap:4px}.nav-links a{padding:7px 14px;font-size:14px;font-weight:500;color:var(--s-muted);border-radius:var(--r-sm);transition:all var(--t)}.nav-links a:hover,.nav-links a.active{color:var(--s-text);background:var(--s-bg)}.nav-btn{background:var(--s-orange);color:white;padding:9px 22px;border-radius:var(--r-pill);font-size:14px;font-weight:600;font-family:var(--font-h);transition:all var(--t)}.nav-btn:hover{background:#D95A10}
+        .nav-wrap{position:fixed;top:0;left:0;right:0;z-index:900;padding:12px 0;transition:padding var(--t), background var(--t), box-shadow var(--t), backdrop-filter var(--t);will-change:padding, background, box-shadow;}.nav-wrap.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(8px);box-shadow:0 2px 10px rgba(0,0,0,.08);padding:8px 0}
+        .nav-inner{display:flex;align-items:center;justify-content:space-between}.nav-logo{display:flex;align-items:center;gap:10px}.logo-badge{width:38px;height:38px;background:var(--s-orange);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;font-family:var(--font-h);font-weight:800;color:white;font-size:18px;position:relative}.logo-badge::after{content:'';position:absolute;top:-3px;right:-3px;width:10px;height:10px;border-radius:50%;background:var(--s-navy);border:2px solid white}.logo-name{font-family:var(--font-h);font-weight:700;font-size:17px;color:var(--s-text)}.logo-sub{font-size:10px;color:var(--s-muted);font-weight:500;display:block;margin-top:1px}.nav-links{display:flex;align-items:center;gap:4px}.nav-links a{padding:7px 14px;font-size:14px;font-weight:500;color:var(--s-muted);border-radius:var(--r-sm);transition:all var(--t)}.nav-links a:hover,.nav-links a.active{color:var(--s-text);background:var(--s-bg)}.nav-btn{background:var(--s-orange);color:white;padding:9px 22px;border-radius:var(--r-pill);font-size:14px;font-weight:600;font-family:var(--font-h);transition:all var(--t)}.nav-btn:hover{background:#D95A10}
 
         /* HERO — full-width text overlay */
         .page-hero{padding:130px 0 70px;background:linear-gradient(135deg,var(--s-bg) 60%,var(--s-orange-lt));position:relative;overflow:hidden}
@@ -166,7 +167,16 @@
 
     <footer class="footer"><div class="container"><p>© 2026 Sangam Digital Learning Community · <a href="/">An IIMBx Initiative</a> · IIM Bangalore</p></div></footer>
     <script>
-        window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>50));
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    document.getElementById('nav').classList.toggle('scrolled', scrollY > 50);
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
         const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in')}),{threshold:.1});
         document.querySelectorAll('.aos').forEach(el=>io.observe(el));
     </script>

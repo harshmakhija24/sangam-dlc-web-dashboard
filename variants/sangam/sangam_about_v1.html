@@ -61,8 +61,8 @@
         .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
         /* HEADER */
-        .header { position: fixed; top:0; left:0; right:0; z-index:1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--sangam-border); }
-        .header.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
+        .header { position: fixed; top:0; left:0; right:0; z-index:1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--sangam-border); transition: box-shadow 0.3s ease, background 0.3s ease; will-change: box-shadow, background; }
+        .header.scrolled { box-shadow: 0 4px 20px rgba(0,0,0,0.08); background: rgba(255,255,255,0.98); }
         .header-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 12px 24px; }
         .logo { display: flex; align-items: center; gap: 12px; }
         .logo-icon { width: 44px; height: 44px; background: linear-gradient(135deg, var(--sangam-navy) 0%, var(--sangam-navy-card) 100%); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; position: relative; }
@@ -262,7 +262,16 @@
 
     <script>
         const header = document.getElementById('header');
-        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); });
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    header.classList.toggle('scrolled', window.scrollY > 50);
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
         const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.1 });
         document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
     </script>
