@@ -144,7 +144,15 @@
       border-color: #9E2A2B;
       box-shadow: 0 4px 16px -2px rgba(26, 43, 76, 0.08), 0 1px 3px 0 rgba(158, 42, 43, 0.04);
     }
-  </style>
+  
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    .animate-marquee {
+      animation: marquee 40s linear infinite;
+    }
+</style>
 </head>
 <body class="bg-background text-on-surface antialiased selection:bg-primary selection:text-white">
 <!-- Top Apex Bar: Ministry of Education & National Mission Info -->
@@ -430,6 +438,61 @@
 <span class="font-label-caps text-primary uppercase font-bold text-[11px] hidden sm:inline">SWAYAM 2.0 Compliant Architecture</span>
 </div>
 </div>
+</section>
+<!-- OUR PARTNERS MARQUEE STRIP -->
+<section class="py-10 overflow-hidden" id="partner-strip" style="border-bottom: 1px solid rgba(0,0,0,0.08); background: #FAFAF8;">
+  <div class="max-w-screen-xl mx-auto px-6 lg:px-12 mb-5 text-center">
+    <span class="text-xs tracking-[0.18em] uppercase font-bold text-red-900">Our Partner Institutions</span>
+    <h2 class="text-xl font-bold text-gray-900 mt-1">22+ Leading Universities Across India</h2>
+  </div>
+  <div class="relative w-full overflow-hidden" style="mask-image: linear-gradient(to right, transparent 0px, black 100px, black calc(100% - 100px), transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0px, black 100px, black calc(100% - 100px), transparent 100%);">
+    <div class="flex gap-4 animate-marquee" style="width: max-content;">
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">IIM Bangalore</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Jain University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Christ University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">CUSAT</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Dayanand Sagar University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">IIFT Delhi</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">University of Kashmir</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">IICA</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Manipal University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">GD Goenka University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">KIIT University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Symbiosis International</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">CMRIT</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Amity University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Atlas Skilltech University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Balaji Institute</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Bennett University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">IIS University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">QCI</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Welingkar Institute</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">IIMS</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">IIMV</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">IIM Bangalore</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Jain University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Christ University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">CUSAT</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Dayanand Sagar University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">IIFT Delhi</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">University of Kashmir</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">IICA</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Manipal University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">GD Goenka University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">KIIT University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Symbiosis International</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">CMRIT</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Amity University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Atlas Skilltech University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Balaji Institute</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Bennett University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">IIS University</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">QCI</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">Welingkar Institute</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">IIMS</span>
+      <span class="inline-flex items-center px-5 py-2.5 rounded-full border font-semibold text-sm whitespace-nowrap transition-all duration-200 cursor-default shadow-sm border-gray-200 bg-white text-gray-600 hover:border-red-800 hover:text-red-800">IIMV</span>
+    </div>
+  </div>
 </section>
 <!-- 5. "Why Learn Through IIMB SWAYAM?" Section -->
 <section class="py-margin-md max-w-[1360px] mx-auto px-gutter-lg">
