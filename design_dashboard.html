@@ -728,7 +728,7 @@
 
         async function renderActiveVariant(filePath) {
             // 1. Update Preview iframe
-            document.getElementById('previewFrame').src = filePath;
+            document.getElementById('previewFrame').src = filePath + '?t=' + new Date().getTime();
 
             // 2. Fetch code for the code viewer
             try {
