@@ -616,297 +616,162 @@
 </div>
 </section>
 <!-- SECTION 8: EXPLORE COURSES (Interactive Catalog) -->
-<section class="py-10 lg:py-8 lg:py-16 bg-surface-bright" id="courses">
-<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
-<div>
-<span class="text-secondary font-label-lg text-label-lg uppercase tracking-wider">Curated Course Catalog</span>
-<h2 class="text-headline-lg font-headline-lg text-primary mt-1">Explore Courses</h2>
-</div>
-<p class="text-body-md font-body-md text-on-surface-variant mt-2 md:mt-0">
-            Open for upcoming semester enrolment. Fully funded under Ministry of Education guidelines.
-          </p>
-</div>
-<!-- Filter & Search Controls -->
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/40 shadow-sm mb-10 flex flex-col gap-4">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
-<!-- Search Input -->
-<div class="lg:col-span-6 relative">
-<span class="material-symbols-outlined absolute left-3.5 top-1/2 -translate-y-1/2 text-outline text-[20px]" data-icon="search">search</span>
-<input class="w-full pl-11 pr-4 py-2.5 text-body-md font-body-md bg-surface border border-outline-variant/60 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary/20 focus:border-secondary" placeholder="Search by course name or keyword..." type="text"/>
-</div>
-<!-- Start Date Filter Group -->
-<div class="lg:col-span-6 flex items-center justify-start lg:justify-end gap-2 flex-wrap">
-<span class="text-label-md font-label-md text-on-surface-variant mr-1">Status:</span>
-<button class="px-3.5 py-1.5 rounded-full text-label-md font-label-md bg-primary text-on-primary font-medium">All Cycles</button>
-<button class="px-3.5 py-1.5 rounded-full text-label-md font-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">Upcoming</button>
-<button class="px-3.5 py-1.5 rounded-full text-label-md font-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">Self-Paced</button>
-<button class="px-3.5 py-1.5 rounded-full text-label-md font-label-md bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors">Currently Running</button>
-</div>
-</div>
-<!-- Subject Filter Pills -->
-<div class="flex items-center gap-2 overflow-x-auto pt-2 border-t border-outline-variant/20 pb-1">
-<span class="text-label-md font-label-md text-on-surface-variant shrink-0 mr-1">Subject Area:</span>
-<button class="px-3.5 py-1 rounded-full text-label-md font-label-md bg-secondary text-on-secondary whitespace-nowrap font-medium">All Disciplines</button>
-<button class="px-3.5 py-1 rounded-full text-label-md font-label-md bg-surface-container-low border border-outline-variant/40 text-on-surface hover:border-secondary whitespace-nowrap">Strategy</button>
-<button class="px-3.5 py-1 rounded-full text-label-md font-label-md bg-surface-container-low border border-outline-variant/40 text-on-surface hover:border-secondary whitespace-nowrap">Finance &amp; Accounting</button>
-<button class="px-3.5 py-1 rounded-full text-label-md font-label-md bg-surface-container-low border border-outline-variant/40 text-on-surface hover:border-secondary whitespace-nowrap">Marketing</button>
-<button class="px-3.5 py-1 rounded-full text-label-md font-label-md bg-surface-container-low border border-outline-variant/40 text-on-surface hover:border-secondary whitespace-nowrap">Operations &amp; Data</button>
-<button class="px-3.5 py-1 rounded-full text-label-md font-label-md bg-surface-container-low border border-outline-variant/40 text-on-surface hover:border-secondary whitespace-nowrap">Leadership</button>
-</div>
-</div>
-<!-- Course Cards Grid (6 Featured Courses) -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg">
-<!-- Course Card 1 -->
-<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
-<div>
-<div class="relative h-48 w-full bg-primary-container">
-<img class="w-full h-full object-cover" data-alt="High-angle cinematic view of modern corporate strategy boardroom with architectural wooden table, executive charts on translucent screens, framed by clean morning Bangalore natural daylight and dark navy accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnQ-gxSXSfjSLl-Tu0kwrhJsUxLXAU6n5-Ry1KE_p6fhDphfYiYWjWzOUVzn9NWKXl84Z5IfyLMIgXuR51Z-gtM1mt8ufDu08ldwQz4dbp9oJEB_rOHQBCa6FAgGwMFTsEyZEtVijoMBfnQUS7zyPnz_16ISvkJw97Ia2oRlfIrfTk4NP2rkYMU7yaI-uljD7kHrl8Vr8TdePs912AH2H1kDjPgZJtXOza0mgAqHnJcKQDMm6wHNgxg9T83H-2QZlRQHmZcwNqZ3Y"/>
-<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-label-sm font-label-sm text-primary font-bold">
-                  Strategy
-                </div>
-<div class="absolute bottom-3 right-3 bg-primary/90 text-on-primary text-label-sm font-label-sm px-2 py-0.5 rounded">
-                  Credit: 3
-                </div>
-</div>
-<div class="p-5">
-<p class="text-label-sm font-label-sm text-secondary font-bold uppercase">Strategy &amp; Policy</p>
-<h3 class="text-title-md font-title-md text-primary mt-1 hover:text-secondary cursor-pointer">Strategic Management</h3>
-<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 line-clamp-2">
-                  Learn formulation, corporate positioning, competitive advantage, and strategy execution from premier IIM Bangalore case studies.
-                </p>
-<div class="flex items-center gap-3 mt-4 pt-3 border-t border-outline-variant/20">
-<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold text-label-md">
-                    PJ
-                  </div>
-<div>
-<p class="text-label-md font-label-md text-primary font-semibold">Prof. P.D. Jose</p>
-<p class="text-[11px] text-on-surface-variant">Professor, Strategy Area</p>
-</div>
-</div>
-</div>
-</div>
-<div class="px-5 py-3.5 bg-surface-container-low border-t border-outline-variant/20 flex items-center justify-between">
-<span class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]" data-icon="timelapse">timelapse</span>
-                6 Weeks
-              </span>
-<a class="text-label-md font-label-md text-secondary font-semibold hover:underline flex items-center gap-1" href="#courses">
-<span>View Course</span>
-<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
-</a>
-</div>
-</div>
-<!-- Course Card 2 -->
-<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
-<div>
-<div class="relative h-48 w-full bg-primary-container">
-<img class="w-full h-full object-cover" data-alt="Close up of financial balance sheet ledger documents and digital graphs displaying clean corporate accounting indicators with a sleek fountain pen resting beside, cool blue and slate palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqmKwucI9HHfK4-ZeMU0o8xfTy1RF5Qh4IM4TAxF2WIF9EBitLXaHQRRwI4Mlv2sX0BrAHroSfjBTHUFTzvBBU4IyVvlnTUgKduLyuHmj1gOK5_1wgNrkGXDsPHNEWIRgNZBcDAylnozIXI-l6x6yKVwuXa51TgZs54y-gGgfObwWmznaHIm5rs9Fu0vUPSbTFjLSTFcdFLXmIotKLEuR6C7aYpSFWBu4ri5DL9K0DALrUmF9Gf2F6JT-7z_CobF0fTNqHHK1U7XQ"/>
-<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-label-sm font-label-sm text-primary font-bold">
-                  Finance
-                </div>
-<div class="absolute bottom-3 right-3 bg-primary/90 text-on-primary text-label-sm font-label-sm px-2 py-0.5 rounded">
-                  Credit: 4
-                </div>
-</div>
-<div class="p-5">
-<p class="text-label-sm font-label-sm text-secondary font-bold uppercase">Finance &amp; Accounting</p>
-<h3 class="text-title-md font-title-md text-primary mt-1 hover:text-secondary cursor-pointer">Financial Accounting &amp; Reporting</h3>
-<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 line-clamp-2">
-                  Master corporate balance sheets, cash flow modeling, GAAP compliance, and financial health diagnostics for managerial decisions.
-                </p>
-<div class="flex items-center gap-3 mt-4 pt-3 border-t border-outline-variant/20">
-<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold text-label-md">
-                    MN
-                  </div>
-<div>
-<p class="text-label-md font-label-md text-primary font-semibold">Prof. M.S. Narasimhan</p>
-<p class="text-[11px] text-on-surface-variant">Professor, Finance &amp; Accounting</p>
-</div>
-</div>
-</div>
-</div>
-<div class="px-5 py-3.5 bg-surface-container-low border-t border-outline-variant/20 flex items-center justify-between">
-<span class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]" data-icon="timelapse">timelapse</span>
-                8 Weeks
-              </span>
-<a class="text-label-md font-label-md text-secondary font-semibold hover:underline flex items-center gap-1" href="#courses">
-<span>View Course</span>
-<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
-</a>
-</div>
-</div>
-<!-- Course Card 3 -->
-<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
-<div>
-<div class="relative h-48 w-full bg-primary-container">
-<img class="w-full h-full object-cover" data-alt="Modern analytics dashboard screen showcasing customer engagement graphs, omnichannel journey flows, and digital attribution models in modern cyan and navy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdUp0ACLpa43oU2SWdtIEBxpEG4YRlGt85gI4VS9_DUUUwzHMClcySG2JQTsVW20Hz_AWHFfaxbWyxOB9LNi0lkMzZiW0Aaj5H-KXxam7KQwSb4mze6fMN8JXem_alZdrfwyJ41e4yic3opprF8nn2Jt9CqFqvGh3ip6nxrR-ULqhJSgXdccNn0BeOr9OghJ7H70xcb9M4-lnZ61dtj8Oyr9ko4smVjGiw8GpAIQjEHtExyaoY5BvN7oIw87G3wuK1TJcGkeE-YZw"/>
-<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-label-sm font-label-sm text-primary font-bold">
-                  Marketing
-                </div>
-<div class="absolute bottom-3 right-3 bg-primary/90 text-on-primary text-label-sm font-label-sm px-2 py-0.5 rounded">
-                  Credit: 3
-                </div>
-</div>
-<div class="p-5">
-<p class="text-label-sm font-label-sm text-secondary font-bold uppercase">Marketing Science</p>
-<h3 class="text-title-md font-title-md text-primary mt-1 hover:text-secondary cursor-pointer">Digital Marketing Strategy</h3>
-<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 line-clamp-2">
-                  Unpack customer journeys, search mechanics, omnichannel marketing funnels, and data-driven customer lifetime value strategies.
-                </p>
-<div class="flex items-center gap-3 mt-4 pt-3 border-t border-outline-variant/20">
-<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold text-label-md">
-                    SV
-                  </div>
-<div>
-<p class="text-label-md font-label-md text-primary font-semibold">Prof. S. Ramesh Kumar</p>
-<p class="text-[11px] text-on-surface-variant">Professor, Marketing Area</p>
-</div>
-</div>
-</div>
-</div>
-<div class="px-5 py-3.5 bg-surface-container-low border-t border-outline-variant/20 flex items-center justify-between">
-<span class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]" data-icon="timelapse">timelapse</span>
-                6 Weeks
-              </span>
-<a class="text-label-md font-label-md text-secondary font-semibold hover:underline flex items-center gap-1" href="#courses">
-<span>View Course</span>
-<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
-</a>
-</div>
-</div>
-<!-- Course Card 4 -->
-<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
-<div>
-<div class="relative h-48 w-full bg-primary-container">
-<img class="w-full h-full object-cover" data-alt="High-tech automated logistics fulfillment centre with intelligent conveyers, organized inventory shelves, and industrial automation robotics in a pristine warehouse environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCugsvfZoXeiAyBRvovDSNJduyeAv1cMNcXZBPJ8m0uIfVcRnI8NRRyDK4tpO-xoWfDsZhZFOAX5FfUnS1EEfIxh8WXm3RXmDbWyxlh8d6gl6RzjxC7Q-0ZVP-Bh8ZllFfvnB0x7TiKX8u6MJhqNLZCWbKXZY9K1ErZCuoD_5fHqat8Qrlpy_hNK5l8HUbWNxtNC3h_p8e9iEXlStvJu3NnONMJlx9D5z9GsdvqUjSheKRf6B5FMYGvmcTgcwGSWzl9fbR5pfJtycU"/>
-<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-label-sm font-label-sm text-primary font-bold">
-                  Operations
-                </div>
-<div class="absolute bottom-3 right-3 bg-primary/90 text-on-primary text-label-sm font-label-sm px-2 py-0.5 rounded">
-                  Credit: 4
-                </div>
-</div>
-<div class="p-5">
-<p class="text-label-sm font-label-sm text-secondary font-bold uppercase">Production &amp; Operations</p>
-<h3 class="text-title-md font-title-md text-primary mt-1 hover:text-secondary cursor-pointer">Operations Management</h3>
-<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 line-clamp-2">
-                  Systematic capacity planning, supply chain synchronization, Six Sigma quality control, and lean manufacturing fundamentals.
-                </p>
-<div class="flex items-center gap-3 mt-4 pt-3 border-t border-outline-variant/20">
-<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold text-label-md">
-                    BM
-                  </div>
-<div>
-<p class="text-label-md font-label-md text-primary font-semibold">Prof. B. Mahadevan</p>
-<p class="text-[11px] text-on-surface-variant">Professor, Operations Management</p>
-</div>
-</div>
-</div>
-</div>
-<div class="px-5 py-3.5 bg-surface-container-low border-t border-outline-variant/20 flex items-center justify-between">
-<span class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]" data-icon="timelapse">timelapse</span>
-                8 Weeks
-              </span>
-<a class="text-label-md font-label-md text-secondary font-semibold hover:underline flex items-center gap-1" href="#courses">
-<span>View Course</span>
-<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
-</a>
-</div>
-</div>
-<!-- Course Card 5 -->
-<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
-<div>
-<div class="relative h-48 w-full bg-primary-container">
-<img class="w-full h-full object-cover" data-alt="Modern data scientist workspace featuring dual high-resolution monitors showing statistical regression curves, Python machine learning scripts, and clean scatter plots." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmOYBnX2-urmLsy76iyEoZh22uVbuzc4Tb5DgYgcazJi__nzpVTAs4M80_l7Xk8djYeIoMVpX_Stwx2uHrtcYI4qtvPoANEKzVRCt196gSvQIjK-VvsaDnqJJzQKfDGREqEVTS77xR9UHMu4CwfaoAvXxvRFmGLXUSon9N_3uFFEOKRJ7ipPWWhiqdcqn7hhZYTYGfgS7SH_jQ28M3jLgs9eLx8V1EITaCGmqK3WN2ZrrX5MCwit5qIB6ic-5_Us1Qv6Kj0fNsdtg"/>
-<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-label-sm font-label-sm text-primary font-bold">
-                  Data Science
-                </div>
-<div class="absolute bottom-3 right-3 bg-primary/90 text-on-primary text-label-sm font-label-sm px-2 py-0.5 rounded">
-                  Credit: 4
-                </div>
-</div>
-<div class="p-5">
-<p class="text-label-sm font-label-sm text-secondary font-bold uppercase">Decision Sciences</p>
-<h3 class="text-title-md font-title-md text-primary mt-1 hover:text-secondary cursor-pointer">Business Analytics &amp; Predictive Modeling</h3>
-<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 line-clamp-2">
-                  Quantitative decision frameworks, regression models, forecasting algorithms, and big data interpretations for executives.
-                </p>
-<div class="flex items-center gap-3 mt-4 pt-3 border-t border-outline-variant/20">
-<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold text-label-md">
-                    UD
-                  </div>
-<div>
-<p class="text-label-md font-label-md text-primary font-semibold">Prof. U. Dinesh Kumar</p>
-<p class="text-[11px] text-on-surface-variant">Professor, Decision Sciences</p>
-</div>
-</div>
-</div>
-</div>
-<div class="px-5 py-3.5 bg-surface-container-low border-t border-outline-variant/20 flex items-center justify-between">
-<span class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]" data-icon="timelapse">timelapse</span>
-                10 Weeks
-              </span>
-<a class="text-label-md font-label-md text-secondary font-semibold hover:underline flex items-center gap-1" href="#courses">
-<span>View Course</span>
-<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
-</a>
-</div>
-</div>
-<!-- Course Card 6 -->
-<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
-<div>
-<div class="relative h-48 w-full bg-primary-container">
-<img class="w-full h-full object-cover" data-alt="Dynamic corporate seminar room where a group of young professionals are engaged in interactive leadership workshop with digital whiteboards and sticky notes, sleek ambient light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIwFLJGnqDqUkZgQx2xMVq8E8fTYFxWhQSWKptUIAcA1WYdZPj3CtwlFIWVAWl687617OXtYsZnT-4EkQmVQ4Yp24Mx3rEYuoBYedIpNDQpSHBRWCEe9yIsbjyCyPfsoSfkSmjLVXkZFQ3za3rTjp2p8eAERhXKHmyTsbUxjU2vshS-fCzQt-A05X7Q7xm9-sPmQbXBG-0BMb9C9k55y9t-q97MU99j1SnolTGS7tNEiKEMbbpQOKsr0tKAs-R3mds6YFm90Fx_cg"/>
-<div class="absolute top-3 left-3 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-md text-label-sm font-label-sm text-primary font-bold">
-                  Leadership
-                </div>
-<div class="absolute bottom-3 right-3 bg-primary/90 text-on-primary text-label-sm font-label-sm px-2 py-0.5 rounded">
-                  Credit: 2
-                </div>
-</div>
-<div class="p-5">
-<p class="text-label-sm font-label-sm text-secondary font-bold uppercase">Organizational Behaviour</p>
-<h3 class="text-title-md font-title-md text-primary mt-1 hover:text-secondary cursor-pointer">Organizational Leadership &amp; Dynamics</h3>
-<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 line-clamp-2">
-                  Develop emotional intelligence, high-stakes negotiation tact, team motivation dynamics, and ethical leadership practices.
-                </p>
-<div class="flex items-center gap-3 mt-4 pt-3 border-t border-outline-variant/20">
-<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold text-label-md">
-                    VR
-                  </div>
-<div>
-<p class="text-label-md font-label-md text-primary font-semibold">Prof. Vasanthi Srinivasan</p>
-<p class="text-[11px] text-on-surface-variant">Professor, OB &amp; HRM Area</p>
-</div>
-</div>
-</div>
-</div>
-<div class="px-5 py-3.5 bg-surface-container-low border-t border-outline-variant/20 flex items-center justify-between">
-<span class="text-body-sm font-body-sm text-on-surface-variant flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px]" data-icon="timelapse">timelapse</span>
-                6 Weeks
-              </span>
-<a class="text-label-md font-label-md text-secondary font-semibold hover:underline flex items-center gap-1" href="#courses">
-<span>View Course</span>
-<span class="material-symbols-outlined text-[16px]" data-icon="chevron_right">chevron_right</span>
-</a>
-</div>
-</div>
-</div>
-<!-- View All Catalog Action -->
-<div class="mt-12 text-center">
-<a class="inline-flex items-center gap-2 px-8 py-3 rounded-lg bg-surface-container-lowest border border-outline-variant text-primary font-label-lg text-label-lg hover:bg-surface-container-low transition-colors shadow-sm" href="#courses">
-<span>View Full 100+ Course Directory</span>
-<span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
-</a>
-</div>
-</div>
+
+<!-- ================= EXPLORE COURSES SECTION ================= -->
+<section id="courses" class="py-12 lg:py-20 bg-surface-container-lowest border-y border-surface-variant">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
+    
+    <!-- Header -->
+    <div class="mb-8 text-center sm:text-left">
+      <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest mb-3" style="background:#EFF6FF; color:#1D4ED8;">Course Catalog</span>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-on-surface">Explore 100+ Live Courses</h2>
+      <p class="text-sm sm:text-base text-gray-600 max-w-2xl">
+        Discover premier management education from IIM Bangalore and our partner institutions. Filter by your specific needs and start learning today.
+      </p>
+    </div>
+
+    <!-- Filters & Search Bar -->
+    <div class="bg-white rounded-xl border p-4 sm:p-5 mb-10 shadow-sm" style="border-color:rgba(0,0,0,0.07);">
+      <form onsubmit="event.preventDefault();" class="flex flex-col gap-4">
+        
+        <!-- Search -->
+        <div class="relative w-full">
+          <span class="material-symbols-outlined absolute left-3.5 top-3 text-gray-400">search</span>
+          <input type="text" placeholder="Search by course name, keyword, or faculty..." 
+                 class="w-full h-12 pl-11 pr-4 rounded-lg border text-sm text-gray-800 bg-gray-50 focus:outline-none focus:ring-2 focus:border-blue-500" style="border-color:#CBD5E1;">
+        </div>
+
+        <!-- Filter Dropdowns -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+          
+          <select class="w-full h-10 px-3 rounded-lg border text-xs text-gray-700 bg-white focus:outline-none focus:ring-1" style="border-color:#CBD5E1;">
+            <option value="">Subject Area</option>
+            <option value="marketing">Marketing</option>
+            <option value="finance">Finance</option>
+            <option value="strategy">Strategy</option>
+            <option value="operations">Operations</option>
+            <option value="entrepreneurship">Entrepreneurship</option>
+            <option value="hr">People & HR</option>
+          </select>
+
+          <select class="w-full h-10 px-3 rounded-lg border text-xs text-gray-700 bg-white focus:outline-none focus:ring-1" style="border-color:#CBD5E1;">
+            <option value="">Institution</option>
+            <option value="iimb">IIM Bangalore</option>
+            <option value="partners">Partner Institutions</option>
+          </select>
+
+          <select class="w-full h-10 px-3 rounded-lg border text-xs text-gray-700 bg-white focus:outline-none focus:ring-1" style="border-color:#CBD5E1;">
+            <option value="">Duration</option>
+            <option value="6">6 Weeks</option>
+            <option value="8">8 Weeks</option>
+            <option value="10">10 Weeks</option>
+            <option value="12">12 Weeks</option>
+          </select>
+
+          <select class="w-full h-10 px-3 rounded-lg border text-xs text-gray-700 bg-white focus:outline-none focus:ring-1" style="border-color:#CBD5E1;">
+            <option value="">Start Date</option>
+            <option value="july26">July 2026 Semester</option>
+            <option value="jan27">Jan 2027 Semester</option>
+          </select>
+          
+          <select class="w-full h-10 px-3 rounded-lg border text-xs text-gray-700 bg-white focus:outline-none focus:ring-1" style="border-color:#CBD5E1;">
+            <option value="">Status</option>
+            <option value="upcoming">Upcoming</option>
+            <option value="enrolling">Enrolling</option>
+            <option value="ongoing">Ongoing</option>
+            <option value="archived">Archived</option>
+          </select>
+
+          <select class="w-full h-10 px-3 rounded-lg border text-xs text-gray-700 bg-white focus:outline-none focus:ring-1" style="border-color:#CBD5E1;">
+            <option value="">Certification</option>
+            <option value="ugc">UGC Approved</option>
+            <option value="aicte">AICTE Approved</option>
+            <option value="none">Audit Only</option>
+          </select>
+          
+        </div>
+      </form>
+    </div>
+
+    <!-- Course Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+      
+      <!-- Course Card 1 -->
+      <div class="bg-white rounded-xl border overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col" style="border-color:rgba(0,0,0,0.07);">
+        <div class="h-40 bg-gray-200 relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Strategy">
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded shadow-sm">ENROLLING</span>
+            <span class="bg-white text-gray-800 text-[10px] font-bold px-2 py-1 rounded shadow-sm">IIMB</span>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-grow">
+          <span class="text-[11px] font-semibold text-blue-600 uppercase tracking-wider mb-2">Strategy</span>
+          <h3 class="text-lg font-bold text-gray-900 mb-2 leading-tight">Strategic Management</h3>
+          <p class="text-sm text-gray-500 mb-4 line-clamp-2">Learn frameworks for analyzing industry structure, competitive advantage, and corporate strategy formulation.</p>
+          
+          <div class="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-600">
+            <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">calendar_month</span> 8 Weeks</div>
+            <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">badge</span> UGC Credit</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course Card 2 -->
+      <div class="bg-white rounded-xl border overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col" style="border-color:rgba(0,0,0,0.07);">
+        <div class="h-40 bg-gray-200 relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1553729459-efe14ef20550?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Finance">
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="bg-green-100 text-green-800 text-[10px] font-bold px-2 py-1 rounded shadow-sm">ENROLLING</span>
+            <span class="bg-white text-gray-800 text-[10px] font-bold px-2 py-1 rounded shadow-sm">IIMB</span>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-grow">
+          <span class="text-[11px] font-semibold text-blue-600 uppercase tracking-wider mb-2">Finance & Accounting</span>
+          <h3 class="text-lg font-bold text-gray-900 mb-2 leading-tight">Financial Accounting and Analysis</h3>
+          <p class="text-sm text-gray-500 mb-4 line-clamp-2">Master the preparation, analysis, and interpretation of financial statements for business decision-making.</p>
+          
+          <div class="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-600">
+            <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">calendar_month</span> 12 Weeks</div>
+            <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">badge</span> AICTE Approved</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course Card 3 -->
+      <div class="bg-white rounded-xl border overflow-hidden hover:shadow-lg transition-all duration-200 group flex flex-col" style="border-color:rgba(0,0,0,0.07);">
+        <div class="h-40 bg-gray-200 relative overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Marketing">
+          <div class="absolute top-3 left-3 flex gap-2">
+            <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2 py-1 rounded shadow-sm">UPCOMING</span>
+            <span class="bg-white text-gray-800 text-[10px] font-bold px-2 py-1 rounded shadow-sm">PARTNER</span>
+          </div>
+        </div>
+        <div class="p-5 flex flex-col flex-grow">
+          <span class="text-[11px] font-semibold text-blue-600 uppercase tracking-wider mb-2">Marketing</span>
+          <h3 class="text-lg font-bold text-gray-900 mb-2 leading-tight">Marketing Management</h3>
+          <p class="text-sm text-gray-500 mb-4 line-clamp-2">Explore core marketing concepts, consumer behavior, product strategy, and digital marketing fundamentals.</p>
+          
+          <div class="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between text-xs text-gray-600">
+            <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">calendar_month</span> 6 Weeks</div>
+            <div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-[16px]">badge</span> Audit Only</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- View All Button -->
+    <div class="mt-10 text-center">
+      <button class="px-6 py-2.5 bg-white border rounded-lg text-sm font-semibold text-gray-800 hover:bg-gray-50 transition-colors shadow-sm" style="border-color:#CBD5E1;">
+        Load More Courses
+      </button>
+    </div>
+
+  </div>
 </section>
+<!-- ======================================================= -->
+
 
 <!-- SECTION: ANNOUNCEMENTS / UPDATES -->
 <section class="py-10 lg:py-8 lg:py-16 bg-surface-container-lowest border-t border-outline-variant/20" id="updates">
