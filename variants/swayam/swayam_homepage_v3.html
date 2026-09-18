@@ -114,7 +114,16 @@
         },
       },
     }
-  </script>
+  <style>
+    /* Ensure marquee animation works independently of Tailwind config CDN parsing */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-100%); }
+    }
+    .animate-marquee {
+      animation: marquee 40s linear infinite;
+    }
+  </style>
 </head>
 <body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- SECTION 1: TOP NAVIGATION BAR -->
@@ -239,7 +248,7 @@
     <span class="text-label-xs font-label-xs text-secondary uppercase tracking-wider">In Collaboration With Leading Institutions</span>
   </div>
   <div class="relative w-full flex items-center overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-    <div class="flex items-center gap-12 animate-marquee whitespace-nowrap min-w-full">
+    <div class="flex items-center gap-12 animate-marquee whitespace-nowrap min-w-full shrink-0">
       <!-- Logos (Set 1) -->
       <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMA</span>
       <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMS</span>
@@ -265,7 +274,7 @@
       <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">Welingkar</span>
     </div>
     <!-- Duplicate for infinite scroll -->
-    <div aria-hidden="true" class="flex items-center gap-12 animate-marquee whitespace-nowrap min-w-full absolute top-0 left-full">
+    <div aria-hidden="true" class="flex items-center gap-12 animate-marquee whitespace-nowrap min-w-full shrink-0 absolute top-0 left-full">
       <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMA</span>
       <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMS</span>
       <span class="text-label-lg font-label-lg text-secondary opacity-70 hover:opacity-100 hover:text-primary transition-all cursor-default">IIMV</span>
