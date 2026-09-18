@@ -129,7 +129,7 @@
 <body class="bg-background text-on-surface font-body-md text-body-md antialiased min-h-screen flex flex-col selection:bg-secondary-container selection:text-on-secondary-container">
 <!-- SECTION 1: TOP NAVIGATION BAR -->
 <header class="sticky top-0 z-50 bg-surface-container-lowest border-b border-outline-variant/30 shadow-sm">
-<div class="w-full h-16 flex items-center justify-between px-6 lg:px-12 max-w-screen-xl mx-auto">
+<div class="w-full h-16 flex items-center justify-between px-4 sm:px-6 lg:px-12 max-w-screen-xl mx-auto">
 <!-- Brand Logo / Product Anchor -->
 <a class="flex items-center gap-space-sm group" href="#home">
 <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-on-primary font-bold font-headline-sm text-headline-sm shadow-sm">
@@ -160,11 +160,26 @@
 </a>
 </div>
 </div>
+
+<div id="mobile-nav-drawer" class="hidden lg:hidden border-t border-gray-100 bg-white shadow-lg">
+  <nav class="px-4 py-3 flex flex-col gap-1">
+    <a href="#home" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Home</a>
+    <a href="#about" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">About</a>
+    <a href="#courses" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Explore Courses</a>
+    <a href="#faculties" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Our Faculties</a>
+    <a href="#partners" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Our Partners</a>
+    <a href="#learners" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Our Learners</a>
+    <a href="#updates" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Updates</a>
+    <a href="#proposal" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Submit Proposal</a>
+    <a href="#contact" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Contact</a>
+    <a href="#explore" class="mt-2 block text-center bg-orange-700 text-white font-semibold py-2.5 px-4 rounded-lg text-sm hover:bg-orange-800 transition-colors">Enrol Now →</a>
+  </nav>
+</div>
 </header>
 <main class="flex-grow">
 <!-- SECTION 2: HERO SECTION -->
-<section class="relative overflow-hidden bg-gradient-to-b from-surface-container-lowest via-surface to-background pt-12 pb-20 border-b border-outline-variant/30" id="home">
-<div class="max-w-screen-xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<section class="relative overflow-hidden bg-gradient-to-b from-surface-container-lowest via-surface to-background pt-12 pb-10 lg:pb-20 border-b border-outline-variant/30" id="home">
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
 <div class="lg:col-span-7 flex flex-col items-start gap-space-md">
 <!-- Institutional Badge -->
 <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed border border-secondary-container text-label-md font-label-md">
@@ -172,7 +187,7 @@
 <span>Government of India Initiative • IIM Bangalore</span>
 </div>
 <!-- Hero Heading -->
-<h1 class="text-headline-xl font-headline-xl text-primary tracking-tight text-balance leading-tight">
+<h1 class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl font-bold text-primary tracking-tight text-balance leading-tight">
             Advancing Access, Equity &amp; Quality in Higher Management Education
           </h1>
 <!-- Hero Subtitle -->
@@ -180,7 +195,7 @@
             IIMB SWAYAM delivers world-class, tuition-free digital courses designed by acclaimed management scholars. Bridge intellectual divides and master essential leadership disciplines.
           </p>
 <!-- Core Objectives Badges -->
-<div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full py-2">
+<div class="grid grid-cols-1 sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 w-full py-2">
 <div class="flex items-center gap-2.5 p-3 rounded-lg bg-surface-container-lowest border border-outline-variant/40 shadow-sm">
 <span class="material-symbols-outlined text-secondary text-[20px]" data-icon="auto_stories">auto_stories</span>
 <span class="text-label-md font-label-md text-on-surface">High-quality teaching resources</span>
@@ -245,7 +260,7 @@
 </section>
 <!-- OUR PARTNERS (Marquee) -->
 <section class="py-10 border-b border-outline-variant/30 overflow-hidden bg-surface-container-lowest" id="partners" style="margin-left: calc(-1 * var(--tw-margin, 2rem)); margin-right: calc(-1 * var(--tw-margin, 2rem)); padding-left: 2rem; padding-right: 2rem;">
-  <div class="max-w-screen-xl mx-auto px-6 lg:px-12 mb-6 text-center">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12 mb-6 text-center">
     <span class="text-label-sm font-label-sm text-secondary uppercase tracking-[0.15em]">Our Partner Institutions</span>
     <h2 class="text-headline-sm font-headline-sm text-primary mt-1">22+ Leading Universities Across India</h2>
   </div>
@@ -303,14 +318,14 @@
 </section>
 <!-- SECTION 3: ACCESS, QUALITY, IMPACT -->
 
-<section class="py-space-xl bg-surface-bright border-b border-outline-variant/20" id="about">
-<div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+<section class="py-10 lg:py-8 lg:py-16 bg-surface-bright border-b border-outline-variant/20" id="about">
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
 <div class="text-center max-w-2xl mx-auto mb-12">
 <span class="text-secondary font-label-lg text-label-lg uppercase tracking-wider">The SWAYAM Mandate</span>
 <h2 class="text-headline-lg font-headline-lg text-primary mt-1">Access, Quality, and Measurable Impact</h2>
 <p class="text-body-md font-body-md text-on-surface-variant mt-2">Upholding national standards to democratize elite management education without barriers.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg">
 <!-- Pillar 1 -->
 <div class="bg-surface-container-lowest p-space-lg rounded-xl border border-outline-variant/40 shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
 <div>
@@ -364,25 +379,25 @@
 </section>
 <!-- SECTION 4: METRICS SECTION -->
 <section class="py-14 bg-primary text-on-primary">
-<div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
 <div class="grid grid-cols-2 lg:grid-cols-4 gap-space-lg divide-y lg:divide-y-0 lg:divide-x divide-outline-variant/20">
 <div class="pt-4 lg:pt-0 lg:px-4 text-center">
-<p class="text-headline-xl font-headline-xl font-bold tracking-tight text-secondary-fixed">100+</p>
+<p class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl font-bold font-bold tracking-tight text-secondary-fixed">100+</p>
 <p class="text-headline-sm font-headline-sm text-on-primary mt-1">Courses Offered</p>
 <p class="text-body-sm font-body-sm text-surface-variant/80 mt-1">Spanning core and advanced management fields</p>
 </div>
 <div class="pt-4 lg:pt-0 lg:px-4 text-center">
-<p class="text-headline-xl font-headline-xl font-bold tracking-tight text-secondary-fixed">5 lakh+</p>
+<p class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl font-bold font-bold tracking-tight text-secondary-fixed">5 lakh+</p>
 <p class="text-headline-sm font-headline-sm text-on-primary mt-1">Learner Enrolments</p>
 <p class="text-body-sm font-body-sm text-surface-variant/80 mt-1">Active nationwide student &amp; professional cohort</p>
 </div>
 <div class="pt-4 lg:pt-0 lg:px-4 text-center">
-<p class="text-headline-xl font-headline-xl font-bold tracking-tight text-secondary-fixed">25+</p>
+<p class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl font-bold font-bold tracking-tight text-secondary-fixed">25+</p>
 <p class="text-headline-sm font-headline-sm text-on-primary mt-1">Partner Institutions</p>
 <p class="text-body-sm font-body-sm text-surface-variant/80 mt-1">Universities integrating IIMB SWAYAM into curricula</p>
 </div>
 <div class="pt-4 lg:pt-0 lg:px-4 text-center">
-<p class="text-headline-xl font-headline-xl font-bold tracking-tight text-secondary-fixed">15+</p>
+<p class="text-2xl sm:text-3xl lg:text-2xl sm:text-3xl lg:text-4xl font-bold font-bold tracking-tight text-secondary-fixed">15+</p>
 <p class="text-headline-sm font-headline-sm text-on-primary mt-1">Subject Areas</p>
 <p class="text-body-sm font-body-sm text-surface-variant/80 mt-1">From Operations &amp; Strategy to FinTech &amp; AI</p>
 </div>
@@ -390,8 +405,8 @@
 </div>
 </section>
 <!-- SECTION 5: WHY LEARN THROUGH IIMB SWAYAM? -->
-<section class="py-space-xl bg-surface">
-<div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+<section class="py-10 lg:py-8 lg:py-16 bg-surface">
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
 <div>
 <span class="text-secondary font-label-lg text-label-lg uppercase tracking-wider">Unmatched Value</span>
@@ -401,7 +416,7 @@
             Engineered specifically to combine academic prestige with self-regulated remote learning flexibility.
           </p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-lg">
 <!-- Card 1 -->
 <div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/40 shadow-sm flex items-start gap-5">
 <div class="w-12 h-12 rounded-lg bg-surface-container-high text-primary flex items-center justify-center shrink-0">
@@ -454,8 +469,8 @@
 </div>
 </section>
 <!-- SECTION 6: HOW LEARNING WORKS -->
-<section class="py-space-xl bg-surface-container-lowest border-y border-outline-variant/30">
-<div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+<section class="py-10 lg:py-8 lg:py-16 bg-surface-container-lowest border-y border-outline-variant/30">
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
 <div class="text-center max-w-2xl mx-auto mb-14">
 <span class="text-secondary font-label-lg text-label-lg uppercase tracking-wider">Five-Phase Journey</span>
 <h2 class="text-headline-lg font-headline-lg text-primary mt-1">How Learning Works</h2>
@@ -464,7 +479,7 @@
 <div class="relative">
 <!-- Desktop Horizontal Connector Line -->
 <div class="hidden lg:block absolute top-10 left-[10%] right-[10%] h-0.5 bg-outline-variant/50 -z-0"></div>
-<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 lg:grid-cols-5 gap-6 relative z-10">
 <!-- Step 1 -->
 <div class="flex flex-col items-center text-center p-4">
 <div class="w-16 h-16 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold text-headline-sm shadow-md mb-4 ring-4 ring-surface-container-lowest">
@@ -515,14 +530,14 @@
 </div>
 </section>
 <!-- SECTION 7: LEARNER PATHWAYS -->
-<section class="py-space-xl bg-surface" id="learners">
-<div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+<section class="py-10 lg:py-8 lg:py-16 bg-surface" id="learners">
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
 <div class="text-center max-w-2xl mx-auto mb-12">
 <span class="text-secondary font-label-lg text-label-lg uppercase tracking-wider">Tailored Academic Trajectories</span>
 <h2 class="text-headline-lg font-headline-lg text-primary mt-1">Designed for Diverse Learner Pathways</h2>
 <p class="text-body-md font-body-md text-on-surface-variant mt-2">Whether completing an undergraduate degree or spearheading executive initiatives, find your track.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg">
 <!-- Cohort 1 -->
 <div class="bg-surface-container-lowest rounded-xl p-6 border border-outline-variant/40 shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-transform duration-200">
 <div>
@@ -587,8 +602,8 @@
 </div>
 </section>
 <!-- SECTION 8: EXPLORE COURSES (Interactive Catalog) -->
-<section class="py-space-xl bg-surface-bright" id="courses">
-<div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+<section class="py-10 lg:py-8 lg:py-16 bg-surface-bright" id="courses">
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
 <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
 <div>
 <span class="text-secondary font-label-lg text-label-lg uppercase tracking-wider">Curated Course Catalog</span>
@@ -627,7 +642,7 @@
 </div>
 </div>
 <!-- Course Cards Grid (6 Featured Courses) -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg">
 <!-- Course Card 1 -->
 <div class="bg-surface-container-lowest rounded-xl border border-outline-variant/50 overflow-hidden shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between">
 <div>
@@ -880,14 +895,14 @@
 </section>
 
 <!-- SECTION: ANNOUNCEMENTS / UPDATES -->
-<section class="py-space-xl bg-surface-container-lowest border-t border-outline-variant/20" id="updates">
-<div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+<section class="py-10 lg:py-8 lg:py-16 bg-surface-container-lowest border-t border-outline-variant/20" id="updates">
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
 <div class="text-center max-w-2xl mx-auto mb-14">
 <span class="text-secondary font-label-lg text-label-lg uppercase tracking-wider">Latest Information</span>
 <h2 class="text-headline-lg font-headline-lg text-primary mt-1">News and Announcements</h2>
 <p class="text-body-md font-body-md text-on-surface-variant mt-2">Stay updated with academic timelines and platform announcements.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-lg">
 <div class="bg-surface p-6 rounded-xl border border-outline-variant/40 flex gap-4 shadow-sm hover:border-primary transition-colors cursor-pointer">
 <div class="text-primary mt-1">
 <span class="material-symbols-outlined text-[28px]" data-icon="event">event</span>
@@ -913,14 +928,14 @@
 </section>
 
 <!-- SECTION 9: STORIES AND IMPACT -->
-<section class="py-space-xl bg-surface border-t border-outline-variant/20" id="stories">
-<div class="max-w-screen-xl mx-auto px-6 lg:px-12">
+<section class="py-10 lg:py-8 lg:py-16 bg-surface border-t border-outline-variant/20" id="stories">
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12">
 <div class="text-center max-w-2xl mx-auto mb-14">
 <span class="text-secondary font-label-lg text-label-lg uppercase tracking-wider">Testimonials &amp; Case Studies</span>
 <h2 class="text-headline-lg font-headline-lg text-primary mt-1">Stories and Realized Impact</h2>
 <p class="text-body-md font-body-md text-on-surface-variant mt-2">Hear directly from undergraduates, professionals, and faculty who transformed their academic horizons.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg">
 <!-- Testimonial 1 -->
 <div class="bg-surface-container-lowest p-6 rounded-xl border border-outline-variant/40 shadow-sm flex flex-col justify-between">
 <div>
@@ -990,9 +1005,9 @@
 </main>
 <!-- SECTION 10: FOOTER / HELP CENTRE -->
 <footer class="bg-primary text-on-primary border-t border-outline-variant/20">
-<div class="w-full py-space-xl px-gutter max-w-[1320px] mx-auto flex flex-col justify-between gap-space-lg">
+<div class="w-full py-10 lg:py-8 lg:py-16 px-4 sm:px-6 lg:px-8 max-w-screen-xl mx-auto flex flex-col justify-between gap-space-lg">
 <!-- Top Grid of Links and Branding -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg pb-10 border-b border-outline-variant/20">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-space-lg pb-10 border-b border-outline-variant/20">
 <!-- Branding Block -->
 <div class="lg:col-span-2 pr-4">
 <div class="flex items-center gap-space-sm mb-3">
@@ -1061,4 +1076,25 @@
 </div>
 </div>
 </footer>
+
+<script>
+  // Mobile nav toggle
+  (function() {
+    var btn = document.getElementById('mobile-menu-btn');
+    var drawer = document.getElementById('mobile-nav-drawer');
+    if (!btn || !drawer) return;
+    btn.addEventListener('click', function() {
+      var open = drawer.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', !open);
+    });
+    // Close on link click
+    drawer.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        drawer.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+
 </body></html>

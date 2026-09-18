@@ -137,7 +137,7 @@
 <body class="bg-surface antialiased text-on-surface selection:bg-primary selection:text-on-primary">
 <!-- 1. TOP NAVIGATION BAR (Shared Component: TopNavBar) -->
 <header class="bg-surface top-0 sticky z-50 border-b border-outline-variant/30">
-<div class="max-w-screen-xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 w-full">
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12 flex items-center justify-between h-16 w-full">
 <!-- Institutional Branding -->
 <div class="flex flex-col">
 <a class="font-display-hero text-headline-sm text-on-surface dark:text-inverse-on-surface tracking-tight font-semibold flex items-center gap-2" href="#">
@@ -165,9 +165,24 @@
 </a>
 </div>
 </div>
+
+<div id="mobile-nav-drawer" class="hidden lg:hidden border-t border-gray-100 bg-white shadow-lg">
+  <nav class="px-4 py-3 flex flex-col gap-1">
+    <a href="#home" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Home</a>
+    <a href="#about" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">About</a>
+    <a href="#explore" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Explore Courses</a>
+    <a href="#faculties" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Our Faculties</a>
+    <a href="#partners" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Our Partners</a>
+    <a href="#learners" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Our Learners</a>
+    <a href="#updates" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Updates</a>
+    <a href="#proposal" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Submit Proposal</a>
+    <a href="#contact" class="block py-2.5 px-4 text-sm font-medium text-gray-800 hover:bg-gray-50 rounded-lg transition-colors">Contact</a>
+    <a href="#explore" class="mt-2 block text-center bg-orange-700 text-white font-semibold py-2.5 px-4 rounded-lg text-sm hover:bg-orange-800 transition-colors">Enrol Now →</a>
+  </nav>
+</div>
 </header>
 <!-- MAIN CANVAS -->
-<main class="max-w-screen-xl mx-auto px-6 lg:px-12 space-y-space-xl py-space-xl" id="home">
+<main class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12 space-y-10 lg:space-y-16 py-10 lg:py-8 lg:py-16" id="home">
 <!-- 2. HERO SECTION -->
 <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
 <div class="lg:col-span-7 space-y-space-md">
@@ -230,7 +245,7 @@
 </section>
 <!-- OUR PARTNERS (Marquee) -->
 <section class="py-10 border-b border-outline-variant/30 overflow-hidden bg-surface-container-lowest">
-  <div class="max-w-screen-xl mx-auto px-6 lg:px-12 mb-6 text-center">
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12 mb-6 text-center">
     <span class="text-label-xs font-label-xs text-secondary uppercase tracking-[0.15em]">Our Partner Institutions</span>
     <h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">22+ Leading Universities Across India</h2>
   </div>
@@ -292,7 +307,7 @@
 <h2 class="font-headline-lg text-headline-lg text-on-surface">Structured for Institutional Excellence</h2>
 <p class="font-body-md text-body-md text-secondary mt-1">Guaranteed by the highest standards of faculty governance, rigorous peer assessment, and national digital infrastructure.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <!-- Pillar 1: Access -->
 <div class="bg-surface-container-lowest border border-outline-variant/40 p-space-lg rounded-xl hover:-translate-y-1 hover:border-outline transition-all duration-200 shadow-sm flex flex-col justify-between">
 <div>
@@ -342,7 +357,7 @@
 </section>
 <!-- 4. METRICS SECTION (Bento Ribbon) -->
 <section class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl p-space-lg shadow-sm">
-<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter divide-y md:divide-y-0 md:divide-x divide-outline-variant/30">
+<div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-gutter divide-y md:divide-y-0 md:divide-x divide-outline-variant/30">
 <div class="px-4 py-2 text-center md:text-left">
 <div class="font-headline-lg text-headline-lg text-primary font-bold tracking-tight">100+</div>
 <div class="font-headline-sm text-body-md text-on-surface font-semibold mt-1">Management Courses</div>
@@ -374,7 +389,7 @@
 </div>
 <p class="text-secondary font-body-md text-body-md max-w-md">Bridging textbook theory with verified executive practices through India's premier management think tank.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter">
 <!-- Diff 1 -->
 <div class="bg-surface-container-lowest border border-outline-variant/40 p-space-lg rounded-xl flex gap-5">
 <div class="text-primary mt-1">
@@ -471,7 +486,7 @@
 <span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Tailored Academic Trajectories</span>
 <h2 class="font-headline-lg text-headline-lg text-on-surface">Engineered for Your Goals</h2>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
 <!-- Student -->
 <div class="bg-surface-container-lowest border border-outline-variant/40 p-5 rounded-xl space-y-3">
 <span class="material-symbols-outlined text-primary text-3xl" data-icon="school">school</span>
@@ -557,7 +572,7 @@
 </div>
 </div>
 <!-- Courses Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
 <!-- Course 1 -->
 <div class="bg-surface-container-lowest border border-outline-variant/40 rounded-xl overflow-hidden hover:-translate-y-1 hover:border-outline transition-all duration-200 shadow-sm flex flex-col justify-between">
 <div class="p-5 space-y-3">
@@ -678,7 +693,7 @@
 <span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Latest Information</span>
 <h2 class="font-headline-lg text-headline-lg text-on-surface">News and Announcements</h2>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter">
 <div class="bg-surface-container-lowest border border-outline-variant/40 p-space-md rounded-xl flex gap-4 shadow-sm hover:border-primary transition-colors cursor-pointer">
 <div class="text-primary mt-1">
 <span class="material-symbols-outlined text-2xl" data-icon="event">event</span>
@@ -708,7 +723,7 @@
 <span class="text-label-xs font-label-xs text-primary uppercase tracking-wider">Peer Testimonials</span>
 <h2 class="font-headline-lg text-headline-lg text-on-surface">Transformative Journeys</h2>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
 <!-- Story 1 -->
 <div class="bg-surface-container-lowest border border-outline-variant/40 p-space-lg rounded-xl flex flex-col justify-between shadow-sm">
 <div class="space-y-4">
@@ -768,9 +783,9 @@
 </main>
 <!-- 10. FOOTER / HELP CENTRE (Shared Component: Footer) -->
 <footer class="bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant/30 dark:border-outline/20">
-<div class="max-w-screen-xl mx-auto px-6 lg:px-12 py-space-xl flex flex-col gap-space-lg w-full" id="contact">
+<div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12 py-10 lg:py-8 lg:py-16 flex flex-col gap-space-lg w-full" id="contact">
 <!-- Institutional Info Grid -->
-<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
 <div class="space-y-3">
 <div class="font-display-hero text-headline-md text-on-surface dark:text-inverse-on-surface tracking-tight font-semibold">
             IIMB SWAYAM
@@ -831,4 +846,25 @@
 </div>
 </div>
 </footer>
+
+<script>
+  // Mobile nav toggle
+  (function() {
+    var btn = document.getElementById('mobile-menu-btn');
+    var drawer = document.getElementById('mobile-nav-drawer');
+    if (!btn || !drawer) return;
+    btn.addEventListener('click', function() {
+      var open = drawer.classList.toggle('hidden');
+      btn.setAttribute('aria-expanded', !open);
+    });
+    // Close on link click
+    drawer.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        drawer.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+</script>
+
 </body></html>
