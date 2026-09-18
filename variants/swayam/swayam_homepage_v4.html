@@ -81,7 +81,7 @@
             "marquee": "marquee 40s linear infinite"
           },
           "spacing": {
-            "margin": "3.5rem",
+            "margin": "1.5rem",
             "space-md": "1.75rem",
             "space-lg": "2.5rem",
             "space-xs": "0.5rem",
@@ -136,8 +136,8 @@
 </head>
 <body class="bg-surface antialiased text-on-surface selection:bg-primary selection:text-on-primary">
 <!-- 1. TOP NAVIGATION BAR (Shared Component: TopNavBar) -->
-<header class="bg-surface dark:bg-inverse-surface docked full-width top-0 sticky z-50 border-b border-outline-variant/30 dark:border-outline/20">
-<div class="max-w-7xl mx-auto px-margin flex items-center justify-between h-20 w-full">
+<header class="bg-surface top-0 sticky z-50 border-b border-outline-variant/30">
+<div class="max-w-screen-xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16 w-full">
 <!-- Institutional Branding -->
 <div class="flex flex-col">
 <a class="font-display-hero text-headline-sm text-on-surface dark:text-inverse-on-surface tracking-tight font-semibold flex items-center gap-2" href="#">
@@ -146,7 +146,7 @@
 <span class="text-label-xs font-label-xs text-secondary tracking-wider">Indian Institute of Management Bangalore • National MOOCs Initiative</span>
 </div>
 <!-- Center Links -->
-<nav class="hidden lg:flex items-center space-x-3">
+<nav class="hidden lg:flex items-center gap-6">
 <a class="text-primary dark:text-inverse-primary font-semibold border-b-2 border-primary dark:border-inverse-primary pb-1 text-label-md font-label-md transition-colors duration-150" href="#home">Home</a>
 <a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface text-label-md font-label-md transition-colors duration-150" href="#about">About</a>
 <a class="text-secondary dark:text-secondary-fixed-dim hover:text-on-surface dark:hover:text-inverse-on-surface text-label-md font-label-md transition-colors duration-150" href="#explore">Explore Courses</a>
@@ -167,7 +167,7 @@
 </div>
 </header>
 <!-- MAIN CANVAS -->
-<main class="max-w-7xl mx-auto px-margin space-y-space-xl py-space-xl" id="home">
+<main class="max-w-screen-xl mx-auto px-6 lg:px-12 space-y-space-xl py-space-xl" id="home">
 <!-- 2. HERO SECTION -->
 <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
 <div class="lg:col-span-7 space-y-space-md">
@@ -230,7 +230,7 @@
 </section>
 <!-- OUR PARTNERS (Marquee) -->
 <section class="py-10 border-b border-outline-variant/30 overflow-hidden bg-surface-container-lowest">
-  <div class="max-w-7xl mx-auto px-margin mb-6 text-center">
+  <div class="max-w-screen-xl mx-auto px-6 lg:px-12 mb-6 text-center">
     <span class="text-label-xs font-label-xs text-secondary uppercase tracking-[0.15em]">Our Partner Institutions</span>
     <h2 class="font-headline-sm text-headline-sm text-on-surface mt-1">22+ Leading Universities Across India</h2>
   </div>
@@ -768,7 +768,7 @@
 </main>
 <!-- 10. FOOTER / HELP CENTRE (Shared Component: Footer) -->
 <footer class="bg-surface-container-lowest dark:bg-inverse-surface border-t border-outline-variant/30 dark:border-outline/20">
-<div class="max-w-7xl mx-auto px-margin py-space-xl flex flex-col gap-space-lg w-full" id="contact">
+<div class="max-w-screen-xl mx-auto px-6 lg:px-12 py-space-xl flex flex-col gap-space-lg w-full" id="contact">
 <!-- Institutional Info Grid -->
 <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
 <div class="space-y-3">
