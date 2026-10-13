@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources — Teaching Tips, Prompts &amp; Curriculum Design | Sangam DLC (Design v2.0.1)</title>
+    <meta name="description" content="Browse 100 teaching resources from IIM Bangalore faculty, organised as a journey: get started, plan, prepare, teach and reflect. Search, filter and save.">
+    <link rel="canonical" href="https://sangamdlc.org/resources/">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/sangam/resources_v2.css">
+    <style>
+        /* ===== Design v2.0.1 — animated teaching journey + top filter bar + card grid ===== */
+        :root{--ease-in-out:cubic-bezier(.77,0,.175,1)}
+        .hero{padding:122px 0 34px}
+        .hero h1{font-size:clamp(34px,5vw,52px);font-weight:800;letter-spacing:-.025em;margin-bottom:14px}
+        .hero h1 .dot{color:var(--orange)}
+        .hero p{font-size:18px;color:var(--muted);max-width:620px;margin-bottom:28px}
+
+        /* --- journey --- */
+        .j-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:22px}
+        .j-head h2{font-size:22px;font-weight:700;letter-spacing:-.01em}
+        .j-head p{font-size:15px;color:var(--muted);margin-top:4px;max-width:560px}
+        .journey{--k:0;--on:0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+        .j-track{grid-column:1/-1;position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;height:30px;margin-bottom:14px}
+        .j-track::before,.j-track::after{content:'';position:absolute;top:13px;height:4px;border-radius:2px;left:calc((100% - 64px)/10)}
+        .j-track::before{right:calc((100% - 64px)/10);background:#DDE5EE}
+        .j-track::after{width:calc(var(--k)*((100% - 64px)/5 + 16px)*var(--on));background:var(--blue);transition:width .45s var(--ease-in-out)}
+        .j-dot{justify-self:center;position:relative;z-index:1;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid #C9D5E2;color:var(--muted);font:700 12px var(--font-h);transition:background-color .3s ease,border-color .3s ease,color .3s ease}
+        /* the traveller: the one orange pinch on the page body. Rides to the chosen stage. */
+        .j-trav{position:absolute;top:0;z-index:2;pointer-events:none;width:30px;height:30px;border-radius:50%;left:calc((100% - 64px)/10 + var(--k)*((100% - 64px)/5 + 16px) - 15px);transition:left .45s var(--ease-in-out)}
+        .j-trav::before{content:'';position:absolute;inset:0;border-radius:50%;border:2px solid var(--orange);animation:ripple 2.2s ease-out infinite}
+        .j-trav::after{content:'';position:absolute;top:-3px;right:-3px;width:11px;height:11px;border-radius:50%;background:var(--orange);border:2px solid #fff}
+        @keyframes ripple{0%{transform:scale(1);opacity:.75}100%{transform:scale(1.9);opacity:0}}
+        /* stage -> progress (CSS-only, driven by the engine's aria-pressed) */
+        .journey:has(.j-card:nth-of-type(1)[aria-pressed=true]){--k:0;--on:1}
+        .journey:has(.j-card:nth-of-type(2)[aria-pressed=true]){--k:1;--on:1}
+        .journey:has(.j-card:nth-of-type(3)[aria-pressed=true]){--k:2;--on:1}
+        .journey:has(.j-card:nth-of-type(4)[aria-pressed=true]){--k:3;--on:1}
+        .journey:has(.j-card:nth-of-type(5)[aria-pressed=true]){--k:4;--on:1}
+        .journey:has(.j-card:nth-of-type(1)[aria-pressed=true]) .j-dot:nth-child(-n+1),
+        .journey:has(.j-card:nth-of-type(2)[aria-pressed=true]) .j-dot:nth-child(-n+2),
+        .journey:has(.j-card:nth-of-type(3)[aria-pressed=true]) .j-dot:nth-child(-n+3),
+        .journey:has(.j-card:nth-of-type(4)[aria-pressed=true]) .j-dot:nth-child(-n+4),
+        .journey:has(.j-card:nth-of-type(5)[aria-pressed=true]) .j-dot:nth-child(-n+5){background:var(--blue);border-color:var(--blue);color:#fff}
+        .journey:has(.j-card:nth-of-type(1)[aria-pressed=true]) .j-dot:nth-child(1),
+        .journey:has(.j-card:nth-of-type(2)[aria-pressed=true]) .j-dot:nth-child(2),
+        .journey:has(.j-card:nth-of-type(3)[aria-pressed=true]) .j-dot:nth-child(3),
+        .journey:has(.j-card:nth-of-type(4)[aria-pressed=true]) .j-dot:nth-child(4),
+        .journey:has(.j-card:nth-of-type(5)[aria-pressed=true]) .j-dot:nth-child(5){background:var(--navy);border-color:var(--navy)}
+
+        .j-card{display:flex;flex-direction:column;gap:12px;text-align:left;padding:10px 10px 16px;background:#fff;border:1px solid var(--line);border-radius:18px;transition:border-color .18s ease,box-shadow .18s ease,transform .18s var(--ease-out);animation:rise .5s var(--ease-out) backwards;animation-delay:calc(var(--i)*70ms)}
+        @media(hover:hover) and (pointer:fine){.j-card:hover{border-color:#C6D3E1;transform:translateY(-3px)}}
+        .j-card:active{transform:scale(.98)}
+        .j-card[aria-pressed="true"]{border-color:var(--c);box-shadow:0 0 0 1px var(--c),0 16px 30px -18px var(--c)}
+        .j-scene{display:block;border-radius:12px;background:var(--ct);overflow:hidden}
+        .j-meta{display:flex;flex-direction:column;gap:1px;padding:0 6px}
+        .j-meta small{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--c)}
+        .j-meta b{font:700 18px/1.25 var(--font-h);color:var(--navy)}
+        .j-cat{font-size:13.5px;color:var(--muted)}
+        .j-count{font-size:12.5px;color:var(--muted);margin-top:8px}
+        .j-count span{font-weight:700;color:var(--ink)}
+        /* once a stage is chosen, only the chosen/hovered scene keeps moving */
+        .journey:has(.j-card[aria-pressed=true]) .j-card:not([aria-pressed=true]):not(:hover) .sc *{animation-play-state:paused}
+
+        /* --- results band --- */
+        .band{background:var(--bg);border-top:1px solid var(--line);margin-top:40px;padding:30px 0 80px}
+        .cat-desc{font-size:15px;color:var(--muted);margin-bottom:20px;min-height:24px}
+        .tb{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-bottom:18px}
+        .tb-fmt{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+        .tb-label{font-size:12px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+        .chip{display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 14px;border-radius:100px;border:1px solid var(--line);background:#fff;font-size:13.5px;font-weight:600;color:var(--navy);transition:background-color .15s ease,border-color .15s ease,color .15s ease,transform .16s var(--ease-out)}
+        .chip .ic{font-size:16px;color:var(--muted)}
+        .chip em{font-style:normal;font-weight:500;font-size:12px;color:var(--muted)}
+        .chip:active{transform:scale(.96)}
+        @media(hover:hover) and (pointer:fine){.chip:hover{border-color:#C6D3E1;background:#FBFCFD}}
+        .chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+        .chip[aria-pressed="true"] .ic,.chip[aria-pressed="true"] em{color:rgba(255,255,255,.78)}
+        .btn-sm{height:36px;padding:0 14px;font-size:13.5px}
+        .count{min-width:20px;height:20px;padding:0 6px;border-radius:100px;background:var(--bg);font:600 12px/20px var(--font-b);text-align:center}
+        .btn-ghost[aria-pressed="true"] .count{background:#E8F0F9}
+        .tb2{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:16px 0 22px;border-top:1px solid var(--line)}
+        #summary{font-size:14px;color:var(--muted);font-weight:500}
+        .tb-ctl{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+        .filters-on{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:-8px 0 22px}
+        .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+        #results[data-view="grid"]{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+        @media(max-width:1024px){#results[data-view="grid"]{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:900px){.journey{grid-template-columns:repeat(3,1fr)}.j-track{display:none}}
+        @media(max-width:640px){.hero{padding-top:104px}.journey{grid-template-columns:repeat(2,1fr)}.j-card:last-of-type{grid-column:1/-1}#results[data-view="grid"]{grid-template-columns:1fr}.tb-ctl{width:100%}.tb-ctl .select{flex:1}}
+    </style>
+</head>
+<body>
+    <nav class="nav-wrap" id="nav" aria-label="Main">
+        <div class="container"><div class="nav-inner">
+            <a href="sangam_homepage_v2.html" class="nav-logo"><div class="logo-badge">S</div><div><div class="logo-name">Sangam DLC</div><span class="logo-sub">by IIMBx</span></div></a>
+            <div class="nav-links">
+                <a href="sangam_homepage_v2.html">Home</a><a href="sangam_about_v2.html">About</a><a href="sangam_courses_v2.html">Courses</a><a href="sangam_resources_v2.0.1.html" class="active" aria-current="page">Resources</a><a href="sangam_events_v2.html">Events</a><a href="sangam_contact_v2.html">Contact</a>
+            </div>
+            <a href="sangam_courses_v2.html" class="nav-btn">Join Free →</a>
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" data-icon="menu"></button>
+        </div></div>
+    </nav>
+
+    <main>
+        <section class="hero"><div class="container">
+            <h1>Resources for better teaching<span class="dot">.</span></h1>
+            <p>A growing library of tips, insights, prompts and templates from IIMB faculty and the Sangam community.</p>
+            <div class="search" role="search">
+                <span class="search-ic" data-icon="search" aria-hidden="true"></span>
+                <input id="q" type="search" placeholder="Search 100 resources…" aria-label="Search resources" autocomplete="off" spellcheck="false">
+                <button type="button" class="search-clear" id="q-clear" data-remove="q" aria-label="Clear search" hidden data-icon="x"></button>
+                <kbd aria-hidden="true">/</kbd>
+            </div>
+        </div></section>
+
+        <section class="container" id="journey-sec" aria-labelledby="j-title">
+            <div class="j-head">
+                <div>
+                    <h2 id="j-title">Start where you are</h2>
+                    <p>Follow the path from joining Sangam to reflecting on your teaching. Pick a stage to see what fits it.</p>
+                </div>
+                <button type="button" class="btn btn-ghost btn-sm" data-cat="all" aria-pressed="true">All resources <span class="count" data-count="cat:all">100</span></button>
+            </div>
+            <div class="journey" id="journey" role="group" aria-label="Teaching journey stages"></div>
+        </section>
+
+        <section class="band"><div class="container">
+            <div id="results-top"></div>
+            <p class="cat-desc" id="cat-desc"></p>
+            <div class="tb">
+                <div class="tb-fmt" id="fmts" role="group" aria-label="Filter by format"><span class="tb-label">Format</span></div>
+                <button type="button" class="btn btn-ghost btn-sm" data-saved-toggle aria-pressed="false" data-icon="bookmark">Saved <span class="count" data-saved-count>0</span></button>
+            </div>
+            <div class="tb2">
+                <p id="summary" aria-live="polite"></p>
+                <div class="tb-ctl">
+                    <label><span class="sr">Level</span><select class="select" data-bind="lvl"><option value="all">All levels</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></label>
+                    <label><span class="sr">Sort by</span><select class="select" data-bind="sort"><option value="featured">Featured</option><option value="new">Newest</option><option value="az">A – Z</option></select></label>
+                    <div class="seg" role="group" aria-label="View">
+                        <button type="button" data-view="grid" aria-pressed="true" aria-label="Grid view" title="Grid" data-icon="grid"></button>
+                        <button type="button" data-view="list" aria-pressed="false" aria-label="List view" title="List" data-icon="list"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="filters-on" id="active" hidden></div>
+            <div id="results"></div>
+            <nav class="pager" id="pager" aria-label="Pagination"></nav>
+        </div></section>
+    </main>
+
+    <footer class="footer"><div class="container"><p>© 2026 Sangam Digital Learning Community · <a href="sangam_homepage_v2.html">An IIMBx Initiative</a> · Design v2.0.1</p></div></footer>
+
+    <script src="../../assets/sangam/resources_data.js"></script>
+    <script src="../../assets/sangam/resources_scenes.js"></script>
+    <script src="../../assets/sangam/resources_engine.js"></script>
+    <script>
+        (function () {
+            const { CATS, FORMATS, SCENES } = SANGAM_RES, R = SangamResources, s = R.svg;
+            document.getElementById('journey').innerHTML =
+                `<div class="j-track" aria-hidden="true">${CATS.map((c, i) => `<span class="j-dot">${i + 1}</span>`).join('')}<span class="j-trav"></span></div>` +
+                CATS.map((c, i) => `<button type="button" class="j-card c-${c.id}" style="--i:${i}" data-cat="${c.id}" data-toggle data-scroll="#journey-sec" aria-pressed="false">
+                    <span class="j-scene">${SCENES[c.id]}</span>
+                    <span class="j-meta"><small>Step ${i + 1}</small><b>${c.verb}</b><span class="j-cat">${c.name}</span><span class="j-count"><span data-count="cat:${c.id}">20</span> artifacts</span></span></button>`).join('');
+            document.getElementById('fmts').insertAdjacentHTML('beforeend', Object.keys(FORMATS).map(f =>
+                `<button type="button" class="chip" data-fmt="${f}" aria-pressed="false">${s(FORMATS[f])}${f} <em data-count="fmt:${f}">0</em></button>`).join(''));
+            R.init({ per: 12, defaultView: 'grid' });
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources — Teaching Tips, Prompts &amp; Curriculum Design | Sangam DLC (Design v2.0.2)</title>
+    <meta name="description" content="A directory of 100 teaching resources from IIM Bangalore faculty, grouped by stage of the educator journey. Filter by format and level, search, and save favourites.">
+    <link rel="canonical" href="https://sangamdlc.org/resources/">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/sangam/resources_v2.css">
+    <style>
+        /* ===== Design v2.0.2 — directory: journey timeline sidebar + category shelves + list rows ===== */
+        .hero{padding:122px 0 34px}
+        .hero h1{font-size:clamp(34px,5vw,52px);font-weight:800;letter-spacing:-.025em;margin-bottom:14px}
+        .hero h1 .dot{color:var(--orange)}
+        .hero p{font-size:18px;color:var(--muted);max-width:620px;margin-bottom:28px}
+        .quick{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:14px;font-size:13px;color:var(--muted)}
+        .qchip{height:30px;padding:0 12px;border-radius:100px;border:1px solid var(--line);background:#fff;font-size:13px;font-weight:600;color:var(--navy);transition:background-color .15s ease,border-color .15s ease,transform .16s var(--ease-out)}
+        .qchip:active{transform:scale(.96)}
+        @media(hover:hover) and (pointer:fine){.qchip:hover{background:var(--bg);border-color:#C6D3E1}}
+
+        .band{background:var(--bg);border-top:1px solid var(--line);padding:36px 0 90px}
+        .layout{display:grid;grid-template-columns:288px minmax(0,1fr);gap:36px;align-items:start}
+
+        /* sidebar */
+        .side{position:sticky;top:84px;max-height:calc(100vh - 104px);overflow:auto;background:#fff;border:1px solid var(--line);border-radius:18px}
+        .side>summary{display:none}
+        .sd-group{padding:18px 14px}
+        .sd-group+.sd-group{border-top:1px solid var(--line)}
+        .sd-h{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0 8px 10px}
+        .opt{display:flex;align-items:center;gap:10px;width:100%;padding:8px 10px;border-radius:10px;font-size:14px;font-weight:500;color:var(--ink);text-align:left;transition:background-color .15s ease}
+        .opt:hover{background:var(--bg)}
+        .opt em,.t-item em{margin-left:auto;font-style:normal;font-size:12px;color:var(--muted)}
+        .opt .box{width:18px;height:18px;flex:none;border-radius:5px;border:1.5px solid #B9C6D5;display:grid;place-items:center;color:transparent;font-size:12px;transition:background-color .15s ease,border-color .15s ease,color .15s ease}
+        .opt .box .ic{stroke-width:3}
+        .opt.radio .box{border-radius:50%}
+        .opt[aria-pressed="true"]{font-weight:600}
+        .opt[aria-pressed="true"] .box{background:var(--navy);border-color:var(--navy);color:#fff}
+        .sd-foot{display:flex;align-items:center;justify-content:space-between;gap:8px}
+        .sd-foot .opt{flex:1}
+
+        /* vertical journey timeline */
+        .t-list{position:relative;display:flex;flex-direction:column;gap:2px;margin-top:4px}
+        .t-list::before{content:'';position:absolute;left:24px;top:22px;bottom:22px;width:2px;background:#DDE5EE}
+        .t-item{position:relative;display:flex;align-items:center;gap:12px;width:100%;padding:8px 10px;border-radius:12px;text-align:left;transition:background-color .15s ease}
+        .t-item:hover{background:var(--bg)}
+        .t-dot{position:relative;z-index:1;flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#fff;border:2px solid #C9D5E2;font:700 12px var(--font-h);color:var(--muted);transition:background-color .3s ease,border-color .3s ease,color .3s ease}
+        .t-tx b{display:block;font:600 14px/1.25 var(--font-h);color:var(--navy)}
+        .t-tx small{font-size:12px;color:var(--muted)}
+        .t-item[aria-pressed="true"]{background:var(--ct)}
+        .t-list:has(.t-item:nth-of-type(1)[aria-pressed=true]) .t-item:nth-of-type(-n+1) .t-dot,
+        .t-list:has(.t-item:nth-of-type(2)[aria-pressed=true]) .t-item:nth-of-type(-n+2) .t-dot,
+        .t-list:has(.t-item:nth-of-type(3)[aria-pressed=true]) .t-item:nth-of-type(-n+3) .t-dot,
+        .t-list:has(.t-item:nth-of-type(4)[aria-pressed=true]) .t-item:nth-of-type(-n+4) .t-dot,
+        .t-list:has(.t-item:nth-of-type(5)[aria-pressed=true]) .t-item:nth-of-type(-n+5) .t-dot{background:var(--blue);border-color:var(--blue);color:#fff}
+        .t-item[aria-pressed="true"] .t-dot{background:var(--navy);border-color:var(--navy);color:#fff}
+        .t-item[aria-pressed="true"] .t-dot::after{content:'';position:absolute;top:-4px;right:-4px;width:10px;height:10px;border-radius:50%;background:var(--orange);border:2px solid #fff}
+
+        /* main column */
+        .m-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+        #summary{font-size:14px;color:var(--muted);font-weight:500}
+        .m-ctl{display:flex;align-items:center;gap:10px}
+        .filters-on{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:-4px 0 18px}
+        .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+        .btn-sm{height:36px;padding:0 14px;font-size:13.5px}
+        #results[data-view="grid"]{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+        #results.shelves{display:block!important;background:none!important;border:0!important;border-radius:0!important;overflow:visible!important}
+
+        /* rows: columns depend on mode (category chip only when not grouped) */
+        .rw-lvl{display:none}
+        #results .rw{grid-template-columns:40px minmax(0,1fr) 150px 84px 70px 36px}
+        #results.shelves .rw{grid-template-columns:40px minmax(0,1fr) 84px 70px 36px}
+        #results.shelves .rw-cat{display:none}
+
+        /* shelves */
+        .shelf+.shelf{margin-top:44px}
+        .sh-head{display:flex;align-items:center;gap:18px;margin-bottom:18px}
+        .sh-scene{flex:none;width:136px;border-radius:14px;background:var(--ct);overflow:hidden;display:block}
+        .sh-t small{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--c)}
+        .sh-t h2{font-size:20px;margin:2px 0}
+        .sh-t p{font-size:14px;color:var(--muted)}
+        .sh-head .btn{margin-left:auto;flex:none}
+        .sh-items[data-view="grid"]{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+        .sh-items[data-view="list"]{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+        .sh-items[data-view="list"] .rw+.rw{border-top:1px solid var(--line)}
+        .shelf{animation:rise .5s var(--ease-out) backwards;animation-delay:calc(var(--i)*70ms)}
+
+        @media(max-width:1080px){.sh-head .btn{display:none}}
+        @media(max-width:960px){
+            #results .rw,#results.shelves .rw{grid-template-columns:40px minmax(0,1fr) 84px 70px 36px}
+            #results .rw-cat{display:none}
+        }
+        @media(max-width:900px){
+            .layout{grid-template-columns:1fr;gap:18px}
+            .side{position:static;max-height:none;overflow:visible}
+            .side>summary{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;font:600 14px var(--font-h);color:var(--navy);cursor:pointer;list-style:none}
+            .side>summary::-webkit-details-marker{display:none}
+            .side[open]>summary{border-bottom:1px solid var(--line)}
+        }
+        @media(max-width:640px){
+            .hero{padding-top:104px}
+            #results[data-view="grid"],.sh-items[data-view="grid"]{grid-template-columns:1fr}
+            .sh-scene{width:96px}
+            #results .rw,#results.shelves .rw{grid-template-columns:40px minmax(0,1fr) 36px}
+            .rw-fmt,.rw-len{display:none}
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-wrap" id="nav" aria-label="Main">
+        <div class="container"><div class="nav-inner">
+            <a href="sangam_homepage_v2.html" class="nav-logo"><div class="logo-badge">S</div><div><div class="logo-name">Sangam DLC</div><span class="logo-sub">by IIMBx</span></div></a>
+            <div class="nav-links">
+                <a href="sangam_homepage_v2.html">Home</a><a href="sangam_about_v2.html">About</a><a href="sangam_courses_v2.html">Courses</a><a href="sangam_resources_v2.0.2.html" class="active" aria-current="page">Resources</a><a href="sangam_events_v2.html">Events</a><a href="sangam_contact_v2.html">Contact</a>
+            </div>
+            <a href="sangam_courses_v2.html" class="nav-btn">Join Free →</a>
+            <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" data-icon="menu"></button>
+        </div></div>
+    </nav>
+
+    <main>
+        <section class="hero"><div class="container">
+            <h1>Resources for better teaching<span class="dot">.</span></h1>
+            <p>A growing library of tips, insights, prompts and templates from IIMB faculty and the Sangam community.</p>
+            <div class="search" role="search">
+                <span class="search-ic" data-icon="search" aria-hidden="true"></span>
+                <input id="q" type="search" placeholder="Search 100 resources…" aria-label="Search resources" autocomplete="off" spellcheck="false">
+                <button type="button" class="search-clear" id="q-clear" data-remove="q" aria-label="Clear search" hidden data-icon="x"></button>
+                <kbd aria-hidden="true">/</kbd>
+            </div>
+            <div class="quick"><span>Popular:</span>
+                <button type="button" class="qchip" data-q="socratic">Socratic</button><button type="button" class="qchip" data-q="rubric">Rubric</button><button type="button" class="qchip" data-q="feedback">Feedback</button><button type="button" class="qchip" data-q="AI">AI</button><button type="button" class="qchip" data-q="checklist">Checklist</button><button type="button" class="qchip" data-q="syllabus">Syllabus</button>
+            </div>
+        </div></section>
+
+        <section class="band"><div class="container">
+            <div class="layout">
+                <details class="side" id="side" open>
+                    <summary>Filters &amp; journey <span aria-hidden="true">▾</span></summary>
+                    <div id="side-body"></div>
+                </details>
+
+                <div>
+                    <div id="results-top"></div>
+                    <div class="m-bar">
+                        <p id="summary" aria-live="polite"></p>
+                        <div class="m-ctl">
+                            <label><span class="sr">Sort by</span><select class="select" data-bind="sort"><option value="featured">Featured</option><option value="new">Newest</option><option value="az">A – Z</option></select></label>
+                            <div class="seg" role="group" aria-label="View">
+                                <button type="button" data-view="grid" aria-pressed="false" aria-label="Grid view" title="Grid" data-icon="grid"></button>
+                                <button type="button" data-view="list" aria-pressed="true" aria-label="List view" title="List" data-icon="list"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filters-on" id="active" hidden></div>
+                    <div id="results"></div>
+                    <nav class="pager" id="pager" aria-label="Pagination"></nav>
+                </div>
+            </div>
+        </div></section>
+    </main>
+
+    <footer class="footer"><div class="container"><p>© 2026 Sangam Digital Learning Community · <a href="sangam_homepage_v2.html">An IIMBx Initiative</a> · Design v2.0.2</p></div></footer>
+
+    <script src="../../assets/sangam/resources_data.js"></script>
+    <script src="../../assets/sangam/resources_scenes.js"></script>
+    <script src="../../assets/sangam/resources_engine.js"></script>
+    <script>
+        (function () {
+            const { CATS, FORMATS, LEVELS, ITEMS, SCENES } = SANGAM_RES, R = SangamResources, s = R.svg;
+            const box = (extra, attr, label, count) => `<button type="button" class="opt ${extra}" ${attr} aria-pressed="false"><span class="box">${s('check')}</span>${label}${count}</button>`;
+            document.getElementById('side-body').innerHTML =
+                `<div class="sd-group"><p class="sd-h">Your journey</p>
+                    ${box('radio', 'data-cat="all"', 'All stages', '<em data-count="cat:all">100</em>')}
+                    <div class="t-list" role="group" aria-label="Journey stages">${CATS.map((c, i) =>
+                        `<button type="button" class="t-item c-${c.id}" data-cat="${c.id}" data-toggle data-scroll="#results-top" aria-pressed="false"><span class="t-dot">${i + 1}</span><span class="t-tx"><b>${c.verb}</b><small>${c.name}</small></span><em data-count="cat:${c.id}">20</em></button>`).join('')}</div></div>
+                <div class="sd-group"><p class="sd-h">Format</p>${Object.keys(FORMATS).map(f => box('', `data-fmt="${f}"`, f, `<em data-count="fmt:${f}">0</em>`)).join('')}</div>
+                <div class="sd-group"><p class="sd-h">Level</p>${box('radio', 'data-lvl="all"', 'Any level', '')}${LEVELS.map(l => box('radio', `data-lvl="${l}"`, l, `<em data-count="lvl:${l}">0</em>`)).join('')}</div>
+                <div class="sd-group sd-foot">${box('', 'data-saved-toggle', 'Saved only', '<em data-saved-count>0</em>')}<button type="button" class="link-btn" data-reset>Reset</button></div>`;
+
+            // Sidebar is always open on desktop, collapsible on mobile.
+            const side = document.getElementById('side'), mq = matchMedia('(min-width:901px)');
+            const fit = () => { side.open = mq.matches; }; fit(); mq.addEventListener('change', fit);
+
+            // "All" view = one shelf per journey stage (4 teasers each). Any filter/search/sort -> flat paginated list.
+            R.render = ctx => {
+                const st = ctx.st, el = document.getElementById('results');
+                const grouped = st.cat === 'all' && !st.q && !st.fmt.size && st.lvl === 'all' && !st.saved && st.sort === 'featured';
+                el.classList.toggle('shelves', grouped);
+                if (!grouped) return false;
+                ctx.hidePager = true;
+                const draw = st.view === 'list' ? R.row : R.card;
+                el.innerHTML = CATS.map((c, i) => {
+                    const all = ctx.items.filter(x => x.cat === c.id);
+                    return `<section class="shelf c-${c.id}" style="--i:${i}" aria-labelledby="sh-${c.id}">
+                        <header class="sh-head"><span class="sh-scene">${SCENES[c.id]}</span>
+                            <div class="sh-t"><small>Step ${i + 1} · ${c.verb}</small><h2 id="sh-${c.id}">${c.name}</h2><p>${c.desc}</p></div>
+                            <button type="button" class="btn btn-ghost btn-sm" data-cat="${c.id}" data-scroll="#results-top">View all ${all.length} ${s('arrow')}</button></header>
+                        <div class="sh-items" data-view="${st.view}">${all.slice(0, 4).map(draw).join('')}</div></section>`;
+                }).join('');
+                return true;
+            };
+            R.init({ per: 10, defaultView: 'list' });
+        })();
+    </script>
+</body>
+</html>
