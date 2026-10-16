@@ -201,24 +201,111 @@
     const it = byId[id]; if (!it) return;
     const c = catOf(it.cat), s = saved.has(id);
     st.item = id; writeHash();
+
+    // Structured plain-text notes for one-click copy
+    const notesLines = [
+      `TITLE: ${it.title}`,
+      `CATEGORY: ${c.name} | FORMAT: ${it.fmt} | LEVEL: ${it.lvl} | LENGTH: ${it.len}`,
+      it.author ? `AUTHOR / FACULTY: ${it.author}${it.authorRole ? ` (${it.authorRole})` : ''}` : '',
+      it.sourceName ? `SOURCE: ${it.sourceName}` : '',
+      '',
+      'SUMMARY & PEDAGOGICAL CONTEXT:',
+      it.summary || it.desc,
+      '',
+      it.takeaways && it.takeaways.length ? `KEY TAKEAWAYS & ACTIONABLE INSIGHTS:\n${it.takeaways.map(t => '• ' + t).join('\n')}` : '',
+      '',
+      it.implementation ? `CLASSROOM / SWAYAM IMPLEMENTATION:\n${it.implementation}` : '',
+      '',
+      it.prompt ? `PROMPT TEMPLATE:\n${it.prompt}` : '',
+      '',
+      `SEARCH TAGS:\n${it.tags.map(t => '#' + t).join(' ')}`,
+      '',
+      'CITATION & ATTRIBUTION:',
+      it.legalAttribution || `Educational fair use resource curated for Sangam Digital Learning Community (IIMBx). Original source: ${it.sourceName || 'Sangam DLC'}.`,
+      it.sourceUrl ? `Original reference URL: ${it.sourceUrl}` : ''
+    ].filter(Boolean).join('\n');
+    dlg._notesText = notesLines;
+
     dlg.innerHTML = `<div class="dlg-inner c-${it.cat}">
       <button type="button" class="dlg-x" data-dlg-close aria-label="Close">${svg('x')}</button>
-      <span class="chip-cat">${svg(c.icon)}${esc(c.name)}</span>
+      <div class="dlg-top-bar">
+        <span class="chip-cat">${svg(c.icon)}${esc(c.name)}</span>
+        ${it.author ? `<span class="dlg-author-chip">${svg('user')}${esc(it.author)}</span>` : ''}
+      </div>
       <h2 id="dlg-title">${esc(it.title)}</h2>
       <p class="dlg-desc">${esc(it.desc)}</p>
+      
       <dl class="dlg-meta">
-        <div><dt>Format</dt><dd>${svg(FORMATS[it.fmt])}${it.fmt}</dd></div>
+        <div><dt>Format</dt><dd>${svg(FORMATS[it.fmt] || 'doc')}${it.fmt}</dd></div>
         <div><dt>Level</dt><dd>${it.lvl}</dd></div>
         <div><dt>Length</dt><dd>${esc(it.len)}</dd></div>
         <div><dt>Added</dt><dd>${fmtDate(it.added)}</dd></div>
       </dl>
-      ${it.prompt ? `<div class="dlg-prompt"><div class="dlg-prompt-h"><span>Prompt</span><button type="button" class="link-btn" data-copy-prompt>${svg('copy')}Copy prompt</button></div><pre>${esc(it.prompt)}</pre></div>` : ''}
-      <div class="dlg-tags">${it.tags.map(t => `<span>${esc(t)}</span>`).join('')}</div>
+
+      ${it.videoId ? `
+        <div class="dlg-video-container">
+          <iframe src="https://www.youtube-nocookie.com/embed/${esc(it.videoId)}?rel=0" title="${esc(it.title)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+        </div>
+      ` : ''}
+
+      ${(it.summary || it.desc) ? `
+        <div class="dlg-section dlg-summary">
+          <h4>Summary &amp; Pedagogical Context</h4>
+          <p>${esc(it.summary || it.desc)}</p>
+        </div>
+      ` : ''}
+
+      ${it.takeaways && it.takeaways.length ? `
+        <div class="dlg-section dlg-takeaways">
+          <h4>Key Takeaways &amp; Actionable Insights</h4>
+          <ul>${it.takeaways.map(t => `<li>${esc(t)}</li>`).join('')}</ul>
+        </div>
+      ` : ''}
+
+      ${it.implementation ? `
+        <div class="dlg-section dlg-implementation">
+          <h4>Classroom &amp; SWAYAM Implementation</h4>
+          <p>${esc(it.implementation)}</p>
+        </div>
+      ` : ''}
+
+      ${it.prompt ? `
+        <div class="dlg-prompt">
+          <div class="dlg-prompt-h">
+            <span>Pedagogical Prompt Template</span>
+            <button type="button" class="link-btn" data-copy-prompt>${svg('copy')}Copy prompt</button>
+          </div>
+          <pre>${esc(it.prompt)}</pre>
+        </div>
+      ` : ''}
+
+      <div class="dlg-legal">
+        <div class="dlg-legal-title">Citation &amp; Source Attribution</div>
+        <p>
+          ${it.author ? `<strong>Author / Creator:</strong> ${esc(it.author)}${it.authorRole ? ` (${esc(it.authorRole)})` : ''}<br>` : ''}
+          ${it.sourceName ? `<strong>Source / Platform:</strong> ${esc(it.sourceName)}<br>` : ''}
+          <em>${esc(it.legalAttribution || 'Curated under educational fair use for academic teaching and instructional development. Content, video streams, and structured learning notes remain hosted directly on this portal.')}</em>
+        </p>
+        ${it.sourceUrl ? `<div><a href="${esc(it.sourceUrl)}" target="_blank" rel="noopener noreferrer" class="dlg-source-link">${svg('external')}View original reference citation (${esc(it.sourceName || 'Source')})</a></div>` : ''}
+      </div>
+
+      <div class="dlg-tags-wrap">
+        <div class="dlg-tags-head">
+          <span class="dlg-tags-label">Search Tags (${it.tags.length})</span>
+          <span class="dlg-tags-hint">Click any tag to search</span>
+        </div>
+        <div class="dlg-tags">
+          ${it.tags.map(t => `<button type="button" class="dlg-tag" data-tag-filter="${esc(t)}">#${esc(t)}</button>`).join('')}
+        </div>
+      </div>
+
       <div class="dlg-actions">
-        <a class="btn btn-primary" href="https://sangamdlc.org/resources/" target="_blank" rel="noopener noreferrer">${ACTION[it.fmt]}${svg('external')}</a>
+        <button type="button" class="btn btn-primary" data-copy-notes="${id}">${svg('copy')}Copy Notes &amp; Takeaways</button>
         <button type="button" class="btn btn-ghost" data-save="${id}" aria-pressed="${s}">${svg('bookmark')}<span class="save-label">${s ? 'Saved' : 'Save'}</span></button>
         <button type="button" class="btn btn-ghost" data-copy-link>${svg('link')}Copy link</button>
-      </div></div>`;
+      </div>
+    </div>`;
+
     if (!dlg.open) dlg.showModal();
     dlg.scrollTop = 0;
   }
@@ -241,12 +328,24 @@
 
   /* ---------- events ---------- */
   document.addEventListener('click', e => {
-    const t = e.target.closest('[data-cat],[data-fmt],[data-lvl],[data-view],[data-page],[data-open],[data-save],[data-saved-toggle],[data-reset],[data-remove],[data-q],[data-dlg-close],[data-copy-prompt],[data-copy-link]');
+    const t = e.target.closest('[data-cat],[data-fmt],[data-lvl],[data-view],[data-page],[data-open],[data-save],[data-saved-toggle],[data-reset],[data-remove],[data-q],[data-dlg-close],[data-copy-prompt],[data-copy-link],[data-copy-notes],[data-tag-filter]');
     if (!t) return;
     const d = t.dataset;
     if ('dlgClose' in d) return dlg.close();
     if ('copyPrompt' in d) return copy(byId[st.item].prompt, 'Prompt copied');
     if ('copyLink' in d) return copy(location.href, 'Link copied');
+    if ('copyNotes' in d) return copy(dlg._notesText || '', 'Notes & takeaways copied');
+    if ('tagFilter' in d) {
+      dlg.close();
+      st.q = d.tagFilter;
+      st.page = 1;
+      const q = $('#q');
+      if (q) q.value = st.q;
+      update('search');
+      toResults(true);
+      toast(`Filtering by #${d.tagFilter}`);
+      return;
+    }
     if ('open' in d) return openItem(d.open);
     if ('save' in d) return toggleSave(d.save);
     if ('view' in d) { st.view = d.view; return update('view'); }
