@@ -52,13 +52,22 @@
 
   /* ---------- filtering ---------- */
   let tokens = [], hlRe = null;
+  function tokenMatches(hay, t) {
+    if (hay.includes(t)) return true;
+    if (t.endsWith('es') && hay.includes(t.slice(0, -2))) return true;
+    if (t.endsWith('s') && hay.includes(t.slice(0, -1))) return true;
+    if (t.endsWith('ies') && hay.includes(t.slice(0, -3) + 'y')) return true;
+    if (t.endsWith('ing') && hay.includes(t.slice(0, -3))) return true;
+    if (hay.includes(t + 's') || hay.includes(t + 'es')) return true;
+    return false;
+  }
   // `skip` lets facet counts ignore their own dimension.
   const match = (it, skip) =>
     (skip === 'cat' || st.cat === 'all' || it.cat === st.cat) &&
     (skip === 'fmt' || !st.fmt.size || st.fmt.has(it.fmt)) &&
     (skip === 'lvl' || st.lvl === 'all' || it.lvl === st.lvl) &&
     (!st.saved || saved.has(it.id)) &&
-    tokens.every(t => it.hay.includes(t));
+    tokens.every(t => tokenMatches(it.hay, t));
   const sorters = { featured: (a, b) => a.order - b.order, new: (a, b) => b.added - a.added, az: (a, b) => a.title.localeCompare(b.title) };
   const hl = s => hlRe ? String(s).split(hlRe).map((p, i) => i % 2 ? `<mark>${esc(p)}</mark>` : esc(p)).join('') : esc(s);
   const fmtDate = ms => new Date(ms).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
@@ -108,7 +117,7 @@
 
   /* ---------- update cycle ---------- */
   function update(reason) {
-    tokens = st.q.toLowerCase().split(/\s+/).filter(Boolean);
+    tokens = st.q.toLowerCase().replace(/#/g, ' ').split(/\s+/).filter(Boolean);
     hlRe = tokens.length ? new RegExp('(' + tokens.map(escRe).join('|') + ')', 'gi') : null;
     const items = ITEMS.filter(i => match(i)).sort(sorters[st.sort]);
     const pages = Math.max(1, Math.ceil(items.length / App.per));
@@ -338,6 +347,7 @@
     if ('tagFilter' in d) {
       dlg.close();
       st.q = d.tagFilter;
+      st.cat = 'all';
       st.page = 1;
       const q = $('#q');
       if (q) q.value = st.q;
@@ -354,11 +364,11 @@
     else if ('lvl' in d) st.lvl = d.lvl;
     else if ('savedToggle' in t.dataset) st.saved = !st.saved;
     else if ('reset' in d) resetFilters();
-    else if ('q' in d) { st.q = d.q; }
+    else if ('q' in d) { st.q = d.q; st.cat = 'all'; }
     else if ('remove' in d) {
       const k = d.remove;
       if (k === 'cat') st.cat = 'all'; else if (k === 'lvl') st.lvl = 'all'; else if (k === 'saved') st.saved = false;
-      else if (k === 'q') { st.q = ''; $('#q').focus(); } else if (k.startsWith('fmt:')) st.fmt.delete(k.slice(4));
+      else if (k === 'q') { st.q = ''; st.cat = 'all'; $('#q').focus(); } else if (k.startsWith('fmt:')) st.fmt.delete(k.slice(4));
     }
     if ('page' in d) { st.page = Number(d.page); update('page'); return toResults(); }
     st.page = 1; update('filter');
@@ -381,8 +391,30 @@
     const q = $('#q');
     q.value = st.q;
     let timer;
-    q.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(() => { st.q = q.value.trim(); st.page = 1; update('search'); }, 120); });
-    q.addEventListener('keydown', e => { if (e.key === 'Escape' && q.value) { q.value = ''; st.q = ''; st.page = 1; update('filter'); } });
+    q.addEventListener('input', () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        st.q = q.value.trim();
+        if (st.q) st.cat = 'all';
+        st.page = 1;
+        update('search');
+      }, 120);
+    });
+    q.addEventListener('keydown', e => {
+      if (e.key === 'Enter') {
+        clearTimeout(timer);
+        st.q = q.value.trim();
+        if (st.q) st.cat = 'all';
+        st.page = 1;
+        update('search');
+        toResults(true);
+      } else if (e.key === 'Escape' && q.value) {
+        q.value = '';
+        st.q = '';
+        st.page = 1;
+        update('filter');
+      }
+    });
     // shared nav behaviour
     const nav = $('#nav');
     const onScroll = () => nav.classList.toggle('scrolled', scrollY > 50);

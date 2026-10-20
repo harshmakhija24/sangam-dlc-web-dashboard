@@ -14,8 +14,8 @@ for (const i of ITEMS) {
   assert.ok(i.fmt in FORMATS, `${i.id}: bad format ${i.fmt}`);
   assert.ok(LEVELS.includes(i.lvl), `${i.id}: bad level ${i.lvl}`);
   assert.ok(i.title && i.desc && i.len && i.tags.length, `${i.id}: missing field`);
-  assert.ok(i.tags.length >= 25, `${i.id}: expected at least 25 tags, got ${i.tags.length}`);
+  assert.ok(i.tags.length >= 50, `${i.id}: expected at least 50 tags, got ${i.tags.length}`);
   if (i.cat === 'prompts' && i.fmt !== 'Checklist') assert.ok(i.prompt, `${i.id}: prompt item needs prompt text`);
 }
 for (const n of [...Object.values(FORMATS), ...CATS.map(c => c.icon)]) assert.ok(ICONS[n], `missing icon ${n}`);
-console.log('OK: 85 artifacts strictly from Google Sheet, ids/titles unique, all tags >= 25, icons present');
+console.log('OK: 85 artifacts strictly from Google Sheet, ids/titles unique, all tags >= 50, icons present');
