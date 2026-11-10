@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resources — Teaching Tips, Prompts &amp; Curriculum Design | Sangam DLC (Design v2.0.2)</title>
-    <meta name="description" content="A directory of 100 teaching resources from IIM Bangalore faculty, grouped by stage of the educator journey. Filter by format and level, search, and save favourites.">
+    <meta name="description" content="A directory of 85 teaching resources from IIM Bangalore faculty, grouped by stage of the educator journey. Filter by format and level, search, and save favourites.">
     <link rel="canonical" href="https://sangamdlc.org/resources/">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -124,7 +124,7 @@
             <p>A growing library of tips, insights, prompts and templates from IIMB faculty and the Sangam community.</p>
             <div class="search" role="search">
                 <span class="search-ic" data-icon="search" aria-hidden="true"></span>
-                <input id="q" type="search" placeholder="Search 100 resources…" aria-label="Search resources" autocomplete="off" spellcheck="false">
+                <input id="q" type="search" placeholder="Search 85 resources…" aria-label="Search resources" autocomplete="off" spellcheck="false">
                 <button type="button" class="search-clear" id="q-clear" data-remove="q" aria-label="Clear search" hidden data-icon="x"></button>
                 <kbd aria-hidden="true">/</kbd>
             </div>
@@ -171,7 +171,7 @@
             const box = (extra, attr, label, count) => `<button type="button" class="opt ${extra}" ${attr} aria-pressed="false"><span class="box">${s('check')}</span>${label}${count}</button>`;
             document.getElementById('side-body').innerHTML =
                 `<div class="sd-group"><p class="sd-h">Your journey</p>
-                    ${box('radio', 'data-cat="all"', 'All stages', '<em data-count="cat:all">100</em>')}
+                    ${box('radio', 'data-cat="all"', 'All stages', '<em data-count="cat:all">85</em>')}
                     <div class="t-list" role="group" aria-label="Journey stages">${CATS.map((c, i) =>
                         `<button type="button" class="t-item c-${c.id}" data-cat="${c.id}" data-toggle data-scroll="#results-top" aria-pressed="false"><span class="t-dot">${i + 1}</span><span class="t-tx"><b>${c.verb}</b><small>${c.name}</small></span><em data-count="cat:${c.id}">20</em></button>`).join('')}</div></div>
                 <div class="sd-group"><p class="sd-h">Format</p>${Object.keys(FORMATS).map(f => box('', `data-fmt="${f}"`, f, `<em data-count="fmt:${f}">0</em>`)).join('')}</div>

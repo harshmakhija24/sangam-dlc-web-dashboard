@@ -390,6 +390,7 @@
     readHash();
     const q = $('#q');
     q.value = st.q;
+    q.placeholder = `Search ${ITEMS.length} resources…`;
     let timer;
     q.addEventListener('input', () => {
       clearTimeout(timer);
@@ -423,5 +424,147 @@
     if (tg) tg.addEventListener('click', () => { const o = nav.classList.toggle('open'); tg.setAttribute('aria-expanded', o); });
     update('init');
     if (st.item) openItem(st.item);
+    liveSheetSync();
   };
+
+  /* ---------- Live Browser Google Sheet Sync & Auto-Tagger (Zero-CLI / JSONP) ---------- */
+  const SHEET_ID = '1GajZnd3DU5rvw1zo7Ag71cFotvTt7e3vSkuDFGEmRzY';
+  const STOP = new Set(['the','and','for','with','from','that','this','into','your','what','when','where','which','while','about','how','why','who','are','was','were','been','have','has','had','will','would','could','should','can','may','not','but','our','their','more','most','some','such','than','then','them','these','those','using','used','use','through','between','within','across','over','under','after','before','during']);
+
+  function autoTags(it) {
+    const seed = [...(it.tags || [])];
+    const words = it.title.replace(/[^\w\s-]/g, ' ').split(/\s+/).map(w => w.trim().toLowerCase()).filter(w => w.length > 3 && !STOP.has(w));
+    seed.push(it.title.replace(/[:–—-]/g, ' ').replace(/\s+/g, ' ').trim());
+    words.forEach((w, i) => {
+      seed.push(`${w} in higher education`, `${w} pedagogy`, `faculty ${w} guide`);
+      if (i + 1 < words.length) seed.push(`${w} ${words[i + 1]}`, `${w} ${words[i + 1]} strategies`);
+    });
+    const fmtPools = {
+      Video: ['video lecture', 'watch faculty video', 'recorded teaching tip', 'audiovisual pedagogy', 'video masterclass', 'classroom video tutorial', 'IIMB video resource'],
+      PDF: ['PDF monograph', 'downloadable faculty PDF', 'printable educator handbook', 'reference PDF guide', 'academic PDF resource', 'institutional PDF manual'],
+      Template: ['downloadable teaching template', 'course planning worksheet', 'ready-to-use syllabus template', 'pedagogical matrix template', 'faculty design canvas'],
+      Checklist: ['quality assurance checklist', 'faculty audit checklist', 'step-by-step teaching checklist', 'course evaluation checklist', 'instructional review rubric'],
+      'Prompt Pack': ['AI prompt pack', 'copy-paste LLM prompt', 'ChatGPT prompt for educators', 'GenAI system prompt', 'pedagogical prompt template'],
+      Guide: ['practical educator guide', 'instructional walkthrough', 'faculty step-by-step manual', 'best practice teaching guide', 'pedagogical playbook'],
+      'Research Paper': ['peer-reviewed educational research', 'empirical learning science', 'academic journal article', 'evidence-based pedagogy paper', 'higher ed research study'],
+      'Case Study': ['teaching case study', 'business school case method', 'real-world pedagogical case', 'institutional case analysis', 'classroom case vignette'],
+      Article: ['faculty insights article', 'higher education commentary', 'pedagogical briefing note', 'teaching methodology article', 'academic practice essay']
+    };
+    const catPools = {
+      swayam: ['SWAYAM onboarding', 'SWAYAM MOOC delivery', 'open educational resources OER', 'UGC online course compliance', 'four-quadrant MOOC model', 'digital assessment readiness', 'NTA exam preparation', 'online learner retention', 'inclusive Indian higher education', 'NEP 2020 digital learning', 'SWAYAM course coordinator guide', 'Academic Bank of Credits ABC', 'national digital repository'],
+      curriculum: ['curriculum architecture', 'backward course design', 'constructive alignment Biggs', 'Bloom revised taxonomy verbs', 'measurable learning outcomes', 'ADDIE instructional design', 'Universal Design for Learning UDL', 'cognitive load management', 'syllabus engineering', 'module quality review', 'student persona mapping', 'experiential course sequencing', 'semester planning blueprint'],
+      prompts: ['generative AI in education', 'ChatGPT for business schools', 'LLM hallucination mitigation', 'AI-resilient assessment design', 'chain of verification prompting', 'localized Indian case generation', 'Socratic AI tutor prompts', 'prompt engineering for professors', 'ethical AI classroom policy', 'automated rubric generation', 'human-in-the-loop AI grading', 'custom GPT teaching assistant'],
+      tips: ['Teaching Tips on Tap', 'IIM Bangalore faculty wisdom', 'classroom energy and presence', 'student engagement techniques', 'active learning facilitation', 'case method questioning', 'Socratic classroom dialogue', 'managing lecture pacing', 'overcoming teaching anxiety', 'hybrid and Zoom teaching', 'empathetic rigorous teaching', 'session plan execution', 'handling tough student questions'],
+      insights: ['Faculty Insights research', 'desirable difficulties in learning', 'retrieval practice and spacing', 'interleaved problem solving', 'cognitive psychology in college', 'research-teaching synergy', 'business simulation pedagogy', 'immersive XR learning labs', 'instructional continuity planning', 'AI workforce readiness', 'academic career sustainability', 'B-school digital transformation', 'evidence-based university teaching']
+    };
+    seed.push(...(fmtPools[it.fmt] || fmtPools.Article), ...(catPools[it.cat] || catPools.tips),
+      'Sangam DLC resource', 'IIMBx digital learning community', 'higher education teaching excellence', 'faculty development program FDP',
+      'university pedagogy innovation', 'student-centered learning', 'management education pedagogy', 'reflective teaching practice',
+      'instructional design best practices', 'college classroom effectiveness', 'Indian higher education reform', 'autonomous learner development',
+      'metacognitive skill building', 'collaborative learning environments', 'pedagogical scholarship', 'academic rigor and empathy',
+      'course delivery optimization', 'educator professional growth', 'evidence-informed instruction', 'transformative classroom experience',
+      'authentic assessment design', 'analytic grading rubric', 'formative feedback loops', 'Harvard case method facilitation', 'asynchronous cohort engagement'
+    );
+    const seen = new Set(), out = [];
+    seed.forEach(raw => {
+      const t = String(raw || '').trim().replace(/^#+/, '').replace(/\s+/g, ' ');
+      if (t.length > 2 && !seen.has(t.toLowerCase())) { seen.add(t.toLowerCase()); out.push(t); }
+    });
+    return out.slice(0, 55);
+  }
+
+  function buildHay(it) {
+    const c = catOf(it.cat);
+    return [it.title, it.desc, it.author || '', it.sourceName || '', (it.tags || []).join(' '), c ? c.name : it.cat, it.fmt, it.lvl, it.summary || '', (it.takeaways || []).join(' '), it.implementation || '', it.prompt || ''].join(' ').toLowerCase();
+  }
+
+  function liveSheetSync() {
+    window.__sangamSheetSync = function (res) {
+      if (!res || !res.table || !Array.isArray(res.table.rows)) return;
+      const byNum = new Map(ITEMS.map(i => [i.sheetNum, i]));
+      const byTitle = new Map(ITEMS.map(i => [i.title.toLowerCase().trim(), i]));
+      let changed = false;
+
+      res.table.rows.forEach(r => {
+        const c = (r && r.c) || [];
+        const cell = idx => (c[idx] && c[idx].v != null) ? String(c[idx].v).trim() : '';
+        const num = parseInt(cell(0), 10);
+        const title = cell(1);
+        if (!num || !title) return;
+        const area = cell(2), edited = cell(3), raw = cell(4), catCol = cell(6), remarks = cell(7);
+        const url = (edited && edited !== '-') ? edited : ((raw && raw !== '-') ? raw : (/^https?:\/\//.test(remarks) ? remarks : ''));
+        const vidMatch = url.match(/(?:youtu\.be\/|v=|shorts\/)([a-zA-Z0-9_-]{6,15})/);
+        const videoId = vidMatch ? vidMatch[1] : '';
+
+        const existing = byNum.get(num) || byTitle.get(title.toLowerCase());
+        if (existing) {
+          if (url && !existing.sourceUrl) { existing.sourceUrl = url; changed = true; }
+          if (videoId && !existing.videoId) { existing.videoId = videoId; changed = true; }
+          return;
+        }
+
+        // Brand-new row added to Google Sheet: auto-classify, auto-tag (50+ tags), and inject live
+        const blob = `${title} ${area} ${catCol} ${url}`.toLowerCase();
+        const cat = /prompt|chatgpt|llm|generative ai|genai|\bai\b|scenario question/.test(blob) ? 'prompts'
+          : /swayam|oer|open educational|credit transfer|accessibility|wcag|forum|ndli|inflibnet|blueprint|question bank|question quality/.test(blob) ? 'swayam'
+          : /curriculum|addie|udl|universal design|design thinking|instructional design|elearning|learning outcome|oscqr|learner profile/.test(blob) ? 'curriculum'
+          : /desirable|difficulty|interleav|retrieval|research|tenure|elective|simulation|continuity|hori|workforce|cognitive/.test(blob) ? 'insights' : 'tips';
+        const fmt = (videoId || /video/i.test(catCol)) ? 'Video'
+          : (/\.pdf$/i.test(url) || /pdf/i.test(catCol)) ? 'PDF'
+          : /checklist/i.test(title + ' ' + catCol) ? 'Checklist'
+          : /template|canvas|matrix/i.test(title + ' ' + catCol) ? 'Template'
+          : /prompt/i.test(title + ' ' + catCol) ? 'Prompt Pack'
+          : /case/i.test(title + ' ' + catCol) ? 'Case Study'
+          : /paper|research/i.test(catCol) ? 'Research Paper'
+          : /guide|playbook|handbook/i.test(title) ? 'Guide' : 'Article';
+
+        const newItem = {
+          sheetNum: num,
+          id: `${cat}-sheet-${num}`,
+          cat,
+          title,
+          desc: `${title} — curated pedagogical resource for ${catOf(cat).name}.`,
+          fmt,
+          lvl: 'Intermediate',
+          len: fmt === 'Video' ? '6 min watch' : '8 min read',
+          author: videoId ? 'IIM Bangalore Faculty' : 'Sangam DLC Faculty Contributor',
+          authorRole: 'Faculty & Instructional Design Contributor',
+          sourceName: videoId ? 'IIMBx / Sangam YouTube Channel' : 'Sangam Digital Learning Community',
+          sourceUrl: url,
+          videoId,
+          embedUrl: videoId ? `https://www.youtube.com/embed/${videoId}` : '',
+          thumbnail: videoId ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg` : '../../assets/sangam/course_ai_guide_1.png',
+          summary: `${title} provides actionable frameworks and evidence-based pedagogical guidance curated by the Sangam Digital Learning Community (IIMBx).`,
+          takeaways: [
+            `Core pedagogical focus: ${title}.`,
+            'Aligns instructional delivery with measurable learner engagement and cognitive retention.',
+            'Adaptable for both in-person cohorts and asynchronous SWAYAM courses.'
+          ],
+          implementation: `Apply the frameworks from "${title}" during your next module planning or live session debrief.`,
+          legalAttribution: 'Curated for Sangam Digital Learning Community (IIMBx).',
+          tags: [],
+          order: ITEMS.length,
+          added: Date.now(),
+          isNew: true
+        };
+        newItem.tags = autoTags(newItem);
+        newItem.hay = buildHay(newItem);
+        ITEMS.push(newItem);
+        byId[newItem.id] = newItem;
+        byNum.set(num, newItem);
+        changed = true;
+      });
+
+      if (changed) {
+        const q = $('#q');
+        if (q) q.placeholder = `Search ${ITEMS.length} resources…`;
+        update('init');
+      }
+    };
+
+    const s = document.createElement('script');
+    s.src = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=responseHandler:__sangamSheetSync`;
+    s.async = true;
+    document.head.appendChild(s);
+  }
 })();

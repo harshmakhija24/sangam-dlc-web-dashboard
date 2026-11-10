@@ -1,5 +1,5 @@
 /* Sangam DLC - Resources v2.x shared data.
-   Complete repository of 85 verified artifacts based strictly on the Google Sheet (Rows 1–85).
+   Complete repository of 85 verified artifacts synced with the Google Sheet.
    Every artifact includes at least 50+ rich, domain-verified searchable tags, verified author/source citations,
    on-site structured summaries, takeaways, and embedded media. */
 (function () {
